@@ -1,0 +1,96 @@
+#main {
+  margin: 0 auto;
+  max-width: 768px;
+  min-width: 320px;
+}
+.tit4 {
+  margin: 0 5%;
+  padding: 4% 0;
+  font-size: 1rem;
+}
+.tit4 .t {
+  color: #333333;
+}
+
+/**
+ * @require opt_foot/e_opt_foot_known.css
+ * @require opt_foot/e_opt_foot_submit.css
+ * @require opt_foot/e_opt_foot_uploadfilefix.css
+ */
+.opt_foot {
+  position: relative;
+  z-index: 99;
+}
+.opt_foot .inner .c0 {
+  padding: 2.7%;
+  width: 94.6%;
+}
+.e_foot_fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.e_foot_fix .inner {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0 10px 1px;
+}
+
+.ico_arr_orange {
+  width: 16px;
+  height: 16px;
+  background: url();
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+#main {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  display: table;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #fafafa;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.statusbox {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 30%;
+}
+.statusicon {
+  width: 13%;
+  margin: 0 auto;
+}
+.statustit {
+  margin-top: 6%;
+}
+.statusdesc {
+  line-height: 2em;
+  margin-top: 3%;
+}
+.opt_foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.opt_foot .cadd {
+  padding-bottom: 5%;
+}

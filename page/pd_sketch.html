@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff8903" />
+<meta name="format-detection" content="telephone=no" />
+<link type="image/x-icon" href="http://www.xiaojukeji.com/website/images/favicon.ico" rel="icon">
+  
+<!-- 基础同步依赖代码 --> 
+<script src="//futurefriendly.cn/ds/static/release/lib/lib.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didibridge/didibridge.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didimonitor/didi-monitor.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dialog.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/pd_sketch/main.js"type="text/javascript"></script>
+
+<!-- resourcemap --> 
+
+
+<title>滴滴顺风车交互模块demo</title>
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/css/lib.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didireset/didireset.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_base/ui_base.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_main/ui_main.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_skin/ui_skin.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/page/pd_sketch/main.css">
+
+</head>
+
+<body ontouchstart="">
+
+<div id="main">
+
+    <!-- 顶部导航 -->
+    <div class="topnav">
+    <div class="bd clearfix">
+        <div class="logo clearfix">
+            <div tabindex="0" class="c1">
+                <a tabindex="-1" href="javascript:;" title="DIDI RIDEA">
+                    <i class="iconsvg icon40 iconsvg_001didi mr10 vt_m"></i><i class="iconsvg icon32 iconsvg_s003ridea vt_m"></i>
+                </a>
+            </div>
+            <div class="c2 dis_b left ml5 tx_ar c_tw">Interaction Module</div>
+        </div>
+        <div class="nav right clearfix">
+
+            <div class="item trigger" rel="menu">
+                <a tabindex="0" href="javascript:;" id="triggerMenu" class="txt"><span class="icon-menu"></span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="topnav_ph"></div>
+    
+    <div class="gl_side">
+        <div class="side_bd">
+
+            <!-- 菜单 -->
+            <aside class="menu">
+    <section>
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">Webapp</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="page_default" class="lk f_load">首页 Default Page</a></li>
+        </ul>
+    </section>
+</aside>
+            
+        </div>
+    </div>
+
+    <div class="gl_container pb20">
+
+        <!-- 首页 -->
+        <div id="page_default" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">首页 Default Page</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">输入框 .inputTxt</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 输入框 .inputTxt -->
+                            <div class="inputTxt">
+                                <input type="text" placeholder="input" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+        
+</div>
+
+<!--
+    @require "lib/lib.js"
+    @require "css/lib.css"
+-->
+
+<script src="http://www.xiaojukeji.com/js/jquery.js"></script>
+
+<script>
+var DidiBridge = require('didibridge');
+var DidiMonitor = require('didimonitor');
+var dd = require('dd');
+</script>
+<!--
+    @require "didireset"
+    @require "ui_base/ui_base.css"
+    @require "ui_main/ui_main.css"
+    @require "ui_skin/ui_skin.css"
+-->
+<script>
+require('page/pd_sketch/main.js');
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+.e_spacehead_3 {
+  width: 54%;
+  left: 23%;
+  top: 14%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transform: scale(0.5);
+  transition: all 0.4s ease-in-out;
+}
+.active .e_spacehead_3 {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.e_spacehead_3 .name {
+  bottom: 3%;
+}
+.e_spacehead_3 .dialog_1,
+.e_spacehead_3 .dialog_2,
+.e_spacehead_3 .dialog_3 {
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.active .e_spacehead_3 .dialog_1,
+.active .e_spacehead_3 .dialog_2,
+.active .e_spacehead_3 .dialog_3 {
+  -webkit-animation: opacityfull 0.1s steps(2) 3;
+  -webkit-animation-fill-mode: both;
+  animation: opacityfull 0.1s steps(2) 3;
+  animation-fill-mode: both;
+}
+.active .e_spacehead_3 .dialog_1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.active .e_spacehead_3 .dialog_2 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.active .e_spacehead_3 .dialog_3 {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.e_spacehead_3 .dialog_1 img,
+.e_spacehead_3 .dialog_2 img,
+.e_spacehead_3 .dialog_3 img {
+  display: none;
+}
+.e_spacehead_3 .dialog_1 {
+  background-image: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/label_right2.png);
+  background-position: left top;
+  top: -7%;
+  left: 62.7%;
+  height: 13.7%;
+  padding-top: 2.2%;
+  padding-left: 28.5%;
+  padding-right: 5%;
+}
+.e_spacehead_3 .dialog_2 {
+  background-image: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/label_left.png);
+  background-position: right top;
+  top: 0;
+  right: 76%;
+  height: 13.7%;
+  padding-top: 2.2%;
+  padding-right: 28.5%;
+  padding-left: 5%;
+}
+.e_spacehead_3 .dialog_3 {
+  background-image: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/label_left.png);
+  background-position: right top;
+  top: 43%;
+  right: 72%;
+  height: 13.7%;
+  padding-top: 2.2%;
+  padding-right: 28.5%;
+  padding-left: 5%;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>车主认证进度查询</title>
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/css/lib.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didireset/didireset.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_base/ui_base.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_main/ui_main.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_skin/ui_skin.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/didiui.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/page/certprogress/main.css">
+
+</head>
+
+<body ontouchstart="">
+
+<div id="main">
+
+    <div class="certprogress_card clearfix">
+        <div class="c_1">
+            <div class="avatar avatar55">
+                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" />
+            </div>
+        </div>
+        <div class="c_2">
+            <div class="info">
+                <p class="tx_16 c_t1">130****0000</p>
+                <p class="tx_12 c_t0">正在认证中...<!-- 或：认证失败 --></p>
+            </div>
+        </div>
+        <div class="c_3">
+            <div class="vm">
+                <div class="vin">
+                    <span class="tx_16 c_t4 iconfont icon-right"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 右边箭头引导的入口链接 -->
+        <a href="javascript:;" class="enter">进入个人页</a>
+    </div>
+
+    <article class="certprogress_flow">
+        <h1>认证进度</h1>
+        <ul>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_complete">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">车主认证资料提交</p>
+                        <p class="tx_11 c_t3">2016-05-16 14:00</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <span class="tx_12 c_t3">已完成</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_complete">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">实名认证</p>
+                        <p class="tx_11 c_t3">2016-05-16 15:00</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <a href="javascript:;" class="tx_12 c_t2">已完成，立即提现</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_alert">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">驾驶证和行驶证认证</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <a href="javascript:;" class="tx_12 c_t2">未通过，重新认证</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_ing">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">身份证、驾驶证、行驶证照片审核排队</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <span class="tx_12 c_t3">进行中</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_hang">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">身份证、驾驶证和行驶证照片审核分配</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <span class="tx_12 c_t3">未开始</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 4种状态
+            .e_cert_complete：已完成
+            .e_cert_alert：未通过
+            .e_cert_hang：未开始
+            .e_cert_ing：进行中 -->
+            <li class="item clearfix e_cert_hang">
+                <div class="c_1">
+                    <span class="ico_flow"></span>
+                </div>
+                <div class="c_2 vm">
+                    <div class="vin">
+                        <p class="tx_14">身份证、驾驶证和行驶证照片审核</p>
+                    </div>
+                </div>
+                <div class="c_3">
+                    <div class="vm">
+                        <div class="vin">
+                            <a href="javascript:;" class="tx_12 c_t2">未通过，重新认证</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </article>
+
+</div>
+
+<!-- 底部浮层 -->
+<div class="opt_foot">
+    <div class="placehold"></div>
+
+<!-- 单按钮 在线客服 -->
+<div class="panel clearfix">
+	<div class="inner">
+	    <div class="c0">
+	    	<span class="btn btn3"><a href="javascript:;"><span class="iconfont icon-headphone"></span> 在线客服</a></span>
+	    </div>
+	</div>
+</div> 
+</div>
+<!-- 底部浮层 -->
+
+<!-- 基础同步依赖代码 --> 
+<script src="//futurefriendly.cn/ds/static/release/lib/lib.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dialog.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/certprogress/main.js"type="text/javascript"></script>
+
+<!-- resourcemap --> 
+
+<!--
+    @require "lib/lib.js"
+    @require "css/lib.css"
+    @require "didiui"
+-->
+<script>
+var dd = require('dd');
+require('page/certprogress/main.js');
+</script>
+
+</body>
+
+</html>

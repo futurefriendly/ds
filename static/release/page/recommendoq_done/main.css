@@ -1,0 +1,25 @@
+body {
+  background-color: #f0f0f0;
+}
+#main {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.done_wrap {
+  width: 92%;
+  margin: 0 auto;
+  border: #e5e5e5 1px solid;
+  border-radius: .25rem;
+  background: #fff;
+}
+.done_wrap .done_tit p {
+  padding: 8% 0;
+}
+.done_pic img {
+  width: 100%;
+}
+.btnwrap {
+  padding: 10% 4%;
+}

@@ -1,0 +1,55 @@
+.imgList3 {
+  margin: 0 5%;
+}
+.imgList3 .item {
+  float: left;
+  width: 33.3%;
+  padding: 0 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.imgList3 .item:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.imgList3 .item .pic {
+  position: relative;
+  border: #e0e0e0 1px solid;
+  border-radius: 5px;
+}
+.imgList3 .item .pic img {
+  display: block;
+  border-radius: 5px;
+}
+.imgList3 .item:first-child {
+  padding: 0 8px 0 0;
+}
+.imgList3 .item:last-child {
+  padding: 0 0 0 8px;
+}
+.imgList3 .item .pic img {
+  width: 100%;
+}
+.imgList3 .item .pic .close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: -12px;
+  top: -12px;
+  background: url(//futurefriendly.cn/ds/static/release/components/imglist/images/applyclose.png) center center no-repeat;
+  background-size: 24px 24px;
+  text-indent: -9999em;
+  overflow: hidden;
+  opacity: 0.6;
+}
+.imgList3 .item .desc {
+  clear: both;
+  padding: 10px 0;
+  text-align: center;
+  font-size: .75rem;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

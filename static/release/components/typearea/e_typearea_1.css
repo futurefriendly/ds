@@ -1,0 +1,33 @@
+.typearea {
+  position: relative;
+  margin: 0 5%;
+  padding-bottom: 40px;
+}
+.typearea textarea {
+  font-size: .875rem;
+  vertical-align: top;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  -webkit-overflow-scrolling: touch;
+}
+.typearea textarea:focus {
+  border-color: #dadada;
+}
+.txt_remain {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  background-color: #fff;
+  bottom: 0;
+  right: 0;
+  padding: 10px 15px;
+  height: 40px;
+  line-height: 20px;
+  border: #dadada 1px solid;
+  border-top: none;
+  color: #ccc;
+  border-radius: 0 0 5px 5px;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

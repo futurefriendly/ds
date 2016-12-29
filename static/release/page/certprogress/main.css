@@ -1,0 +1,188 @@
+.ico_flow {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(data:image/png;base64,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);
+  background-size: 47px 11px;
+}
+.e_cert_complete .ico_flow {
+  background-position: 0 0;
+}
+.e_cert_alert .ico_flow {
+  background-position: -12px 0;
+}
+.e_cert_hang .ico_flow {
+  background-position: -24px 0;
+}
+.e_cert_ing .ico_flow {
+  background-position: -36px 0;
+}
+.btn3 a {
+  border-color: #cccccc;
+}
+.vm {
+  display: table;
+  height: 100%;
+}
+.vin {
+  display: table-cell;
+  vertical-align: middle;
+}
+body {
+  background-color: #fafafa;
+}
+#main {
+  max-width: 768px;
+  min-width: 320px;
+  margin: auto;
+  border: #e5e5e5 1px solid;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.certprogress_card {
+  position: relative;
+  padding: 1rem 0 1rem 1rem;
+  border-bottom: #e5e5e5 1px solid;
+  background-color: #ffffff;
+}
+.certprogress_card .c_3 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 1rem;
+  text-align: right;
+}
+.certprogress_card .enter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+.certprogress_card .c_1 {
+  float: left;
+  margin-right: 1rem;
+}
+.certprogress_card .c_2 {
+  overflow: hidden;
+  padding-top: 0.3rem;
+}
+.certprogress_flow {
+  background-color: #ffffff;
+}
+.certprogress_flow .item {
+  position: relative;
+  padding: 0 0 0 1rem;
+}
+.certprogress_flow .c_1:before,
+.certprogress_flow .c_1:after {
+  content: '';
+  position: absolute;
+  height: 25%;
+  background-color: #eaeaea;
+  width: 2px;
+  left: 5px;
+  -webkit-transform: scaleX(0.25);
+  transform: scaleX(0.25);
+}
+.certprogress_flow .item:first-child .c_1:before {
+  display: none;
+}
+.certprogress_flow .item:last-child .c_1:after {
+  display: none;
+}
+.certprogress_flow .c_1:before {
+  top: 0;
+}
+.certprogress_flow .c_1:after {
+  bottom: 0;
+}
+.certprogress_flow h1 {
+  display: none;
+}
+.certprogress_flow .item .c_1 {
+  position: absolute;
+  left: 1rem;
+  width: 27px;
+  height: 100%;
+}
+.certprogress_flow .item .c_1 .ico_flow {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+}
+.certprogress_flow .item .c_2 {
+  width: 92.8%;
+  margin-left: 7.2%;
+  overflow: hidden;
+  border-top: #f0f0f0 1px solid;
+  padding: .7rem 38% .7rem 0;
+  min-height: 4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.certprogress_flow .item:first-child .c_2 {
+  border-top: none;
+}
+.certprogress_flow .item .c_3 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 1rem;
+  text-align: right;
+}
+.e_cert_complete .c_2 p:first-child {
+  color: #878787;
+}
+.e_cert_alert .c_2 p:first-child {
+  color: #fa2c21;
+}
+.e_cert_hang .c_2 p:first-child,
+.e_cert_ing .c_2 p:first-child {
+  color: #333333;
+}
+.opt_foot .placehold {
+  height: 60px;
+}
+.opt_foot .panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  background-color: #fafafa;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.opt_foot .panel .inner {
+  margin: 0 auto;
+  max-width: 768px;
+}
+.opt_foot .panel .c0 {
+  padding: 12px 1rem 14px;
+}
+.opt_foot .panel .c0 .lk {
+  line-height: 34px;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('//futurefriendly.cn/ds/static/release/page/certprogress/font/iconfont.eot?t=1466490388');
+  src: url('//futurefriendly.cn/ds/static/release/page/certprogress/font/iconfont.eot?t=1466490388#iefix') format('embedded-opentype'), url('//futurefriendly.cn/ds/static/release/page/certprogress/font/iconfont.woff?t=1466490388') format('woff'), url('//futurefriendly.cn/ds/static/release/page/certprogress/font/iconfont.ttf?t=1466490388') format('truetype'), url('//futurefriendly.cn/ds/static/release/page/certprogress/font/iconfont.svg?t=1466490388#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-headphone:before {
+  content: "\e606";
+}
+.icon-right:before {
+  content: "\e602";
+}

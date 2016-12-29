@@ -1,0 +1,167 @@
+.planet {
+  position: absolute;
+}
+.planet img {
+  display: block;
+  width: 100%;
+}
+.e_planet_1 {
+  width: 50.4%;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(100%, -100%, 0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: .5s;
+  transform: translate3d(100%, -100%, 0);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: .5s;
+}
+.active .e_planet_1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.e_planet_2 {
+  width: 11.5%;
+  left: 14%;
+  top: 0;
+  padding-top: 92.4%;
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 20%, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transform: translate3d(-100%, 20%, 0);
+  transition: all 0.5s ease-in-out;
+}
+.active .e_planet_2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.planet_path {
+  position: absolute;
+  width: 64%;
+  top: 0;
+  padding-top: 32%;
+  left: 14.3%;
+}
+.active .planet_path {
+  -webkit-animation: opacityfull 0.15s steps(2) 3;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+  animation: opacityfull 0.15s steps(2) 3;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.planet_path img {
+  display: block;
+  width: 100%;
+}
+.planet_path .path {
+  position: relative;
+}
+.target1 {
+  display: none;
+}
+.target2 {
+  display: none;
+}
+.mv1 {
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  width: 100%;
+  height: 100%;
+}
+.active .mv1 {
+  -webkit-animation: mv1 2s cubic-bezier(0.665, 0.22, 0.875, 0.575) infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-delay: 2.5s;
+  animation: mv1 2s cubic-bezier(0.665, 0.22, 0.875, 0.575) infinite;
+  animation-direction: alternate;
+  animation-delay: 2.5s;
+}
+@-webkit-keyframes mv1 {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(82%);
+  }
+}
+@keyframes mv1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(82%);
+  }
+}
+.mv1 .dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  box-shadow: rgba(108, 212, 255, 0.75) 0 0 12px 0;
+  background: #26a9ff;
+  border-radius: 50%;
+}
+.active .mv1 .dot {
+  -webkit-animation: dotblink 0.2s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-delay: 2.5s;
+  animation: dotblink 0.2s ease-in-out infinite;
+  animation-direction: alternate;
+  animation-delay: 2.5s;
+}
+@-webkit-keyframes dotblink {
+  0% {
+    -webkit-transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes dotblink {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.mv2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.active .mv2 {
+  -webkit-animation: mv2 2s linear infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-delay: 2.5s;
+  animation: mv2 2s linear infinite;
+  animation-direction: alternate;
+  animation-delay: 2.5s;
+}
+@-webkit-keyframes mv2 {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-86%);
+  }
+}
+@keyframes mv2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-86%);
+  }
+}

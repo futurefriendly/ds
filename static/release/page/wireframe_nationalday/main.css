@@ -1,0 +1,19 @@
+img {
+  width: 100%;
+  vertical-align: top;
+}
+#main {
+  margin: 0 auto;
+  max-width: 768px;
+  padding-bottom: 100px;
+}
+.foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.foot .inn {
+  max-width: 768px;
+  margin: 0 auto;
+}

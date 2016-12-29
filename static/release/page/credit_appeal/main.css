@@ -1,0 +1,118 @@
+body {
+  background-color: #f0f0f0;
+}
+#main {
+  max-width: 768px;
+  margin: auto;
+}
+.progress_card_list {
+  margin: 0 4%;
+  padding-bottom: 4%;
+}
+.progress_card_list .item {
+  margin-top: 2.67%;
+}
+.progress_card_list .item:first-child {
+  margin-top: 0;
+}
+.progress_card {
+  background-color: #fff;
+  border-radius: 4px;
+  border: #fafafa 1px solid;
+}
+.progress_card h3 {
+  padding: .8rem 0;
+  color: #333;
+  text-align: center;
+  font-size: .9375rem;
+  border-bottom: #eeeeee 1px solid;
+}
+.progress_card .bar {
+  margin: 0 16%;
+  position: relative;
+  margin-top: 1rem;
+  text-align: center;
+}
+.progress_card .bar:before,
+.progress_card .bar:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  margin-top: -1px;
+  top: 50%;
+  background-color: #ccc;
+  -webkit-transform: scaleY(0.25);
+  transform: scaleY(0.25);
+}
+.progress_card .bar:before {
+  left: 0;
+}
+.progress_card .bar:after {
+  right: 0;
+}
+.progress_card .bar .dot,
+.progress_card .bar .dot:before,
+.progress_card .bar .dot:after {
+  display: block;
+  width: .4375rem;
+  height: .4375rem;
+  border-radius: 50%;
+  background-color: #cccccc;
+}
+.progress_card .bar .dot {
+  margin: 0 auto;
+}
+.progress_card .bar .dot:before {
+  position: absolute;
+  top: 0;
+  content: '';
+  left: 0;
+}
+.progress_card .bar .dot:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  right: 0;
+}
+.progress_card .txt {
+  margin-top: .5rem;
+  padding-bottom: 0.8rem;
+}
+.progress_card .txt .c {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: .625rem;
+  line-height: 1.2em;
+  color: #adadad;
+}
+.progress_card .txt .c .s {
+  font-size: .75rem;
+  line-height: 1.75em;
+}
+.e_progress_1 .bar .dot:before {
+  background-color: #f93;
+}
+.e_progress_1 .txt .c:nth-child(1) .s {
+  color: #f93;
+}
+.e_progress_2 .bar:before,
+.e_progress_2 .bar .dot,
+.e_progress_2 .bar .dot:before {
+  background-color: #f93;
+}
+.e_progress_2 .txt .c:nth-child(1) .s,
+.e_progress_2 .txt .c:nth-child(2) .s {
+  color: #f93;
+}
+.e_progress_3 .bar:before,
+.e_progress_3 .bar:after,
+.e_progress_3 .bar .dot,
+.e_progress_3 .bar .dot:before,
+.e_progress_3 .bar .dot:after {
+  background-color: #f93;
+}
+.e_progress_3 .txt .c .s {
+  color: #ff9933;
+}

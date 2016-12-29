@@ -1,0 +1,38 @@
+body {
+  background: #89785c url(//futurefriendly.cn/ds/static/release/page/spreadbag_code/images/bg_code.jpg) center top no-repeat;
+  background-size: 100%;
+}
+#main {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 768px;
+  overflow: hidden;
+}
+.ico_pyq {
+  display: inline-block;
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background: url(//futurefriendly.cn/ds/static/release/page/spreadbag_code/images/ico_pyq.png) center center no-repeat;
+  background-size: 24px 24px;
+}
+.toptxt {
+  line-height: 2em;
+  padding: 4% 0;
+}
+.imagewrap {
+  width: 74%;
+  margin: 0 auto;
+  border: #414649 1px solid;
+}
+.save {
+  width: 26.6%;
+  margin: 2% auto 0;
+  padding-bottom: 8%;
+}
+.save img {
+  width: 100%;
+  display: block;
+}

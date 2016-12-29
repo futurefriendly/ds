@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>芝麻信用分</title>
+
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/css/lib.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didireset/didireset.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_base/ui_base.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_main/ui_main.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/ui_style/ui_skin/ui_skin.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didiui/didiui.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/page/gingili_value/main.css">
+
+</head>
+
+<body>
+
+<div id="main">
+
+<div class="container">
+
+    <!-- 仪表盘 -->
+    <!-- 不同的分数对应不同的扩展类
+        e_level_1: 350-550;
+        e_level_2: 550-600;
+        e_level_3: 600-650;
+        e_level_4: 650-700;
+        e_level_5: 700-950;
+    -->
+    <div class="circle_wrap e_level_1">
+
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+        <div class="bg bg5"></div>
+
+        <div class="toptxt">
+            <img src="//futurefriendly.cn/ds/static/release/page/gingili_value/images/toptxt.png" alt="因为信用 所以简单" />
+        </div>
+
+        <div class="inner">
+            <!-- 仪表盘图片 -->
+            <img src="//futurefriendly.cn/ds/static/release/page/gingili_value/images/circle.png" class="circle_instrument" />
+            <!-- 仪表盘动画 -->
+            <!-- circle_pos角度区间范围：225deg
+            从：-webkit-transform:rotate(-113deg)
+            到：-webkit-transform:rotate(112deg)
+            5个level各45deg -->
+            <div class="circle_pos" style="-webkit-transform:rotate(-113deg)"></div>
+            <div class="circle_txt">
+                <div class="c">
+                    <div class="c1">芝麻信用评分</div>
+                    <div class="c2">549</div>
+                    <div class="c3">信用较差</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relevant_wrap">
+        <!-- 活动合作说明 -->
+        <div class="relevant_rule" style="display:none">
+            <ul class="clearfix tx_12">
+                <li class="item c_t3">滴滴顺风车与芝麻信用合作，为你营造更安全真实的出行环境。</li>
+                <li class="item c_t3">芝麻信用管理有限公司是合法的独立的信用评估管理机构，其推出的芝麻信用是面向社会的信用服务体系，依据各方面信息，运用大数据及云计算客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用带来的价值。</li>
+            </ul>
+        </div>
+        <!-- 信用未达良好 -->
+        <div class="relevant_note">
+            <div class="c1 tx_16 tx_c">你当前的信用未达良好</div>
+            <div class="c2 tx_12 c_t3 tx_c">信用等级达到良好将自动通过认证</div>
+            <div class="c3 tx_12 tx_c"><a href="javascript:;" class="lk">快去获得更多芝麻分 &gt;</a></div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+<!-- 基础同步依赖代码 --> 
+<script src="//futurefriendly.cn/ds/static/release/lib/lib.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dialog.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/gingili_value/main.js"type="text/javascript"></script>
+
+<!-- resourcemap --> 
+
+<!--
+    @require "lib/lib.js"
+    @require "css/lib.css"
+    @require "didiui"
+-->
+<script>
+var dd = require('dd');
+require('page/gingili_value/main.js');
+function setText(){
+
+    var winw = $(window).width();
+    var wtimes = 1;
+    if(winw > 768){
+        wtimes = 2;
+    }else{
+        if(winw <= 320){
+            wtimes = 0.85;
+        }else{
+            wtimes = winw / 375;
+        }
+    }
+    var wfont = Math.floor(16 * wtimes) + 'px';
+    $('html').css('font-size',wfont);
+
+}
+setText();
+window.onresize = setText;
+window.onload = setText;
+</script>
+
+</body>
+
+</html>

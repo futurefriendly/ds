@@ -1,0 +1,17 @@
+#main {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.rule_tit {
+  padding-top: 12%;
+  margin-bottom: 7%;
+}
+article {
+  margin: 0 8%;
+  padding-bottom: 5%;
+}
+article p {
+  line-height: 2em;
+  text-indent: 2em;
+  margin-top: 1em;
+}

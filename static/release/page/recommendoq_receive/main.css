@@ -1,0 +1,78 @@
+body {
+  background-color: #fff;
+}
+#main {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.redbag {
+  background-color: #f0f0f0;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.redbag .inner {
+  width: 92%;
+  margin: 0 auto;
+  border: #e5e5e5 1px solid;
+  border-radius: .25rem;
+  background: #fff;
+}
+.redbag .bd {
+  padding-top: 12%;
+}
+.redbag .ft {
+  padding: 2% 4% 6%;
+  background-color: #ffffff;
+}
+.redbag .ft p {
+  line-height: 1.75em;
+}
+.sometalk {
+  background-color: #fff;
+  padding: 9% 0 4%;
+}
+.commentlist {
+  background-color: #fff;
+  padding: 0 8%;
+}
+.commentlist .picCnt,
+.commentlist .msgCnt {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+.commentlist .msgCnt {
+  border-top: #f0f0f0 1px solid;
+}
+.commentlist .item:first-child .msgCnt {
+  border-top-color: transparent;
+}
+.checkphone {
+  border: #e5e5e5 1px solid;
+  border-radius: .25rem;
+}
+.checkphone .item {
+  position: relative;
+  border-top: #e5e5e5 1px solid;
+  padding: .75rem;
+}
+.checkphone .item:first-child {
+  border-top: none;
+}
+.checkphone .item input {
+  width: 100%;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  font-size: .875rem;
+}
+.checkphone .item .btn_check {
+  position: absolute;
+  right: .35rem;
+  top: .35rem;
+}
+.checkphone .item .btn_check a {
+  background-color: #ccc;
+  color: #fff;
+  font-size: .875rem;
+  min-width: 4rem;
+}

@@ -1,0 +1,599 @@
+/**
+ * @require page/startrek2016/page0/page0.css
+ * @require page/startrek2016/page1/page1.css
+ * @require page/startrek2016/page2/page2.css
+ * @require page/startrek2016/page3/page3.css
+ * @require page/startrek2016/page4/page4.css
+ * @require page/startrek2016/page5/page5.css
+ * @require page/startrek2016/page6/page6.css
+ * @require page/startrek2016/page7/page7.css
+ * @require page/startrek2016/page8/page8.css
+ * @require page/startrek2016/page9/page9.css
+ * @require page/startrek2016/page10/page10.css
+ */
+.ico_pagearl {
+  width: 23px;
+  height: 21px;
+  background: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/pagearl.png) center center no-repeat;
+  background-size: 23px 21px;
+}
+.ico_pagearr {
+  width: 23px;
+  height: 21px;
+  background: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/pagearr.png) center center no-repeat;
+  background-size: 23px 21px;
+}
+.c_trek_orange {
+  color: #ff7f03;
+}
+.c_trek_orange2 {
+  color: #ff8727;
+}
+.c_trek_blue {
+  color: #1d8bae;
+}
+.c_trek_blue2 {
+  color: #135063;
+}
+.btn_trek {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+  padding: .875rem .75rem;
+  text-align: center;
+  color: #ff8420;
+  border: #ffa53b 1px solid;
+  background-color: rgba(255, 132, 11, 0.22);
+  border-radius: 0.2rem;
+}
+.btn_trek:active {
+  -webkit-filter: brightness(0.9);
+}
+.foot_btns {
+  padding: 2% 5%;
+}
+.foot_btns .c1 {
+  padding: 0 0 0 3%;
+  float: left;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.foot_btns .c1:first-child {
+  padding: 0 3% 0 0;
+}
+.foot_btns .btn_trek {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #000000 url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/bluebg.jpg) center center no-repeat;
+  background-size: cover;
+}
+#main {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 768px;
+  background-image: url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png);
+  background-position: 0 0,0 0,0 0;
+  -webkit-animation: bodybg 10s linear infinite;
+  animation: bodybg 10s linear infinite;
+  background-size: 25%,50%,75%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  will-change: -webkit-transform;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@-webkit-keyframes bodybg {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 100% 0, -100% 0, 300% 0;
+  }
+}
+@keyframes bodybg {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 100% 0, -100% 0, 300% 0;
+  }
+}
+.page {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+}
+.active.page {
+  height: 100%;
+}
+.page1 {
+  z-index: 1;
+}
+.page2 {
+  z-index: 2;
+}
+.page3 {
+  z-index: 3;
+}
+.page4 {
+  z-index: 4;
+}
+.page5 {
+  z-index: 5;
+}
+.page6 {
+  z-index: 6;
+}
+.page7 {
+  z-index: 7;
+}
+.page8 {
+  z-index: 8;
+}
+.page9 {
+  z-index: 9;
+}
+.page10 {
+  z-index: 10;
+}
+.toplogo {
+  padding-top: 3%;
+  width: 26%;
+  margin: 0 auto;
+}
+.toplogo img {
+  width: 100%;
+}
+.myintro {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 17%;
+  padding: 1% 2%;
+  z-index: 900;
+  -webkit-animation: blink 0.3s ease-in-out infinite;
+  animation: blink 0.3s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.myintro img {
+  width: 100%;
+}
+.talkbox {
+  color: #ff8420;
+  font-size: .9375rem;
+  line-height: 1.6em;
+  overflow: hidden;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  margin: 0 6%;
+  border-width: 32px 34px 27px 31px;
+  border-image-source: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/talkbox.png);
+  border-image-slice: 64 68 54 62 fill;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: round;
+  /* Chrome Console: Elements using the 'border-image' CSS property with no 'border-style' set should have no border, but currently do. Setting 'border-style' will be required in M51, around May 2016. See https://www.chromestatus.com/features/5542503914668032 for more details. */
+  border-style: solid;
+}
+.talkbox .inner {
+  -webkit-transform: translateY(100%);
+  -webkit-transition: -webkit-transform 1s steps(10);
+  -webkit-transition-delay: .5s;
+  transform: translateY(100%);
+  transition: transform 1s steps(10);
+  transition-delay: .5s;
+}
+.active .talkbox .inner {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.opt_foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  padding-bottom: 16%;
+  z-index: 100;
+}
+.e_foot_static {
+  position: static;
+}
+.opt_foot .footnote {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 90%;
+  padding: 0 5%;
+  color: #adadad;
+}
+.opt_foot .footnote p {
+  padding-top: 2%;
+  width: 100%;
+  font-size: 0.5625rem;
+}
+.opt_foot .footnote .left {
+  width: 50%;
+  text-align: left;
+}
+.opt_foot .footnote .right {
+  width: 50%;
+  text-align: right;
+}
+.opt_foot .footnote .lk {
+  width: 100%;
+  position: relative;
+  display: block;
+  padding: 150px 0 0;
+  margin: -150px 0 0;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.e_foot_static .footnote {
+  padding-top: 2%;
+}
+.active .opt_foot .footnote .ico_pagearl {
+  -webkit-animation: pagearr 1s steps(2) infinite;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.active .opt_foot .footnote .ico_pagearr {
+  -webkit-animation: pagearr 1s steps(2) infinite;
+  -webkit-animation-fill-mode: both;
+}
+@-webkit-keyframes pagearr {
+  0% {
+    -webkit-transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(5%);
+  }
+}
+.covertxt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.0625rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.75rem;
+  padding-top: 34%;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.covertxt .inner {
+  -webkit-transition: -webkit-transform 5s linear;
+  -webkit-transform: perspective(100px) rotateX(50deg) translateY(100%);
+  transition: transform 5s linear;
+  transform: perspective(100px) rotateX(50deg) translateY(100%);
+}
+.active .covertxt .inner {
+  -webkit-transform: perspective(1000px) rotateX(0deg) translateY(0);
+  transform: perspective(1000px) rotateX(0deg) translateY(0);
+}
+.n_foot_page1 {
+  margin-top: 16%;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0s steps(1), opacity 0.5s ease-in-out;
+  -webkit-transition-delay: 5s,5s;
+  transition: height 0s steps(1), opacity 0.5s ease-in-out;
+  transition-delay: 5s,5s;
+}
+.active .n_foot_page1 {
+  height: auto;
+  opacity: 1;
+}
+.planet_bg1,
+.planet_bg2 {
+  -webkit-animation: planet_shake 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation: planet_shake 1s linear infinite;
+  animation-direction: alternate;
+}
+@-webkit-keyframes planet_shake {
+  0% {
+    -webkit-transform: translateX(-10%) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translateX(10%) rotate(-5deg);
+  }
+}
+-keyframes planet_shake 0% {
+  transform: translateX(-10%) rotate(5deg);
+}
+-keyframes planet_shake 100% {
+  transform: translateX(10%) rotate(-5deg);
+}
+.planet_bg1 {
+  width: 16.8%;
+  position: absolute;
+  left: 7%;
+  top: 60%;
+}
+.planet_bg1 img {
+  width: 100%;
+}
+.planet_bg2 {
+  width: 10.4%;
+  position: absolute;
+  left: 80%;
+  top: 72%;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+.planet_bg2 img {
+  width: 100%;
+}
+/* 宇航员头像 */
+.spacehead {
+  position: relative;
+  z-index: 10;
+}
+.spacehead .inner {
+  position: relative;
+}
+.spacehead img {
+  display: block;
+  width: 100%;
+}
+.spacehead .cc1 {
+  position: absolute;
+  width: 64.4%;
+  left: 17.8%;
+  top: 18%;
+}
+.active .spacehead .cc1 {
+  -webkit-animation: rotate 20s linear infinite;
+  animation: rotate 20s linear infinite;
+}
+.spacehead .avatar {
+  position: absolute;
+  width: 34.4%;
+  left: 32.2%;
+  top: 30.5%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: #ff8417 2px solid;
+  box-shadow: rgba(245, 127, 23, 0.75) 0 0 0.5rem 0.28rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.spacehead .avatar img {
+  opacity: 0;
+  border-radius: 50%;
+}
+.spacehead .name {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.spacehead .dialog_1,
+.spacehead .dialog_2,
+.spacehead .dialog_3 {
+  position: absolute;
+}
+/* 蓝色字 */
+.time {
+  position: absolute;
+}
+/* 数据圈 */
+.datacircle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  left: 20%;
+  padding-top: 26%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transform: scale(0.5);
+  transition: all 0.5s ease-in-out;
+}
+.datacircle img {
+  display: block;
+  width: 100%;
+}
+.active .datacircle img {
+  -webkit-animation: rotate 8s linear infinite;
+  animation: rotate 8s linear infinite;
+}
+.datacircle .inner {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 63%;
+  color: #ff8420;
+}
+.datacircle .inner .c1 .t {
+  font-size: 5.875rem;
+  line-height: 1em;
+}
+.active .datacircle {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* 端外分享遮罩 */
+.sharelayer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 54%;
+  padding-left: 46%;
+  height: 100%;
+  text-align: right;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.sharelayer img {
+  display: block;
+  float: right;
+}
+/* 音乐 */
+.music_tool {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  z-index: 1001;
+  overflow: hidden;
+  cursor: pointer;
+}
+.music_tool_switch {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: -9999px;
+}
+.music_tool .bd {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/music.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 48px 24px;
+  -webkit-animation: zoom-shake 1.8s ease-in-out infinite;
+  animation: zoom-shake 1.8s ease-in-out infinite;
+}
+.music_tool_switch:checked + .music_tool,
+.music_tool_switch:checked + .music_tool .bd {
+  -webkit-animation: none;
+  animation: none;
+}
+.music_tool_switch:checked + .music_tool .bd {
+  background-position: -24px 0;
+}
+/* loading补充 */
+.queryloader__overlay {
+  background: #000000 url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/bluebg.jpg) center center no-repeat !important;
+  background-size: cover!important;
+}
+.queryloader_show .queryloader__overlay {
+  display: block;
+}
+.queryloader__overlay__percentage {
+  font-size: 16px!important;
+  color: #fff!important;
+  margin-top: 0 !important;
+}
+.queryloader__overlay__bar {
+  display: block;
+  width: 60px!important;
+  height: 60px!important;
+  margin: -70px 0 0 -30px !important;
+  background: url(http://static.xiaojukeji.com/pinche/images/spark/loading.png) center center no-repeat;
+  background-size: 40px 40px;
+  background-color: transparent!important;
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+  left: 50%;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes opacityfull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacityfull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 音乐节奏 */
+@-webkit-keyframes zoom-shake {
+  0%,
+  60% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  20% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+  }
+  30% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  }
+  40% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+@keyframes zoom-shake {
+  0%,
+  60% {
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  30% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  40% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}

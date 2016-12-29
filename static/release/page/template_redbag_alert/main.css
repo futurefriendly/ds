@@ -1,0 +1,31 @@
+body {
+  background-color: #f5f5f5;
+}
+#main {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.toparea {
+  background-color: #fff;
+  border-bottom: #eeeeee 1px solid;
+}
+.toparea .lk {
+  display: block;
+}
+.opt_foot {
+  margin-top: 5%;
+}
+.opt_foot .placehold {
+  height: 64px;
+}
+.opt_foot .panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  padding: 10px 8.53%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

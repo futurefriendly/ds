@@ -1,0 +1,217 @@
+#main {
+  margin: 0 auto;
+  max-width: 768px;
+  min-width: 320px;
+}
+.tit4 {
+  margin: 0 5%;
+  padding: 4% 0;
+  font-size: 1rem;
+}
+.tit4 .t {
+  color: #333333;
+}
+
+/**
+ * @require opt_foot/e_opt_foot_known.css
+ * @require opt_foot/e_opt_foot_submit.css
+ * @require opt_foot/e_opt_foot_uploadfilefix.css
+ */
+.opt_foot {
+  position: relative;
+  z-index: 99;
+}
+.opt_foot .inner .c0 {
+  padding: 2.7%;
+  width: 94.6%;
+}
+.e_foot_fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.e_foot_fix .inner {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0 10px 1px;
+}
+
+#main {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  height: 100%;
+  padding-bottom: 27%;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #f0f0f0 url(//futurefriendly.cn/ds/static/release/page/superdriver_note/images/notebg.jpg) center top no-repeat;
+  background-size: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sd_toptit {
+  display: none;
+}
+.sd_topnote {
+  padding-top: 34%;
+}
+.sd_topnote p {
+  margin: 0 5%;
+  font-size: .875rem;
+  color: #666;
+  line-height: 2em;
+}
+.modelcard .item {
+  margin: 4% 5% 0;
+  background-color: #fff;
+  border-radius: 5px;
+  border: #e2e2e2 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px 1px;
+  overflow: hidden;
+}
+.modelcard .item:first-child {
+  margin-top: 0;
+}
+.modelcard .hd {
+  position: relative;
+  padding-left: 5%;
+  background-color: #f9f9f9;
+}
+.modelcard .hd:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: #ececec;
+  -webkit-transform: scaleY(0.5);
+  -wekbit-transform-origin: 0 bottom;
+  transform: scaleY(0.5);
+  transform-origin: 0 bottom;
+}
+.e_card_1 .hd {
+  background-image: url(//futurefriendly.cn/ds/static/release/img/cardrepeat1.png);
+  background-size: 46px 67px;
+}
+.e_card_2 .hd {
+  background-image: url(//futurefriendly.cn/ds/static/release/img/cardrepeat2.png);
+  background-size: 55px 67px;
+}
+.e_card_3 .hd {
+  background-image: url(//futurefriendly.cn/ds/static/release/img/cardrepeat3.png);
+  background-size: 46px 57px;
+}
+.e_card_4 .hd {
+  background-image: url(//futurefriendly.cn/ds/static/release/img/cardrepeat4.png);
+  background-size: 46px 65px;
+}
+.modelcard .hd .labelicon {
+  width: 70px;
+  margin-right: 12px;
+  float: left;
+  padding: 10px 0;
+}
+.modelcard .hd .labelicon img {
+  width: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.modelcard .hd .labeltit {
+  line-height: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+  font-size: 1.1875rem;
+}
+.modelcard .bd {
+  padding: 5%;
+}
+.modelcard .bd .avatar {
+  float: left;
+}
+.modelcard .bd .avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 70px;
+  margin-right: 12px;
+}
+.modelcard .bd .pinfo {
+  overflow: hidden;
+}
+.modelcard .bd .pinfo .username .n {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.modelcard .bd .pinfo .username .m {
+  vertical-align: middle;
+  font-size: .625rem;
+  color: #fff;
+  background-color: #ff8500;
+  display: inline-block;
+  line-height: 17px;
+  border-radius: 9px;
+  padding: 0 7px;
+}
+.modelcard .bd .pinfo p {
+  line-height: 1.9em;
+  font-size: 0.75rem;
+}
+.modelcard .bd .pinfo p .lk {
+  text-decoration: underline;
+}
+.modelcard .bd .pop {
+  position: relative;
+  clear: both;
+  margin-top: 7%;
+  padding: 6%;
+  border: #e5e5e5 1px solid;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+.modelcard .bd .pop p {
+  font-size: .875rem;
+  color: #878787;
+  line-height: 1.9em;
+}
+.modelcard .bd .pop .arr {
+  position: absolute;
+  left: 29px;
+  top: -7px;
+  padding: 1px 1px 0 0;
+  background: #e5e5e5;
+  -webkit-transform: rotate(-45deg);
+}
+.modelcard .bd .pop .arr:after {
+  display: block;
+  content: '';
+  width: 11px;
+  height: 11px;
+  background: #f9f9f9;
+}
+.bannerlist {
+  margin: 0 5%;
+}
+.bannerlist .item {
+  margin-top: 4%;
+}
+.bannerlist .item:first-child {
+  margin-top: 0;
+}
+.bannerlist .item .lk {
+  display: block;
+  border: #ccc 1px solid;
+}
+.bannerlist .item img {
+  display: block;
+}

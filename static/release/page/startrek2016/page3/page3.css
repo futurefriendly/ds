@@ -1,0 +1,263 @@
+.e_time_3 {
+  position: absolute;
+  left: 7%;
+  top: 10%;
+  z-index: 200;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -webkit-transition-delay: 4s;
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 4s;
+}
+.active .e_time_3 {
+  opacity: 1;
+}
+.e_spacehead_2 {
+  width: 28.5%;
+  left: 16%;
+  top: 19%;
+}
+.active .e_spacehead_2 {
+  -webkit-animation: spacehead_2 5s ease-in 1;
+  -webkit-animation-fill-mode: both;
+  animation: spacehead_2 5s ease-in 1;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes spacehead_2 {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0) scale(1);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 74%, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes spacehead_2 {
+  0% {
+    transform: translate3d(0, -100%, 0) scale(1);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  90% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 74%, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+.e_spacehead_2 .name {
+  font-size: .47rem;
+  bottom: 3%;
+}
+.e_time_1 {
+  left: 7%;
+  top: 9%;
+}
+.spaceship {
+  position: absolute;
+  width: 52%;
+  right: 7%;
+  top: 26%;
+}
+.active .spaceship {
+  -webkit-animation: spaceship 3s linear 1;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+  animation: spaceship 3s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+.spaceship .inner {
+  position: relative;
+}
+.active .spaceship .inner {
+  -webkit-animation: shipshake 1s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-delay: 3s;
+  animation: shipshake 1s ease-in-out infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+@-webkit-keyframes shipshake {
+  0% {
+    -webkit-transform: translateY(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(3%);
+  }
+}
+@keyframes shipshake {
+  0% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(3%);
+  }
+}
+@-webkit-keyframes spaceship {
+  0% {
+    -webkit-transform: translate3d(0, 300%, 0);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(-30%, -10%, 0);
+    opacity: 1;
+  }
+}
+@keyframes spaceship {
+  0% {
+    transform: translate3d(0, 300%, 0);
+    opacity: 0;
+  }
+  80% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-30%, -10%, 0);
+    opacity: 1;
+  }
+}
+.spaceship .fire {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 1%;
+}
+.active .spaceship .fire {
+  -webkit-animation: fire 0.2s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-transform-origin: center 0;
+  animation: fire 0.2s ease-in-out infinite;
+  animation-direction: alternate;
+  transform-origin: center 0;
+}
+@-webkit-keyframes fire {
+  0% {
+    -webkit-transform: scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes fire {
+  0% {
+    transform: scaleY(0.9);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.spaceship .dialog {
+  position: absolute;
+}
+.spaceship .avatar {
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: 46%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: #ff871d 2px solid;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.spaceship .avatar img {
+  border-radius: 50%;
+  width: 100%;
+  display: block;
+}
+.spaceship .avatar,
+.spaceship .name_host,
+.spaceship .name_cust {
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition-delay: 5s;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 5s;
+}
+.spaceship .avatar_cust {
+  opacity: 0;
+}
+.spaceship .name_host {
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  text-align: center;
+  font-size: .47rem;
+  top: 74%;
+}
+.active .spaceship .avatar_host,
+.active .spaceship .name_host {
+  -webkit-transform: translateX(55%);
+  transform: translateX(55%);
+}
+.active .spaceship .avatar_cust,
+.active .spaceship .name_cust {
+  opacity: 1;
+  -webkit-transform: translateX(-55%);
+  transform: translateX(-55%);
+}
+.spaceship .name_cust {
+  opacity: 0;
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  text-align: center;
+  font-size: .47rem;
+  top: 74%;
+}
+.spaceship .dialog {
+  position: absolute;
+  top: 27.4%;
+  left: 62.7%;
+  height: 22.3%;
+  opacity: 0;
+  padding-top: 2.2%;
+  padding-left: 28.5%;
+  padding-right: 5%;
+  overflow: hidden;
+  background: url(//futurefriendly.cn/ds/static/release/page/startrek2016/images/label_right.png) left top no-repeat;
+  background-size: cover;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.active .spaceship .dialog {
+  -webkit-animation: opacityfull 0.1s steps(2) 3;
+  -webkit-animation-delay: 5.5s;
+  -webkit-animation-fill-mode: both;
+  animation: opacityfull 0.1s steps(2) 3;
+  animation-delay: 5.5s;
+  animation-fill-mode: both;
+}
+.spaceship .dialog img {
+  display: none;
+}
+.spaceship .dialog .inner {
+  font-size: 1rem;
+}

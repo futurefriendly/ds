@@ -1,0 +1,446 @@
+html,
+body,
+#main,
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+#main {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto;
+}
+/* 通用结构 */
+.swiper-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.swiper-wrapper {
+  background: #ffffff url(//futurefriendly.cn/ds/static/release/page/invitation2016/images/bg1.png) left bottom;
+}
+.swiper-slide {
+  position: relative;
+  background-color: #fff;
+}
+.swiper-slide section,
+.swiper-slide .item {
+  box-sizing: border-box;
+}
+.swiper-slide section {
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+}
+.fix-container {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.fix-container .logo {
+  width: 34%;
+  padding-top: 5%;
+  margin: 0 auto;
+}
+.fix-container .skip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 12.3%;
+  padding: 3.5% 4.5% 0 0;
+}
+.swiper-slide {
+  overflow: hidden;
+}
+.word1 {
+  position: relative;
+  z-index: 10;
+  padding-top: 20.8%;
+  padding-left: 13.2%;
+  width: 73.6%;
+  opacity: 0;
+}
+.swiper-slide-active .word1 {
+  opacity: 1;
+  animation: opacityfull 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+  animation-delay: .5s;
+}
+.arr_l {
+  width: 3.5%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 62.1% 4.4% 0 0;
+}
+.cloud1,
+.cloud2 {
+  width: 11.7%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cloud1 {
+  padding: 58.8% 0 0 17.6%;
+}
+.cloud2 {
+  padding: 67.2% 0 0 66.7%;
+}
+.train {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 28% 4%;
+}
+.swiper-slide-active .train {
+  animation: train 8s linear infinite;
+  animation-fill-mode: both;
+  transform: translateX(100%);
+}
+@keyframes train {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(25%) translateY(10%);
+  }
+  100% {
+    transform: translateX(100%) translateY(40%);
+  }
+}
+@keyframes train1 {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes train2 {
+  0% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+@keyframes train3 {
+  0% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+.train1,
+.train2,
+.train3 {
+  width: 17.3%;
+  float: left;
+  opacity: 0;
+}
+.train1 {
+  transform-origin: left 80%;
+}
+.train2 {
+  transform-origin: center center;
+}
+.train3 {
+  transform-origin: right 80%;
+}
+.swiper-slide-active .train1,
+.swiper-slide-active .train2,
+.swiper-slide-active .train3 {
+  opacity: 1;
+}
+.swiper-slide-active .train1 {
+  animation: train1 0.3s steps(1) infinite;
+  animation-fill-mode: both;
+}
+.swiper-slide-active .train2 {
+  animation: train2 0.3s steps(1) infinite;
+  animation-fill-mode: both;
+}
+.swiper-slide-active .train3 {
+  animation: train3 0.3s steps(1) infinite;
+  animation-fill-mode: both;
+}
+.word2 {
+  position: relative;
+  z-index: 10;
+  padding-top: 22%;
+  width: 100%;
+  opacity: 0;
+}
+.swiper-slide-active .word2 {
+  opacity: 1;
+  animation: opacityfull 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+  animation-delay: .5s;
+}
+.plane {
+  width: 26%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 62% 0 0 0;
+}
+.swiper-slide-active .plane {
+  opacity: 1;
+  animation: plane 6s linear infinite;
+  animation-fill-mode: both;
+}
+@keyframes plane {
+  0% {
+    transform: translateX(-100%) translateY(20%);
+  }
+  100% {
+    transform: translateX(400%) translateY(-30%);
+  }
+}
+.word3 {
+  position: relative;
+  z-index: 10;
+  padding-top: 20.8%;
+  width: 76%;
+  margin: 0 auto;
+  opacity: 0;
+}
+.swiper-slide-active .word3 {
+  opacity: 1;
+  animation: opacityfull 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+  animation-delay: .5s;
+}
+.firework {
+  position: absolute;
+  width: 76%;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 93% 12%;
+  opacity: 0;
+}
+.swiper-slide-active .firework {
+  opacity: 1;
+  animation: opacityfull 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+  animation-delay: .5s;
+}
+.car {
+  width: 37%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 36% 53%;
+  transform: rotate(-28deg);
+  transform-origin: 70% 400%;
+}
+.swiper-slide-active .car {
+  animation: car 3s linear 1;
+  animation-fill-mode: both;
+  animation-delay: .5s;
+}
+@keyframes car {
+  0% {
+    transform: rotate(-28deg);
+    transform-origin: 70% 400%;
+  }
+  100% {
+    transform: rotate(20deg);
+    transform-origin: 70% 400%;
+  }
+}
+.a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.swiper-slide-active .a {
+  animation: bounceInDown 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+}
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  100% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 10px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+.a1,
+.a2,
+.a3,
+.a4,
+.a5,
+.a6,
+.a7,
+.a8 {
+  opacity: 0;
+}
+.swiper-slide-active .a1 {
+  opacity: 1;
+  width: 25%;
+  padding: 0 0 12% 37%;
+  animation-delay: 2.8s;
+}
+.swiper-slide-active .a2 {
+  opacity: 1;
+  width: 14%;
+  padding: 0 0 33% 5%;
+  animation-delay: 2.9s;
+}
+.swiper-slide-active .a3 {
+  opacity: 1;
+  width: 14%;
+  padding: 0 0 24% 72%;
+  animation-delay: 3s;
+}
+.swiper-slide-active .a4 {
+  opacity: 1;
+  width: 14%;
+  padding: 0 0 39% 61%;
+  animation-delay: 3.1s;
+}
+.swiper-slide-active .a5 {
+  opacity: 1;
+  width: 11%;
+  padding: 0 0 61% 51%;
+  animation-delay: 3.2s;
+}
+.swiper-slide-active .a6 {
+  opacity: 1;
+  width: 11%;
+  padding: 0 0 59% 82%;
+  animation-delay: 3.3s;
+}
+.swiper-slide-active .a7 {
+  opacity: 1;
+  width: 8%;
+  padding: 0 0 75% 27%;
+  animation-delay: 3.4s;
+}
+.swiper-slide-active .a8 {
+  opacity: 1;
+  width: 8%;
+  padding: 0 0 79% 42%;
+  animation-delay: 3.5s;
+}
+.bggroup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  width: 300%;
+}
+.bggroup .bg1,
+.bggroup .bg2,
+.bggroup .bg3 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.e_slide_2 .bggroup {
+  margin-left: -100%;
+}
+.e_slide_3 .bggroup {
+  margin-left: -200%;
+}
+.e_slide_4 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* loading补充 */
+.queryloader__overlay {
+  background: #fff!important;
+}
+.queryloader_show .queryloader__overlay {
+  display: block;
+}
+.queryloader__overlay__percentage {
+  font-size: 16px!important;
+  color: #000!important;
+  margin-top: 0 !important;
+}
+.queryloader__overlay__bar {
+  display: block;
+  width: 60px!important;
+  height: 60px!important;
+  margin: -70px 0 0 -30px !important;
+  background: url(http://static.xiaojukeji.com/pinche/images/spark/loading.png) center center no-repeat;
+  background-size: 40px 40px;
+  background-color: transparent!important;
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+  left: 50%;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes opacityfull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacityfull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

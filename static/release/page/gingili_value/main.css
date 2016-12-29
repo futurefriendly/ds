@@ -1,0 +1,196 @@
+.circle_wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #0e83f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0e83f5), to(#22c2f5));
+  background-image: linear-gradient(top, #0e83f5, #22c2f5);
+  background-image: linear-gradient(to bottom, #0e83f5, #22c2f5);
+}
+.circle_wrap .bg {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+/*350-550*/
+.circle_wrap .bg1 {
+  opacity: 1;
+  background-color: #ea5254;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea5254), to(#f4653c));
+  background-image: linear-gradient(top, #ea5254, #f4653c);
+  background-image: linear-gradient(to bottom, #ea5254, #f4653c);
+}
+/*550-600*/
+.circle_wrap .bg2 {
+  background-color: #f57705;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f57705), to(#f9a804));
+  background-image: linear-gradient(top, #f57705, #f9a804);
+  background-image: linear-gradient(to bottom, #f57705, #f9a804);
+}
+/*600-650*/
+.circle_wrap .bg3 {
+  background-color: #2ab22c;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2ab22c), to(#94d440));
+  background-image: linear-gradient(top, #2ab22c, #94d440);
+  background-image: linear-gradient(to bottom, #2ab22c, #94d440);
+}
+/*650-700*/
+.circle_wrap .bg4 {
+  background-color: #03a4c3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#03a4c3), to(#02d2aa));
+  background-image: linear-gradient(top, #03a4c3, #02d2aa);
+  background-image: linear-gradient(to bottom, #03a4c3, #02d2aa);
+}
+/*700-950*/
+.circle_wrap .bg5 {
+  background-color: #0e83f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0e83f5), to(#22c2f5));
+  background-image: linear-gradient(top, #0e83f5, #22c2f5);
+  background-image: linear-gradient(to bottom, #0e83f5, #22c2f5);
+}
+.e_level_1 .bg1 {
+  opacity: 1;
+}
+.e_level_2 .bg1,
+.e_level_2 .bg2 {
+  opacity: 1;
+}
+.e_level_3 .bg1,
+.e_level_3 .bg2,
+.e_level_3 .bg3 {
+  opacity: 1;
+}
+.e_level_4 .bg1,
+.e_level_4 .bg2,
+.e_level_4 .bg3,
+.e_level_4 .bg4 {
+  opacity: 1;
+}
+.e_level_5 .bg1,
+.e_level_5 .bg2,
+.e_level_5 .bg3,
+.e_level_5 .bg4,
+.e_level_5 .bg5 {
+  opacity: 1;
+}
+.toptxt {
+  padding: 9% 0 7%;
+}
+.toptxt img {
+  width: 100%;
+  vertical-align: top;
+}
+.circle_wrap .inner {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.circle_wrap .circle_pos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  -webkit-transform: rotate(-113deg);
+  transform: rotate(-113deg);
+}
+.circle_wrap .circle_pos:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: #ffffff -2px 0 1px 2px;
+}
+.circle_instrument {
+  margin: 0 auto;
+  display: block;
+}
+.circle_pos {
+  position: absolute;
+}
+.circle_txt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+}
+.circle_txt .c {
+  margin: 0 auto;
+}
+.circle_txt .c1 {
+  font-size: 0.9375rem;
+}
+.circle_txt .c2 {
+  font-size: 4rem;
+  line-height: 1em;
+}
+.circle_txt .c3 {
+  font-size: 1.5625rem;
+}
+.relevant_wrap {
+  position: relative;
+  padding: 8% 10%;
+  margin-top: -6%;
+  background: #fff;
+}
+.relevant_rule {
+  font-size: .75rem;
+  line-height: 2em;
+  color: #adadad;
+}
+.relevant_rule .item {
+  position: relative;
+  padding-left: 15px;
+}
+.relevant_rule .item:before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  left: 0;
+  top: 9px;
+  background-color: #adadad;
+}
+.relevant_note .c1 {
+  padding-top: 5%;
+}
+.relevant_note .c2 {
+  line-height: 2em;
+}
+.relevant_note .c3 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 10%;
+}
+.relevant_note .c3 .lk {
+  color: #585858;
+}

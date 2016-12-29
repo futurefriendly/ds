@@ -1,0 +1,27 @@
+/**
+ * @require opt_foot/e_opt_foot_known.css
+ * @require opt_foot/e_opt_foot_submit.css
+ * @require opt_foot/e_opt_foot_uploadfilefix.css
+ */
+.opt_foot {
+  position: relative;
+  z-index: 99;
+}
+.opt_foot .inner .c0 {
+  padding: 2.7%;
+  width: 94.6%;
+}
+.e_foot_fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.e_foot_fix .inner {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0 10px 1px;
+}

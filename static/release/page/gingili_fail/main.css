@@ -1,0 +1,32 @@
+.apphold {
+  padding-top: 12%;
+}
+.apphold .c1 {
+  width: 16%;
+  margin: 0 auto;
+}
+.apphold .c1 img {
+  width: 100%;
+  display: block;
+}
+.apphold .c2 {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1.125em;
+  color: #585858;
+}
+.opt_foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.opt_foot .inner {
+  padding: 4% 5%;
+}
+.appdesc {
+  margin-top: 7%;
+}
+.appdesc .note {
+  line-height: 2em;
+}

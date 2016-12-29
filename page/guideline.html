@@ -1,0 +1,5790 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ff8903" />
+<meta name="format-detection" content="telephone=no" />
+<link type="image/x-icon" href="http://www.xiaojukeji.com/website/images/favicon.ico" rel="icon">
+  
+<!-- 基础同步依赖代码 --> 
+<script src="//futurefriendly.cn/ds/static/release/lib/lib.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didibridge/didibridge.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didimonitor/didi-monitor.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dialog.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/guideline/main.js"type="text/javascript"></script>
+
+<!-- resourcemap --> 
+
+
+<title>滴滴顺风车Web设计系统</title>
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/css/lib.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-dd/dd.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didireset/didireset.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_base/ui_base.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_main/ui_main.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_skin/ui_skin.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/page/guideline/main.css">
+
+</head>
+
+<body ontouchstart="">
+
+<div id="main">
+
+    <!-- 顶部导航 -->
+    <div class="topnav">
+    <div class="bd clearfix">
+        <div class="logo clearfix">
+            <div tabindex="0" class="c1">
+                <a tabindex="-1" href="javascript:;" title="DIDI RIDEA">
+                    <i class="iconsvg icon40 iconsvg_001didi mr10 vt_m"></i><i class="iconsvg icon32 iconsvg_s003ridea vt_m"></i>
+                </a>
+            </div>
+            <div class="c2 dis_b left ml5 tx_ar c_tw">Design System</div>
+        </div>
+        <div class="nav right clearfix">
+
+            <div class="item trigger" rel="menu">
+                <a tabindex="0" href="javascript:;" id="triggerMenu" class="txt"><span class="icon-menu"></span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="topnav_ph"></div>
+    
+    <div class="gl_side">
+        <div class="side_bd">
+
+            <!-- 菜单 -->
+            <aside class="menu">
+    <section>
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">系统总则 Getting Started</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="about_version" class="lk f_load">关于系统 About</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="start_contribution" class="lk f_load">系统维护 Contribution</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">系统指南 Guidelines</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="guide_experience" class="lk f_load">用户体验 Experience</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="guide_visual" class="lk f_load">视觉原则 Visual</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="guide_compatible" class="lk f_load">标准兼容 Compatible</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="guide_suggestion" class="lk f_load">开发习惯 Suggestion</a></li>
+        </ul>
+    </section>
+    <section class="c_code">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">编码规范 Instant Code</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="code_html" class="lk f_load">布局框架 HTML Frame</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="code_reset" class="lk f_load">样式重置 CSS Reset</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="code_cssname" class="lk f_load">样式命名 Classification</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="code_unicode" class="lk f_load">字体名称 Unicode</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="code_character" class="lk f_load">字符转义 Character</a></li>
+        </ul>
+    </section>
+    <section class="c_code">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">基础代码 Atomic Code</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_layout" class="lk f_load">布局 Instant Layout</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_other" class="lk f_load">杂项 Others</a></li>
+        </ul>
+    </section>
+    <section class="c_design">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">基础设计 Atomic Design</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_text" class="lk f_load">文字 Font & Text</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_btn" class="lk f_load">按钮 Btn</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_check" class="lk f_load">单选复选框 inputCheck</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_inputTxt" class="lk f_load">输入和下拉 inputTxt</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_progress" class="lk f_load">进度 progress</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="a_icon" class="lk f_load">图标 Icon</a></li>
+        </ul>
+    </section>
+    <section class="c_design">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">模块设计 Molecules Design</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="m_avatar" class="lk f_load">头像 avatar</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="m_ticket" class="lk f_load">券 ticket</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="m_msgBox" class="lk f_load">消息体 msgBox</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="m_blankTip" class="lk f_load">空页面提示 blankTip</a></li>
+        </ul>
+    </section>
+    <section class="c_design">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">皮肤设计 Skin Design</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="skin_txt" class="lk f_load">文字 Color</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="skin_bg" class="lk f_load">其他 Other</a></li>
+        </ul>
+    </section>
+    <section class="c_design">
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">动效交互 Motion Interact</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="animation_rule" class="lk f_load">动画原则 Animate Rule</a></li>
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="animation_demo" class="lk f_load">动画示例 Animate Demo</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">弹窗交互 Dialog Interact</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="dialog_dd" class="lk f_load">浮层 DidiDialog</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="tit"><strong><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">系统扩展 System Extend</span></strong></h2>
+        <ul class="clearfix">
+            <li class="item"><a tabindex="0" href="javascript:;" data-href="didiui" class="lk f_load">将didiui引入项目</a></li>
+            <li class="item"><a tabindex="0" href="/ide/" class="lk" target="_blank">H5-IDE组件子集</a></li>
+        </ul>
+    </section>
+</aside>
+            
+        </div>
+    </div>
+
+    <div class="gl_container pb20">
+
+        <!--
+        =================== getting started -->
+
+        <!-- 关于 -->
+        <div id="about_version" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">关于设计系统 About</h2>
+    </div>
+
+    <div class="mod_bd">
+
+    	<div id="qrcodeTable"></div>
+
+        <h2 class="mod_h3">服务范围 Service</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>本设计系统服务滴滴顺风车 Web 产品，包含端内 HTML5 页面，和端外运营活动页面。</li>
+                <li>本设计系统服务 UE 和 FE 同学，既是前端开发的 CSS 规范，也包含 UI 设计的模块化应用和展示。</li>
+            </ol>
+        </blockquote>
+
+        <h2 class="mod_h3">系统优势 Benefits</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>用户体验和视觉设计原则有据可循。</li>
+                <li>设计和前端规范的统一，保证Web设计从交互、设计到前端开发的高度还原。</li>
+            </ol>
+        </blockquote>
+
+        <h2 class="mod_h3">设计思路 Thinking</h2>
+
+        <blockquote class="mod_blockquote">
+        	<ol class="mod_ol">
+        		<li>本设计系统以及 didiui（滴滴顺风车样式库）应用了 <a href="http://bradfrost.com/">Brad Frost</a> 的 <a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Design System</a> 对 CSS 的编写和设计模块的归纳进行分类。如将模块分为原子（Atomic）和分子（Molecules）等。在 Web 设计开发中，设计师和前端开发通过组织原子和分子，构成组织和页面。</li>
+        		<li>本设计系统也吸取了腾讯财付通《页面重构中的设计模式》中的面向设计的CSS思想。即将样式分为base、main、skin三个部分，实际上也是从原子到分子再组织成页面的思想。</li>
+                <li>上述两条也是2013年以来比较火的 <a href="https://en.bem.info/">BEM样式设计思想</a>，国内从2011年就已经在Qzone落地，可以说走在世界的前面。</li>
+                <li>设计系统的目录分类参考了 <a href="https://www.aaron-gustafson.com/">Aaron Gustafson</a> 推荐的 Salesforce 的 <a href="https://www.lightningdesignsystem.com/">Design System</a>，应该是2016年 Web 设计领域最好的设计系统。</li>
+        		<li>设计思想的趋势是相似的。</li>
+        	</ol>
+        </blockquote>
+
+        <h2 class="mod_h3">工程模块 Components</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>本设计系统使用 fis-didi 作为开发自动化工具</li>
+                <li>应用本设计系统中的编码和设计规范，需要在项目中引入下面两个工程模块：didiui, dd</li>
+            </ol>
+        </blockquote>
+
+    </div>
+
+</div>
+
+        <!-- 维护 -->
+        <div id="start_contribution" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">系统维护 Contribution</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">Clone Git仓库</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>Clone UI：访问 <a href="https://git.xiaojukeji.com/beatles/ui">https://git.xiaojukeji.com/beatles/ui</a>，Fork 它并 Clone 到本地</li>
+                <li>Clone Didiui：访问 <a href="https://git.xiaojukeji.com/didi-component/didiui">https://git.xiaojukeji.com/didi-component/didiui</a>，将它 Clone 到本地</li>
+            </ol>
+        </blockquote>
+
+        <h2 class="mod_h3">添加模块</h2>
+
+        <h3 class="mod_h4">准备文件</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>拉取 didiui 和 ui 的 git 更新</li>
+                <li>准备好下面2个文件：</li>
+            </ol>
+        </blockquote>
+
+        <pre class="highlight">
+            ui/page/guideline/main.html
+            ui/page/guideline/inc/side_menu.html
+        </pre>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>在 ui/page/guideline/inc/ 中新建模块页面，基础设计组件命名为a_xxx.html，模块设计组件命名为 m_xxx.html，如：</li>
+            </ol>
+        </blockquote>
+
+        <p class="mt15"><img src="//futurefriendly.cn/ds/static/release/page/guideline/images/contribution_side.png" /></p>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>新页面中的第一个dom设置id="a_xxx"或"m_xxx"，如：</li>
+            </ol>
+        </blockquote>
+
+        <pre class="highlight">
+            &lt;div id="start_contribution" class="gl_mod"&gt;
+        </pre>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>在 ui/page/guideline/main.html 中按下面的格式引入这个文件：</li>
+            </ol>
+        </blockquote>
+
+        <pre class="highlight">
+            &lt;link rel="import" href="./inc/a_inputTxt.html?__inline" /&gt;
+        </pre>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>在 ui/page/guideline/inc/side_menu.html 中加入对这个页面的导航，如：</li>
+            </ol>
+        </blockquote>
+
+        <pre class="highlight">
+            &lt;li class="item"&gt;&lt;a tabindex="0" href="javascript:;" data-href="a_check" class="lk f_load"&gt;单选复选框 inputCheck&lt;/a&gt;&lt;/li&gt;
+        </pre>
+
+        <h3 class="mod_h4">编写didiui组件</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>模块的 HTML 结构写在新建立的 a_xxx.html 或 m_xxx.html 中，如下图所示</li>
+                <li>基础设计组件的 CSS 写在 ui/components/ui_base/ui_base.css 中，依赖的图片和资源也放在这个目录下</li>
+                <li>模块设计组件的 CSS 写在 ui/components/ui_base/ui_main.css 中，依赖的图片和资源也放在这个目录下</li>
+            </ol>
+        </blockquote>
+
+        <p class="mt15"><img src="//futurefriendly.cn/ds/static/release/page/guideline/images/contribution_didiui.png" /></p>
+
+        <h3 class="mod_h4">编写完毕</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ul">
+                <li>编写调试完毕，将 ui/components/ui_base/ 或 ui/components/ui_main/ 下的文件 拷贝至 didiui/ui_style/ 的对应目录下，如有依赖图片或资源，需要修改 component.json 文件</li>
+                <li>在 didiui 下，修改 component.json 的版本号</li>
+                <li>提交 didiui 到 Git</li>
+                <li>提交 ui 到 Git</li>
+                <li>didi publish</li>
+            </ol>
+        </blockquote>
+
+        <p class="mt15"><img src="//futurefriendly.cn/ds/static/release/page/guideline/images/contribution_upload.png" /></p>
+
+        <h2 class="mod_h3">设计和代码预览</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>在组件编写中，通过下面的结构可以实现设计和代码预览：</p>
+        </blockquote>
+
+        <pre class="highlight">
+
+&lt;div class="mod_item"&gt;
+&lt;div class="part_ui"&gt;
+
+&lt;div class="gl_table"&gt;&lt;table class="gl_tb"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;!-- f_code代表其中的组件可以在Guideline中查看源代码，为了使用方便，每个 f_code 中必须是一个可以单独使用的组件 --&gt;
+&lt;div class="f_code"&gt;
+
+    &lt;!-- 组件编写开始--&gt;
+    &lt;div class="blankTip"&gt;
+        &lt;div class="pic"&gt;
+            &lt;img src="/img/ico_blankTip.jpg" /&gt;
+        &lt;/div&gt;
+        &lt;h3 class="mt10 tx_14 c_t0 tx_c"&gt;您还没有任何消息&lt;/h3&gt;
+        &lt;p class="mt5 tx_12 c_t3 tx_c"&gt;您还没有任何消息&lt;/p&gt;
+        &lt;div class="btnwrap"&gt;
+            &lt;span class="btn btn1"&gt;&lt;a href="javascript:;"&gt;按钮&lt;/a&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 组件编写结束 --&gt;
+
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+
+        <blockquote class="mod_blockquote">
+            <p>效果如下：</p>
+        </blockquote>
+
+        <p class="mt15"><img src="//futurefriendly.cn/ds/static/release/page/guideline/images/contribution_fcode.png" /></p>
+
+    </div>
+
+</div>
+
+        <!--
+        =================== guidelines -->
+
+        <!-- 体验 -->
+        <div id="guide_experience" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">用户体验 Experience</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">面向未来的友好设计 Principle</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>移动优先，对设备友好(Mobile First)：运用渐进增强的思想，从小屏幕到大屏幕进行连续的体验设计</li>
+                <li>内容策略，对环境友好(Content Strategy)：内容第一，功能第二，不炫技。</li>
+                <li>内容围绕用户，对用户友好(Orbital Content)：不为用户体验设置障碍，保证可访问性。</li>
+            </ol>
+        </blockquote>
+
+        <h2 class="mod_h3">语义化 Semantic </h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>一个页面有且只有一个 h1 标签</li>
+                <li>按需使用 strong, em, blockquote 等</li>
+                <li>使用 strong 代替 b 标签，使用 em 代替 i 标签</li>
+            </ol>
+        </blockquote>
+
+		<h2 class="mod_h3">视觉无障碍优化 Accessibility</h2>
+
+        <h3 class="mod_h4">可感知性 Perceivable</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>img 标签上注意加上alt属性，有alt属性的图片，不需要加title属性</li>
+                <li>a 标签如果不包含文本，或其中的内容没有描述性属性如alt，则必须带上 title 属性</li>
+                <li>尽量使用 rem 或 em 单位，保持浏览器字体设置功能可用</li>
+            </ol>
+        </blockquote>
+
+        <h3 class="mod_h4">可操作性 Operable</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>注意 tabIndex 的顺序</li>
+                <li>浮层关闭时，tab 焦点要返回之前点开浮层的入口</li>
+            </ol>
+        </blockquote>
+
+        <h3 class="mod_h4">可理解性 Understandable</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>保持合理的 DOM 顺序</li>
+            </ol>
+        </blockquote>
+
+        <h3 class="mod_h4">健壮性 Robust</h3>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>保持渐进增强的 Web 设计方式（高要求）</li>
+            </ol>
+        </blockquote>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://futurefriend.ly">Future Friendly</a></li>
+                        <li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a></li>
+                        <li><a href="https://www.w3.org/Translations/WCAG20-zh/">Web内容无障碍指南(WCAG) 2.0</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 视觉 -->
+        <div id="guide_visual" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">视觉原则 Visual</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">基础原则</h2>
+
+        <blockquote class="mod_blockquote">
+            <ol class="mod_ol">
+                <li>设计时应遵循“极简设计”理念，并顺应设计趋势，如无必要勿增实体</li>
+                <li>设计稿基于Iphone750x1334分辨率进行设计输出，规范中的所有标注均基于该分辨率</li>
+                <li>界面背景尽量以白色和滴滴品牌色为主（广告／运营／地图界面除外）</li>
+                <li>页面边距、字号、元素长宽、元素间距尽量保持4的整数倍出现</li>
+                <li>按钮、卡片等元素描边使用内描边，允许≤1px的设计误差</li>
+                <li>界面中的黑色遮罩层属性：48%（纯黑），白色毛玻璃效果；底图高斯模糊10像素，白色遮罩90%透明度</li>
+                <li>点击热区统一为黑色8%的透明度（橘色线框按钮点击态使用品牌色8%的透明遮罩）</li>
+                <li>规范中的所有字符个数都是以中文字符为基本单位</li>
+                <li>页面的卡片以及按钮圆角的大小为8px</li>
+                <li>分割线为1像素 颜色为＃e5e5e5</li>
+                <li>背景颜色为 #f0f0f0和 ＃ffffff</li>
+            </ol>
+        </blockquote>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://wiki.intra.xiaojukeji.com/pages/viewpage.action?pageId=40087630">顺风车设计规范</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+    	
+    </div>
+
+</div>
+
+        <!-- 兼容 -->
+        <div id="guide_compatible" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">标准兼容 Compatible</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">移动端文档类型声明（DTD）</h2>
+
+		<div class="gl_table"><table class="gl_tb tx_16">
+			<tr>
+				<td>
+					<p>HTML5</p>
+					<pre class="highlight">
+						&lt;!DOCTYPE HTML&gt;
+						&lt;html&gt;
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+		<h2 class="mod_h3">PC端文档类型声明（DTD）</h2>
+
+		<div class="gl_table"><table class="gl_tb tx_16">
+			<tr>
+				<td>
+					<p>HTML5</p>
+					<pre class="highlight">
+						&lt;!DOCTYPE HTML&gt;
+						&lt;html&gt;
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>或 XHTML1.0</p>
+					<pre class="highlight">
+						&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+						&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+		<h2 class="mod_h3">兼容性</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>因嘀嘀业务只涉及 iOS 和 Android 平台，故兼容性以 mobile webkit 浏览器为主</p>
+        </blockquote>
+
+        <div class="gl_table"><table class="gl_tb">
+            <thead class="c_bg1 tx_b">
+                <tr>
+                    <td>Mobile</td>
+                    <td>Desktop</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    	<p>Safari (Webkit)</p>
+                    	<p>Chrome (Blink)</p>
+                    	<p>QQ Browser (X5)</p>
+                    	<p>Wechat Webview (X5)</p>
+                    </td>
+                    <td>
+                    	<p>Safari (Webkit)</p>
+                    	<p>Chrome (Blink)</p>
+                    	<p>IE9+ (Trident)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table></div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://caniuse.com/">http://caniuse.com</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 习惯 -->
+        <div id="guide_suggestion" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">开发习惯 Suggestion</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">HTML</h2>
+
+        <blockquote class="mod_blockquote">
+        	<p>文档设置：utf-8 无BOM</p>
+        </blockquote>
+
+        <h3 class="mod_h4">注意代码封闭</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						&lt;input type="text"&gt;
+						&lt;img src="img.png"&gt;
+						&lt;p&gt;some text here.
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						&lt;input type="text" /&gt;
+						&lt;img src="img.png" /&gt;
+						&lt;p&gt;some text here.&lt;/p&gt;
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">块状元素嵌套内联元素</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						&lt;a&gt;
+							&lt;div&gt;
+								some text here.
+							&lt;/div&gt;
+						&lt;/a&gt;
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						&lt;div&gt;
+							&lt;a&gt;
+								some text here.
+							&lt;/a&gt;
+						&lt;/div&gt;
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+		<h2 class="mod_h3">CSS</h2>
+
+        <blockquote class="mod_blockquote">
+        	<p>link 方式引入的 CSS，首行设置 @charset "utf-8"</p>
+        	<p>避免使用 id 定义，尽量使用 class</p>
+        	<p>选择器层级避免超过 4 层</p>
+        </blockquote>
+
+        <h3 class="mod_h4">CSS书写格式：正常属性单行，带前缀的属性换行</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{
+							display:inline-block;
+							font-size:12px;
+							color:#f00;
+							-webkit-box-sizing:border-box;
+							box-sizing:border-box
+						}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ display:inline-block; font-size:12px; color:#f00;
+							-webkit-box-sizing:border-box;
+							box-sizing:border-box;
+							background:#000
+						}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <blockquote class="mod_blockquote">
+        	<p>Less 或 Sass 等 CSS 预处理器的书写方法可以采用全部换行</p>
+        </blockquote>
+
+        <h3 class="mod_h4">省略不需要的单位和小数点前面的0</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ font-size:0.5rem;}
+						.selector{ margin:0px}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ font-size:.5rem}
+						.selector{ margin:0}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">RGB格式的颜色注意缩写</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ color:#ff0000}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ color:#f00}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">CSS书写顺序，引起reflow的在前，引起repaint的在后：位置 &gt; 布局 &gt; 尺寸 &gt; 渲染</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ color:#000; width:30px; display:block; top:-2px; position:relative}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ position:relative; top:-2px; display:block; width:30px; color:#000}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">私有属性在前，标准属性在后</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{
+							transform:rotate(30deg);
+							-webkit-transform:rotate(30deg);
+							-moz-transform:rotate(30deg);
+							-o-transform:rotate(30deg);
+							-ms-transform:rotate(30deg)
+						}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{
+							-webkit-transform:rotate(30deg);
+							-moz-transform:rotate(30deg);
+							-o-transform:rotate(30deg);
+							-ms-transform:rotate(30deg);
+							transform:rotate(30deg)
+						}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">为不支持CSS3的浏览器写出降级方案，且降级属性在前，优化属性在后</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ background-color:rgba(0,0,0,.7)}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ background-color:#000; background-color:rgba(0,0,0,.7)}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">图片加载之前，铺上一层和图片主色相似的背景色</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ background:url(img.png);}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{ background:#789abc url(img.png);}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">display: inline的写法</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ display:inline; padding-left:30px; margin-right:30px; height:100px; float:left;} // display:inline-block 时，避免写 水平方向的 margin 或 padding，height 和 float 属性
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">display: inline-block的写法</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{ display:inline-block; float:left} // display:inline-block 时，避免写 float 属性
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>注意 Notice</p>
+					<pre class="highlight">
+						.selector{ display:inline-block; *display:inline; *zoom:1} // PC 端如果要适应 IE7
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">CSS禁止的写法</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						*{} /* 禁用全局选择器 */
+						.selector *{} /* 同上 */
+						p{} /* 禁止直接定义一个标签 */
+						.selector{ color:#000!important}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">优先使用CSS2</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						li{ margin-bottom:10px}
+						li:last-child{ margin-bottom:0}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						li{ margin-top:10px}
+						li:first-child{ margin-top:0} /* first-child是CSS2规范，last-child是CSS3规范 */
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">响应式设计的媒体查询断点，按照移动优先的原则，分辨率从小到大顺序写</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						.selector{}
+						@media (max-width:1003px){
+							.selector{}
+						}
+						@media (max-width:768px){
+							.selector{}
+						}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						.selector{}
+						@media (min-width:768px){
+							.selector{}
+						}
+						@media (min-width:1003px){
+							.selector{}
+						}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+        <h3 class="mod_h4">动画的百分比，逐条写出，不缩写（某些安卓缩写有问题）</h3>
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+					<p>常见问题 Not do this</p>
+					<pre class="highlight">
+						@keyframes ani{
+							0%,100%{ transform:translateX(0)}
+							50%{ transform:translateX(100%)}
+						}
+					</pre>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>规范写法 Do this</p>
+					<pre class="highlight">
+						@keyframes ani{
+							0%{ transform:translateX(0)}
+							50%{ transform:translateX(100%)}
+							100%{ transform:translateX(0)}
+						}
+					</pre>
+				</td>
+			</tr>
+		</table></div>
+
+		<h2 class="mod_h3">图片资源</h2>
+
+        <blockquote class="mod_blockquote">
+        	<p>区分内容图片和装饰图片，内容图片用 img 方式引入，装饰图片用background或border-image方式引入</p>
+            <p>使用 sprite</p>
+            <p>照片存储jpg，质量60</p>
+            <p>需要放在纯色背景上的透明图片，存储 png8，杂边设置为后面的背景色</p>
+            <p>需要放在复杂颜色背景上的透明图片，存储为 png32（Photoshop“存储为Web格式”中的 png24），使用压缩工具压缩为 pngα 上传</p>
+        </blockquote>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="https://github.com/CSSLint/csslint/wiki/Rules">Nicholas C. Zakas: "CSS Lint Rules"</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+    	
+    </div>
+
+</div>
+
+        <!--
+        =================== code -->
+
+        <!-- 页面框架 -->
+        <div id="code_html" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">布局框架 HTML Frame</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">移动页面 Mobile Web</h2>
+
+        <blockquote class="mod_blockquote">
+            下面是由 didi init page 初始化的代码。
+        </blockquote>
+
+        <blockquote class="mod_blockquote">
+            body 元素上加上 ontouchstart=""，可以保证 :active 伪类生效。
+        </blockquote>
+
+        <pre class="highlight">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"&gt;
+&lt;meta name="format-detection" content="telephone=no" /&gt;
+&lt;title&gt;滴滴顺风车&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body ontouchstart=""&gt;
+
+&lt;div id="main"&gt;
+
+&lt;/div&gt;
+
+&lt;!-- 基础同步依赖代码 --&gt; 
+&lt;!--SCRIPT_PLACEHOLDER--&gt;
+&lt;!-- resourcemap --&gt; 
+&lt;!--RESOURCEMAP_PLACEHOLDER--&gt;
+&lt;!--
+    @require "/lib/lib.js"
+    @require "/css/lib.css"
+    @require "didiui"
+--&gt;
+&lt;script&gt;
+var dd = require('dd');
+require('./main.js');
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+    </div>
+
+</div> 
+
+        <!-- Reset -->
+        <div id="code_reset" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">样式重置 CSS Reset</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">移动页面 Mobile Web</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>下面是工程组件 didi-component/didireset 中的代码。</p>
+            <p>注意，如项目中使用了 didiui，其中就已经包含 didireset，无需在项目中再写 CSS reset 代码；如项目中没有使用 didiui，则需要 require 'didireset'。</p>
+        </blockquote>
+
+        <blockquote class="mod_blockquote">
+            body 的根字号设置为 100%(1rem)，浏览器默认设置下渲染为 16px
+        </blockquote>
+
+        <pre class="highlight">
+        /* CSS RESET
+================================================================
+ *
+ * PROJECT: Hitch;
+ *
+================================================================*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+footer,
+nav,
+article {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+header,
+footer,
+nav,
+article {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+fieldset,
+img,
+video,
+form {
+  border: 0;
+  max-width: 100%;
+  vertical-align: top;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+iframe {
+  vertical-align: top;
+}
+/* 默认 */
+strong {
+  font-weight: 800;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+/* 表单 */
+input,
+textarea,
+select,
+button {
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Helvetica, Arial, sans-serif;
+}
+input,
+button {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+textarea {
+  resize: none;
+  overflow-y: auto;
+}
+/* 链接 */
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+a:link,
+label,
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  body {
+    -webkit-user-select: auto;
+  }
+}
+
+        </pre>
+
+    </div>
+
+</div> 
+
+        <!-- 类名 -->
+        <div id="code_cssname" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">样式命名 Classification</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">CSS命名规则</h2>
+
+        <pre class="highlight">
+&lt;style&gt;
+/* DIDI CSS INDEX - [base/main/skin]
+================================================================
+ *
+ * PROJECT: Hitch;
+ * AUTHOR:  Someone;
+ *
+----------------------------------------------------------------
+ *
+ * [命名规则]
+ * 命名使用下划线连接, 驼峰只用于区分单词
+ * g_:  [global_]   结构: w_和w_xxx_i[_inside]嵌套出现;
+ * m_:  [module_]   模块: m_下有hd(可选),bd(必选),ft(可选) 后跟驼峰名称如m_xxxExtra或编号如m_xxx_1区分同类模块;
+ * e_:  [expand_]   扩展类;
+ * n_:  [new_]      实例类;
+ * f_:  [function_] 和样式关联的JS操作类;
+ *
+ * [模块命名规则]
+ * 基类:  m_模块名(_[名称|编号]);
+ * 扩展类: e_无前缀基类模块名_[名称|无前缀父级基类模块名];
+ * 实例类: n_无前缀基类模块名_[作用|状态]_[名称|无前缀父级基类模块名];
+ *
+----------------------------------------------------------------
+ *
+ * [base]
+ * 1. CSS RESET;
+ * 2. 基础代码;
+ * 3. 基础模块;
+ * 4. 基础图标;
+ *
+ * [main]
+ * 1. 模块;
+ * 2. 结构;
+ *
+ * [skin]
+ * 1. 文字;
+ * 2. 边框;
+ * 3. 背景;
+ * 4. 其他;
+ *
+ * [addition]
+ * a. 动画;
+ * b. JS使用类;
+ * c. MEDIA QUERIES;
+ * 
+================================================================*/
+
+/* 1 模块
+================================================================*/
+
+.m_selector{}
+
+/* 2 结构
+================================================================*/
+
+.g_selector{}
+&lt;/style&gt;
+        </pre>
+
+        <h2 class="mod_h3">CSS前缀对比</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14">
+            <thead class="c_bg1 tx_b">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>全局结构</td>
+                    <td>模块、组件</td>
+                    <td>通过js引入的交互样式</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>滴滴顺风车</td>
+                    <td>.g_</td>
+                    <td>.m_, .e_, .n_</td>
+                    <td>.f_ 或 .js_</td>
+                </tr>
+                <tr>
+                    <td>腾讯微博</td>
+                    <td>.w-</td>
+                    <td>.m_, .e_, .n_</td>
+                    <td>.f_</td>
+                </tr>
+                <tr>
+                    <td>腾讯财付通</td>
+                    <td>无</td>
+                    <td>.mod-, .exp-, .new-</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>去哪儿</td>
+                    <td>.g-</td>
+                    <td>.m-, .ui-</td>
+                    <td>.js-</td>
+                </tr>
+            </tbody>
+        </table></div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://docs.xiaojukeji.com/pages/viewpage.action?pageId=27361287">财付通：页面重构中的设计模式</a></li>
+                        <li><a href="https://github.com/doyoe/html-css-guide">去哪儿：HTML/CSS开发规范指南</a></li>
+                        <li><a href="https://github.com/kejun/CSS-Code-Guideline">豆瓣：CSS Code Guideline</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div> 
+
+        <!-- 字体名称 -->
+        <div id="code_unicode" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">字体名称 Unicode</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <blockquote class="mod_blockquote">
+            <p>Font-family 避免使用中文名称，优先使用英文名称</p>
+        </blockquote>
+
+        <h2 class="mod_h3">iOS</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>系统</th>
+                    <th>字体名称</th>
+                    <th>font-family</th>
+                    <th>示例文字</th>
+                </tr>
+            </thead>
+            <tr>
+                <td rowspan="2">iOS9及以上</td>
+                <td>San Francisco</td>
+                <td>-apple-system-font</td>
+                <td style="font-family:-apple-system-font">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>苹方</td>
+                <td>PingFang SC</td>
+                <td style="font-family:PingFang SC">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>iOS7及以上</td>
+                <td>Helvetica Neue</td>
+                <td>HelveticaNeue</td>
+                <td style="font-family:HelveticaNeue">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td rowspan="2">iOS7以下</td>
+                <td>Helvetica</td>
+                <td>Helvetica</td>
+                <td style="font-family:Helvetica">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>黑体-简</td>
+                <td>Heiti SC</td>
+                <td style="font-family:Heiti SC">字体示例 <br /> Sample Text</td>
+            </tr>
+        </table></div>
+
+        <h2 class="mod_h3">Android</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>系统</th>
+                    <th>字体名称</th>
+                    <th>font-family</th>
+                    <th>示例文字</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Android 5.0及以上</td>
+                <td>思源黑体</td>
+                <td>Notosans</td>
+                <td style="font-family:Notosans">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>Android 5.0以下</td>
+                <td>Droid Sans Fallback</td>
+                <td>Droidsansfallback</td>
+                <td style="font-family:Droidsansfallback">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>Android 4.0及以上</td>
+                <td>Roboto</td>
+                <td>Roboto</td>
+                <td style="font-family:Roboto">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>Android 4.0以下</td>
+                <td>Droid Sans</td>
+                <td>Droid Sans</td>
+                <td style="font-family:Droid Sans">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>MIUI V8</td>
+                <td>小米兰亭</td>
+                <td>MI LanTing_GB</td>
+                <td style="font-family:MI LanTing_GB">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>MIUI V5</td>
+                <td>方正兰亭黑(中文西文皆是)</td>
+                <td>Lantinghei SC</td>
+                <td style="font-family:Lantinghei SC">字体示例 <br /> Sample Text</td>
+            </tr>
+        </table></div>
+
+        <h2 class="mod_h3">WinPhone</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>字体名称</th>
+                    <th>font-family</th>
+                    <th>示例文字</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Segoe UI</td>
+                <td>Segoe UI</td>
+                <td style="font-family:Segoe UI">字体示例 <br /> Sample Text</td>
+            </tr>
+            <tr>
+                <td>方正等线体</td>
+                <td>DengXian</td>
+                <td style="font-family:DengXian">字体示例 <br /> Sample Text</td>
+            </tr>
+        </table></div>
+
+        <h2 class="mod_h3">Mac OS</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>中文名</th>
+                    <th>英文名</th>
+                    <th>UNICODE</th>
+                </tr>
+            </thead>
+            <tr style="font-family:STHeiti Light">
+                <td>华文细黑</td>
+                <td>STHeiti Light [STXihei]</td>
+                <td>\534E\6587\7EC6\9ED1</td>
+            </tr>
+            <tr style="font-family:STHeiti">
+                <td>华文黑体</td>
+                <td>STHeiti</td>
+                <td>\534E\6587\7EC6\9ED1</td>
+            </tr>
+            <tr style="font-family:STKaiti">
+                <td>华文楷体</td>
+                <td>STKaiti</td>
+                <td>\534E\6587\6977\4F53</td>
+            </tr>
+            <tr style="font-family:STSong">
+                <td>华文宋体</td>
+                <td>STSong</td>
+                <td>\534E\6587\5B8B\4F53</td>
+            </tr>
+            <tr style="font-family:STFangsong">
+                <td>华文仿宋</td>
+                <td>STFangsong</td>
+                <td>\534E\6587\4EFF\5B8B</td>
+            </tr>
+            <tr style="font-family:LiHei Pro Medium">
+                <td>丽黑 Pro</td>
+                <td>LiHei Pro Medium</td>
+                <td>\4E3D\9ED1 Pro</td>
+            </tr>
+            <tr style="font-family:LiSong Pro Light">
+                <td>丽宋 Pro</td>
+                <td>LiSong Pro Light</td>
+                <td>\4E3D\5B8B Pro</td>
+            </tr>
+            <tr style="font-family:BiauKai">
+                <td>标楷体</td>
+                <td>BiauKai</td>
+                <td>\6807\6977\4F53</td>
+            </tr>
+            <tr style="font-family:Apple LiGothic Medium">
+                <td>苹果丽中黑</td>
+                <td>Apple LiGothic Medium</td>
+                <td>\82F9\679C\4E3D\4E2D\9ED1</td>
+            </tr>
+            <tr style="font-family:Apple LiSung Light">
+                <td>苹果丽细宋</td>
+                <td>Apple LiSung Light</td>
+                <td>\82F9\679C\4E3D\7EC6\5B8B</td>
+            </tr>
+        </table></div>
+
+        <h2 class="mod_h3">WINDOWS</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>中文名</th>
+                    <th>英文名</th>
+                    <th>UNICODE</th>
+                </tr>
+            </thead>
+            <tr style="font-family:PMingLiU">
+                <td>新细明体</td>
+                <td>PMingLiU</td>
+                <td>\65B0\7EC6\660E\4F53</td>
+            </tr>
+            <tr style="font-family:MingLiU">
+                <td>细明体</td>
+                <td>MingLiU</td>
+                <td>\7EC6\660E\4F53</td>
+            </tr>
+            <tr style="font-family:DFKai-SB">
+                <td>标楷体</td>
+                <td>DFKai-SB</td>
+                <td>\6807\6977\4F53</td>
+            </tr>
+            <tr style="font-family:SimHei">
+                <td>黑体</td>
+                <td>SimHei</td>
+                <td>\9ED1\4F53</td>
+            </tr>
+            <tr style="font-family:SimSun">
+                <td>宋体</td>
+                <td>SimSun</td>
+                <td>\5B8B\4F53</td>
+            </tr>
+            <tr style="font-family:NSimSun">
+                <td>新宋体</td>
+                <td>NSimSun</td>
+                <td>\65B0\5B8B\4F53</td>
+            </tr>
+            <tr style="font-family:FangSong">
+                <td>仿宋</td>
+                <td>FangSong</td>
+                <td>\4EFF\5B8B</td>
+            </tr>
+            <tr style="font-family:KaiTi">
+                <td>楷体</td>
+                <td>KaiTi</td>
+                <td>\6977\4F53</td>
+            </tr>
+            <tr style="font-family:FangSong_GB2312">
+                <td>仿宋_GB2312</td>
+                <td>FangSong_GB2312</td>
+                <td>\4EFF\5B8B_GB2312</td>
+            </tr>
+            <tr style="font-family:KaiTi_GB2312">
+                <td>楷体_GB2312</td>
+                <td>KaiTi_GB2312</td>
+                <td>\6977\4F53_GB2312</td>
+            </tr>
+            <tr style="font-family:Microsoft JhengHei">
+                <td>微软正黑体</td>
+                <td>Microsoft JhengHei</td>
+                <td>\5FAE\x8F6F\6B63\9ED1\4F53</td>
+            </tr>
+            <tr style="font-family:Microsoft YaHei">
+                <td>微软雅黑</td>
+                <td>Microsoft YaHei</td>
+                <td>\5FAE\8F6F\96C5\9ED1</td>
+            </tr>
+        </table></div>
+
+        <h2 class="mod_h3">OFFICE (参考)</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14 tx_br">
+            <thead>
+                <tr>
+                    <th>中文名</th>
+                    <th>英文名</th>
+                    <th>UNICODE</th>
+                </tr>
+            </thead>
+            <tr style="font-family:LiSu">
+                <td>隶书</td>
+                <td>LiSu</td>
+                <td>\96B6\4E66</td>
+            </tr>
+            <tr style="font-family:YouYuan">
+                <td>幼圆</td>
+                <td>YouYuan</td>
+                <td>\5E7C\5706</td>
+            </tr>
+            <tr style="font-family:STXihei">
+                <td>华文细黑</td>
+                <td>STXihei</td>
+                <td>\534E\6587\7EC6\9ED1</td>
+            </tr>
+            <tr style="font-family:STKaiti">
+                <td>华文楷体</td>
+                <td>STKaiti</td>
+                <td>\534E\6587\6977\4F53</td>
+            </tr>
+            <tr style="font-family:STSong">
+                <td>华文宋体</td>
+                <td>STSong</td>
+                <td>\534E\6587\5B8B\4F53</td>
+            </tr>
+            <tr style="font-family:STZhongsong">
+                <td>华文中宋</td>
+                <td>STZhongsong</td>
+                <td>\534E\6587\4E2D\5B8B</td>
+            </tr>
+            <tr style="font-family:STFangsong">
+                <td>华文仿宋</td>
+                <td>STFangsong</td>
+                <td>\534E\6587\4EFF\5B8B</td>
+            </tr>
+            <tr style="font-family:FZShuTi">
+                <td>方正舒体</td>
+                <td>FZShuTi</td>
+                <td>\65B9\6B63\8212\4F53</td>
+            </tr>
+            <tr style="font-family:FZYaoti">
+                <td>方正姚体</td>
+                <td>FZYaoti</td>
+                <td>\65B9\6B63\59DA\4F53</td>
+            </tr>
+            <tr style="font-family:STCaiyun">
+                <td>华文彩云</td>
+                <td>STCaiyun</td>
+                <td>\534E\6587\5F69\4E91</td>
+            </tr>
+            <tr style="font-family:STHupo">
+                <td>华文琥珀</td>
+                <td>STHupo</td>
+                <td>\534E\6587\7425\73C0</td>
+            </tr>
+            <tr style="font-family:STLiti">
+                <td>华文隶书</td>
+                <td>STLiti</td>
+                <td>\534E\6587\96B6\4E66</td>
+            </tr>
+            <tr style="font-family:STXingkai">
+                <td>华文行楷</td>
+                <td>STXingkai</td>
+                <td>\534E\6587\884C\6977</td>
+            </tr>
+            <tr style="font-family:STXinwei">
+                <td>华文新魏</td>
+                <td>STXinwei</td>
+                <td>\534E\6587\65B0\9B4F</td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="https://developer.apple.com/fonts/">Introducing San Francisco</a></li>
+                        <li><a href="https://support.apple.com/en-us/HT202771">iOS 7: Font list</a></li>
+                        <li><a href="http://www.zhihu.com/question/27921438">为什么我感觉MIUI和iOS8的字体是用的一样的？</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div> 
+
+        <!-- 字符转义 -->
+        <div id="code_character" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">字符转义 Character</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">最常用的字符实体 Character Entities</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14">
+            <thead>
+                <tr>
+                    <th>显示</th>
+                    <th>说明</th>
+                    <th>实体名称</th>
+                    <th>实体编号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&ensp;</td>
+                    <td>半角空格</td>
+                    <td>&amp;ensp;</td>
+                    <td>&amp;#8194;</td>
+                </tr>
+                <tr>
+                    <td>&emsp;</td>
+                    <td>全角空格</td>
+                    <td>&amp;emsp;</td>
+                    <td>&amp;#8195;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>不断行的半角空格</td>
+                    <td>&amp;nbsp;</td>
+                    <td>&amp;#160;</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>小于</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;#60;</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>大于</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;#62;</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>&amp;符号</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;#38;</td>
+                </tr>
+                <tr>
+                    <td>&quot;</td>
+                    <td>双引号</td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;#34;</td>
+                </tr>
+                <tr>
+                    <td>&copy;</td>
+                    <td>版权</td>
+                    <td>&amp;copy;</td>
+                    <td>&amp;#169;</td>
+                </tr>
+                <tr>
+                    <td>&reg;</td>
+                    <td>已注册商标</td>
+                    <td>&amp;reg;</td>
+                    <td>&amp;#174;</td>
+                </tr>
+                <tr>
+                    <td>&trade;</td>
+                    <td>商标（美国）</td>
+                    <td>&amp;trade;</td>
+                    <td>&amp;#8482;</td>
+                </tr>
+                <tr>
+                    <td>&times;</td>
+                    <td>乘号</td>
+                    <td>&amp;times;</td>
+                    <td>&amp;#215;</td>
+                </tr>
+                <tr>
+                    <td>&divide;</td>
+                    <td>除号</td>
+                    <td>&amp;divide;</td>
+                    <td>&amp;#247;</td>
+                </tr>
+            </tbody>
+        </table></div>
+
+        <h2 class="mod_h3">ISO 8859-1 (Latin-1)字符集</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14">
+            <thead>
+                <tr>
+                    <th>显示</th>
+                    <th>实体名称</th>
+                    <th>实体编号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&amp;nbsp;</td>
+                    <td>&amp;#160;</td>
+                </tr>
+                <tr>
+                    <td>&iexcl;</td>
+                    <td>&amp;iexcl;</td>
+                    <td>&amp;#161;</td>
+                </tr>
+                <tr>
+                    <td>&cent;</td>
+                    <td>&amp;cent;</td>
+                    <td>&amp;#162;</td>
+                </tr>
+                <tr>
+                    <td>&pound;</td>
+                    <td>&amp;pound;</td>
+                    <td>&amp;#163;</td>
+                </tr>
+                <tr>
+                    <td>¤</td>
+                    <td>&amp;curren;</td>
+                    <td>&amp;#164;</td>
+                </tr>
+                <tr>
+                    <td>¥</td>
+                    <td>&amp;yen;</td>
+                    <td>&amp;#165;</td>
+                </tr>
+                <tr>
+                    <td>¦</td>
+                    <td>&amp;brvbar;</td>
+                    <td>&amp;#166;</td>
+                </tr>
+                <tr>
+                    <td>§</td>
+                    <td>&amp;sect;</td>
+                    <td>&amp;#167;</td>
+                </tr>
+                <tr>
+                    <td>¨</td>
+                    <td>&amp;uml;</td>
+                    <td>&amp;#168;</td>
+                </tr>
+                <tr>
+                    <td>©</td>
+                    <td>&amp;copy;</td>
+                    <td>&amp;#169;</td>
+                </tr>
+                <tr>
+                    <td>ª</td>
+                    <td>&amp;ordf;</td>
+                    <td>&amp;#170;</td>
+                </tr>
+                <tr>
+                    <td>«</td>
+                    <td>&amp;laquo;</td>
+                    <td>&amp;#171;</td>
+                </tr>
+                <tr>
+                    <td>¬</td>
+                    <td>&amp;not;</td>
+                    <td>&amp;#172;</td>
+                </tr>
+                <tr>
+                    <td>&shy;</td>
+                    <td>&amp;shy;</td>
+                    <td>&amp;#173;</td>
+                </tr>
+                <tr>
+                    <td>®</td>
+                    <td>&amp;reg;</td>
+                    <td>&amp;#174;</td>
+                </tr>
+                <tr>
+                    <td>¯</td>
+                    <td>&amp;macr;</td>
+                    <td>&amp;#175;</td>
+                </tr>
+                <tr>
+                    <td>°</td>
+                    <td>&amp;deg;</td>
+                    <td>&amp;#176;</td>
+                </tr>
+                <tr>
+                    <td>±</td>
+                    <td>&amp;plusmn;</td>
+                    <td>&amp;#177;</td>
+                </tr>
+                <tr>
+                    <td>²</td>
+                    <td>&amp;sup2;</td>
+                    <td>&amp;#178;</td>
+                </tr>
+                <tr>
+                    <td>³</td>
+                    <td>&amp;sup3;</td>
+                    <td>&amp;#179;</td>
+                </tr>
+                <tr>
+                    <td>´</td>
+                    <td>&amp;acute;</td>
+                    <td>&amp;#180;</td>
+                </tr>
+                <tr>
+                    <td>µ</td>
+                    <td>&amp;micro;</td>
+                    <td>&amp;#181;</td>
+                </tr>
+                <tr>
+                    <td>¶</td>
+                    <td>&amp;para;</td>
+                    <td>&amp;#182;</td>
+                </tr>
+                <tr>
+                    <td>·</td>
+                    <td>&amp;middot;</td>
+                    <td>&amp;#183;</td>
+                </tr>
+                <tr>
+                    <td>¸</td>
+                    <td>&amp;cedil;</td>
+                    <td>&amp;#184;</td>
+                </tr>
+                <tr>
+                    <td>¹</td>
+                    <td>&amp;sup1;</td>
+                    <td>&amp;#185;</td>
+                </tr>
+                <tr>
+                    <td>º</td>
+                    <td>&amp;ordm;</td>
+                    <td>&amp;#186;</td>
+                </tr>
+                <tr>
+                    <td>»</td>
+                    <td>&amp;raquo;</td>
+                    <td>&amp;#187;</td>
+                </tr>
+                <tr>
+                    <td>¼</td>
+                    <td>&amp;frac14;</td>
+                    <td>&amp;#188;</td>
+                </tr>
+                <tr>
+                    <td>½</td>
+                    <td>&amp;frac12;</td>
+                    <td>&amp;#189;</td>
+                </tr>
+                <tr>
+                    <td>¾</td>
+                    <td>&amp;frac34;</td>
+                    <td>&amp;#190;</td>
+                </tr>
+                <tr>
+                    <td>¿</td>
+                    <td>&amp;iquest;</td>
+                    <td>&amp;#191;</td>
+                </tr>
+                <tr>
+                    <td>À</td>
+                    <td>&amp;Agrave;</td>
+                    <td>&amp;#192;</td>
+                </tr>
+                <tr>
+                    <td>Á</td>
+                    <td>&amp;Aacute;</td>
+                    <td>&amp;#193;</td>
+                </tr>
+                <tr>
+                    <td>Â</td>
+                    <td>&amp;Acirc;</td>
+                    <td>&amp;#194;</td>
+                </tr>
+                <tr>
+                    <td>Ã</td>
+                    <td>&amp;Atilde;</td>
+                    <td>&amp;#195;</td>
+                </tr>
+                <tr>
+                    <td>Ä</td>
+                    <td>&amp;Auml;</td>
+                    <td>&amp;#196;</td>
+                </tr>
+                <tr>
+                    <td>Å</td>
+                    <td>&amp;Aring;</td>
+                    <td>&amp;#197;</td>
+                </tr>
+                <tr>
+                    <td>Æ</td>
+                    <td>&amp;AElig;</td>
+                    <td>&amp;#198;</td>
+                </tr>
+                <tr>
+                    <td>Ç</td>
+                    <td>&amp;Ccedil;</td>
+                    <td>&amp;#199;</td>
+                </tr>
+                <tr>
+                    <td>È</td>
+                    <td>&amp;Egrave;</td>
+                    <td>&amp;#200;</td>
+                </tr>
+                <tr>
+                    <td>É</td>
+                    <td>&amp;Eacute;</td>
+                    <td>&amp;#201;</td>
+                </tr>
+                <tr>
+                    <td>Ê</td>
+                    <td>&amp;Ecirc;</td>
+                    <td>&amp;#202;</td>
+                </tr>
+                <tr>
+                    <td>Ë</td>
+                    <td>&amp;Euml;</td>
+                    <td>&amp;#203;</td>
+                </tr>
+                <tr>
+                    <td>Ì</td>
+                    <td>&amp;Igrave;</td>
+                    <td>&amp;#204;</td>
+                </tr>
+                <tr>
+                    <td>Í</td>
+                    <td>&amp;Iacute;</td>
+                    <td>&amp;#205;</td>
+                </tr>
+                <tr>
+                    <td>Î</td>
+                    <td>&amp;Icirc;</td>
+                    <td>&amp;#206;</td>
+                </tr>
+                <tr>
+                    <td>Ï</td>
+                    <td>&amp;Iuml;</td>
+                    <td>&amp;#207;</td>
+                </tr>
+                <tr>
+                    <td>Ð</td>
+                    <td>&amp;ETH;</td>
+                    <td>&amp;#208;</td>
+                </tr>
+                <tr>
+                    <td>Ñ</td>
+                    <td>&amp;Ntilde;</td>
+                    <td>&amp;#209;</td>
+                </tr>
+                <tr>
+                    <td>Ò</td>
+                    <td>&amp;Ograve;</td>
+                    <td>&amp;#210;</td>
+                </tr>
+                <tr>
+                    <td>Ó</td>
+                    <td>&amp;Oacute;</td>
+                    <td>&amp;#211;</td>
+                </tr>
+                <tr>
+                    <td>Ô</td>
+                    <td>&amp;Ocirc;</td>
+                    <td>&amp;#212;</td>
+                </tr>
+                <tr>
+                    <td>Õ</td>
+                    <td>&amp;Otilde;</td>
+                    <td>&amp;#213;</td>
+                </tr>
+                <tr>
+                    <td>Ö</td>
+                    <td>&amp;Ouml;</td>
+                    <td>&amp;#214;</td>
+                </tr>
+                <tr>
+                    <td>×</td>
+                    <td>&amp;times;</td>
+                    <td>&amp;#215;</td>
+                </tr>
+                <tr>
+                    <td>Ø</td>
+                    <td>&amp;Oslash;</td>
+                    <td>&amp;#216;</td>
+                </tr>
+                <tr>
+                    <td>Ù</td>
+                    <td>&amp;Ugrave;</td>
+                    <td>&amp;#217;</td>
+                </tr>
+                <tr>
+                    <td>Ú</td>
+                    <td>&amp;Uacute;</td>
+                    <td>&amp;#218;</td>
+                </tr>
+                <tr>
+                    <td>Û</td>
+                    <td>&amp;Ucirc;</td>
+                    <td>&amp;#219;</td>
+                </tr>
+                <tr>
+                    <td>Ü</td>
+                    <td>&amp;Uuml;</td>
+                    <td>&amp;#220;</td>
+                </tr>
+                <tr>
+                    <td>Ý</td>
+                    <td>&amp;Yacute;</td>
+                    <td>&amp;#221;</td>
+                </tr>
+                <tr>
+                    <td>Þ</td>
+                    <td>&amp;THORN;</td>
+                    <td>&amp;#222;</td>
+                </tr>
+                <tr>
+                    <td>ß</td>
+                    <td>&amp;szlig;</td>
+                    <td>&amp;#223;</td>
+                </tr>
+                <tr>
+                    <td>à</td>
+                    <td>&amp;agrave;</td>
+                    <td>&amp;#224;</td>
+                </tr>
+                <tr>
+                    <td>á</td>
+                    <td>&amp;aacute;</td>
+                    <td>&amp;#225;</td>
+                </tr>
+                <tr>
+                    <td>â</td>
+                    <td>&amp;acirc;</td>
+                    <td>&amp;#226;</td>
+                </tr>
+                <tr>
+                    <td>ã</td>
+                    <td>&amp;atilde;</td>
+                    <td>&amp;#227;</td>
+                </tr>
+                <tr>
+                    <td>ä</td>
+                    <td>&amp;auml;</td>
+                    <td>&amp;#228;</td>
+                </tr>
+                <tr>
+                    <td>å</td>
+                    <td>&amp;aring;</td>
+                    <td>&amp;#229;</td>
+                </tr>
+                <tr>
+                    <td>æ</td>
+                    <td>&amp;aelig;</td>
+                    <td>&amp;#230;</td>
+                </tr>
+                <tr>
+                    <td>ç</td>
+                    <td>&amp;ccedil;</td>
+                    <td>&amp;#231;</td>
+                </tr>
+                <tr>
+                    <td>è</td>
+                    <td>&amp;egrave;</td>
+                    <td>&amp;#232;</td>
+                </tr>
+                <tr>
+                    <td>é</td>
+                    <td>&amp;eacute;</td>
+                    <td>&amp;#233;</td>
+                </tr>
+                <tr>
+                    <td>ê</td>
+                    <td>&amp;ecirc;</td>
+                    <td>&amp;#234;</td>
+                </tr>
+                <tr>
+                    <td>ë</td>
+                    <td>&amp;euml;</td>
+                    <td>&amp;#235;</td>
+                </tr>
+                <tr>
+                    <td>ì</td>
+                    <td>&amp;igrave;</td>
+                    <td>&amp;#236;</td>
+                </tr>
+                <tr>
+                    <td>í</td>
+                    <td>&amp;iacute;</td>
+                    <td>&amp;#237;</td>
+                </tr>
+                <tr>
+                    <td>î</td>
+                    <td>&amp;icirc;</td>
+                    <td>&amp;#238;</td>
+                </tr>
+                <tr>
+                    <td>ï</td>
+                    <td>&amp;iuml;</td>
+                    <td>&amp;#239;</td>
+                </tr>
+                <tr>
+                    <td>ð</td>
+                    <td>&amp;eth;</td>
+                    <td>&amp;#240;</td>
+                </tr>
+                <tr>
+                    <td>ñ</td>
+                    <td>&amp;ntilde;</td>
+                    <td>&amp;#241;</td>
+                </tr>
+                <tr>
+                    <td>ò</td>
+                    <td>&amp;ograve;</td>
+                    <td>&amp;#242;</td>
+                </tr>
+                <tr>
+                    <td>ó</td>
+                    <td>&amp;oacute;</td>
+                    <td>&amp;#243;</td>
+                </tr>
+                <tr>
+                    <td>ô</td>
+                    <td>&amp;ocirc;</td>
+                    <td>&amp;#244;</td>
+                </tr>
+                <tr>
+                    <td>õ</td>
+                    <td>&amp;otilde;</td>
+                    <td>&amp;#245;</td>
+                </tr>
+                <tr>
+                    <td>ö</td>
+                    <td>&amp;ouml;</td>
+                    <td>&amp;#246;</td>
+                </tr>
+                <tr>
+                    <td>÷</td>
+                    <td>&amp;divide;</td>
+                    <td>&amp;#247;</td>
+                </tr>
+                <tr>
+                    <td>ø</td>
+                    <td>&amp;oslash;</td>
+                    <td>&amp;#248;</td>
+                </tr>
+                <tr>
+                    <td>ù</td>
+                    <td>&amp;ugrave;</td>
+                    <td>&amp;#249;</td>
+                </tr>
+                <tr>
+                    <td>ú</td>
+                    <td>&amp;uacute;</td>
+                    <td>&amp;#250;</td>
+                </tr>
+                <tr>
+                    <td>û</td>
+                    <td>&amp;ucirc;</td>
+                    <td>&amp;#251;</td>
+                </tr>
+                <tr>
+                    <td>ü</td>
+                    <td>&amp;uuml;</td>
+                    <td>&amp;#252;</td>
+                </tr>
+                <tr>
+                    <td>ý</td>
+                    <td>&amp;yacute;</td>
+                    <td>&amp;#253;</td>
+                </tr>
+                <tr>
+                    <td>þ</td>
+                    <td>&amp;thorn;</td>
+                    <td>&amp;#254;</td>
+                </tr>
+                <tr>
+                    <td>ÿ</td>
+                    <td>&amp;yuml;</td>
+                    <td>&amp;#255;</td>
+                </tr>
+            </tbody>
+        </table></div>
+
+        <h2 class="mod_h3">数学和希腊字母标志 symbols, mathematical symbols, and Greek letters</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14">
+            <thead>
+                <tr>
+                    <th>显示</th>
+                    <th>实体名称</th>
+                    <th>实体编号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ƒ</td>
+                    <td>&amp;fnof;</td>
+                    <td>&amp;#402;</td>
+                </tr>
+                <tr>
+                    <td>Α</td>
+                    <td>&amp;Alpha;</td>
+                    <td>&amp;#913;</td>
+                </tr>
+                <tr>
+                    <td>Β</td>
+                    <td>&amp;Beta;</td>
+                    <td>&amp;#914;</td>
+                </tr>
+                <tr>
+                    <td>Γ</td>
+                    <td>&amp;Gamma;</td>
+                    <td>&amp;#915;</td>
+                </tr>
+                <tr>
+                    <td>Δ</td>
+                    <td>&amp;Delta;</td>
+                    <td>&amp;#916;</td>
+                </tr>
+                <tr>
+                    <td>Ε</td>
+                    <td>&amp;Epsilon;</td>
+                    <td>&amp;#917;</td>
+                </tr>
+                <tr>
+                    <td>Ζ</td>
+                    <td>&amp;Zeta;</td>
+                    <td>&amp;#918;</td>
+                </tr>
+                <tr>
+                    <td>Η</td>
+                    <td>&amp;Eta;</td>
+                    <td>&amp;#919;</td>
+                </tr>
+                <tr>
+                    <td>&Theta;</td>
+                    <td>&amp;Theta;</td>
+                    <td>&amp;#920;</td>
+                </tr>
+                <tr>
+                    <td>Ι</td>
+                    <td>&amp;Iota;</td>
+                    <td>&amp;#921;</td>
+                </tr>
+                <tr>
+                    <td>Κ</td>
+                    <td>&amp;Kappa;</td>
+                    <td>&amp;#922;</td>
+                </tr>
+                <tr>
+                    <td>&Lambda;</td>
+                    <td>&amp;Lambda;</td>
+                    <td>&amp;#923;</td>
+                </tr>
+                <tr>
+                    <td>&Mu;</td>
+                    <td>&amp;Mu;</td>
+                    <td>&amp;#924;</td>
+                </tr>
+                <tr>
+                    <td>&Nu;</td>
+                    <td>&amp;Nu;</td>
+                    <td>&amp;#925;</td>
+                </tr>
+                <tr>
+                    <td>&Xi;</td>
+                    <td>&amp;Xi;</td>
+                    <td>&amp;#926;</td>
+                </tr>
+                <tr>
+                    <td>&Omicron;</td>
+                    <td>&amp;Omicron;</td>
+                    <td>&amp;#927;</td>
+                </tr>
+                <tr>
+                    <td>&Pi;</td>
+                    <td>&amp;Pi;</td>
+                    <td>&amp;#928;</td>
+                </tr>
+                <tr>
+                    <td>&Rho;</td>
+                    <td>&amp;Rho;</td>
+                    <td>&amp;#929;</td>
+                </tr>
+                <tr>
+                    <td>&Sigma;</td>
+                    <td>&amp;Sigma;</td>
+                    <td>&amp;#931;</td>
+                </tr>
+                <tr>
+                    <td>Τ</td>
+                    <td>&amp;Tau;</td>
+                    <td>&amp;#932;</td>
+                </tr>
+                <tr>
+                    <td>Υ</td>
+                    <td>&amp;Upsilon;</td>
+                    <td>&amp;#933;</td>
+                </tr>
+                <tr>
+                    <td>Φ</td>
+                    <td>&amp;Phi;</td>
+                    <td>&amp;#934;</td>
+                </tr>
+                <tr>
+                    <td>Χ</td>
+                    <td>&amp;Chi;</td>
+                    <td>&amp;#935;</td>
+                </tr>
+                <tr>
+                    <td>Ψ</td>
+                    <td>&amp;Psi;</td>
+                    <td>&amp;#936;</td>
+                </tr>
+                <tr>
+                    <td>Ω</td>
+                    <td>&amp;Omega;</td>
+                    <td>&amp;#937;</td>
+                </tr>
+                <tr>
+                    <td>α</td>
+                    <td>&amp;alpha;</td>
+                    <td>&amp;#945;</td>
+                </tr>
+                <tr>
+                    <td>β</td>
+                    <td>&amp;beta;</td>
+                    <td>&amp;#946;</td>
+                </tr>
+                <tr>
+                    <td>γ</td>
+                    <td>&amp;gamma;</td>
+                    <td>&amp;#947;</td>
+                </tr>
+                <tr>
+                    <td>δ</td>
+                    <td>&amp;delta;</td>
+                    <td>&amp;#948;</td>
+                </tr>
+                <tr>
+                    <td>ε</td>
+                    <td>&amp;epsilon;</td>
+                    <td>&amp;#949;</td>
+                </tr>
+                <tr>
+                    <td>ζ</td>
+                    <td>&amp;zeta;</td>
+                    <td>&amp;#950;</td>
+                </tr>
+                <tr>
+                    <td>η</td>
+                    <td>&amp;eta;</td>
+                    <td>&amp;#951;</td>
+                </tr>
+                <tr>
+                    <td>θ</td>
+                    <td>&amp;theta;</td>
+                    <td>&amp;#952;</td>
+                </tr>
+                <tr>
+                    <td>ι</td>
+                    <td>&amp;iota;</td>
+                    <td>&amp;#953;</td>
+                </tr>
+                <tr>
+                    <td>κ</td>
+                    <td>&amp;kappa;</td>
+                    <td>&amp;#954;</td>
+                </tr>
+                <tr>
+                    <td>λ</td>
+                    <td>&amp;lambda;</td>
+                    <td>&amp;#955;</td>
+                </tr>
+                <tr>
+                    <td>μ</td>
+                    <td>&amp;mu;</td>
+                    <td>&amp;#956;</td>
+                </tr>
+                <tr>
+                    <td>ν</td>
+                    <td>&amp;nu;</td>
+                    <td>&amp;#957;</td>
+                </tr>
+                <tr>
+                    <td>ξ</td>
+                    <td>&amp;xi;</td>
+                    <td>&amp;#958;</td>
+                </tr>
+                <tr>
+                    <td>ο</td>
+                    <td>&amp;omicron;</td>
+                    <td>&amp;#959;</td>
+                </tr>
+                <tr>
+                    <td>π</td>
+                    <td>&amp;pi;</td>
+                    <td>&amp;#960;</td>
+                </tr>
+                <tr>
+                    <td>ρ</td>
+                    <td>&amp;rho;</td>
+                    <td>&amp;#961;</td>
+                </tr>
+                <tr>
+                    <td>ς</td>
+                    <td>&amp;sigmaf;</td>
+                    <td>&amp;#962;</td>
+                </tr>
+                <tr>
+                    <td>σ</td>
+                    <td>&amp;sigma;</td>
+                    <td>&amp;#963;</td>
+                </tr>
+                <tr>
+                    <td>τ</td>
+                    <td>&amp;tau;</td>
+                    <td>&amp;#964;</td>
+                </tr>
+                <tr>
+                    <td>υ</td>
+                    <td>&amp;upsilon;</td>
+                    <td>&amp;#965;</td>
+                </tr>
+                <tr>
+                    <td>φ</td>
+                    <td>&amp;phi;</td>
+                    <td>&amp;#966;</td>
+                </tr>
+                <tr>
+                    <td>χ</td>
+                    <td>&amp;chi;</td>
+                    <td>&amp;#967;</td>
+                </tr>
+                <tr>
+                    <td>ψ</td>
+                    <td>&amp;psi;</td>
+                    <td>&amp;#968;</td>
+                </tr>
+                <tr>
+                    <td>ω</td>
+                    <td>&amp;omega;</td>
+                    <td>&amp;#969;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;thetasym;</td>
+                    <td>&amp;#977;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;upsih;</td>
+                    <td>&amp;#978;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;piv;</td>
+                    <td>&amp;#982;</td>
+                </tr>
+                <tr>
+                    <td>•</td>
+                    <td>&amp;bull;</td>
+                    <td>&amp;#8226;</td>
+                </tr>
+                <tr>
+                    <td>…</td>
+                    <td>&amp;hellip;</td>
+                    <td>&amp;#8230;</td>
+                </tr>
+                <tr>
+                    <td>′</td>
+                    <td>&amp;prime;</td>
+                    <td>&amp;#8242;</td>
+                </tr>
+                <tr>
+                    <td>″</td>
+                    <td>&amp;Prime;</td>
+                    <td>&amp;#8243;</td>
+                </tr>
+                <tr>
+                    <td>‾</td>
+                    <td>&amp;oline;</td>
+                    <td>&amp;#8254;</td>
+                </tr>
+                <tr>
+                    <td>⁄</td>
+                    <td>&amp;frasl;</td>
+                    <td>&amp;#8260;</td>
+                </tr>
+                <tr>
+                    <td>&weierp;</td>
+                    <td>&amp;weierp;</td>
+                    <td>&amp;#8472;</td>
+                </tr>
+                <tr>
+                    <td>&image;</td>
+                    <td>&amp;image;</td>
+                    <td>&amp;#8465;</td>
+                </tr>
+                <tr>
+                    <td>&real;</td>
+                    <td>&amp;real;</td>
+                    <td>&amp;#8476;</td>
+                </tr>
+                <tr>
+                    <td>&trade;</td>
+                    <td>&amp;trade;</td>
+                    <td>&amp;#8482;</td>
+                </tr>
+                <tr>
+                    <td>&alefsym;</td>
+                    <td>&amp;alefsym;</td>
+                    <td>&amp;#8501;</td>
+                </tr>
+                <tr>
+                    <td>←</td>
+                    <td>&amp;larr;</td>
+                    <td>&amp;#8592;</td>
+                </tr>
+                <tr>
+                    <td>↑</td>
+                    <td>&amp;uarr;</td>
+                    <td>&amp;#8593;</td>
+                </tr>
+                <tr>
+                    <td>→</td>
+                    <td>&amp;rarr;</td>
+                    <td>&amp;#8594;</td>
+                </tr>
+                <tr>
+                    <td>↓</td>
+                    <td>&amp;darr;</td>
+                    <td>&amp;#8595;</td>
+                </tr>
+                <tr>
+                    <td>↔</td>
+                    <td>&amp;harr;</td>
+                    <td>&amp;#8596;</td>
+                </tr>
+                <tr>
+                    <td>&crarr;</td>
+                    <td>&amp;crarr;</td>
+                    <td>&amp;#8629;</td>
+                </tr>
+                <tr>
+                    <td>&lArr;</td>
+                    <td>&amp;lArr;</td>
+                    <td>&amp;#8656;</td>
+                </tr>
+                <tr>
+                    <td>&uArr;</td>
+                    <td>&amp;uArr;</td>
+                    <td>&amp;#8657;</td>
+                </tr>
+                <tr>
+                    <td>&rArr;</td>
+                    <td>&amp;rArr;</td>
+                    <td>&amp;#8658;</td>
+                </tr>
+                <tr>
+                    <td>&dArr;</td>
+                    <td>&amp;dArr;</td>
+                    <td>&amp;#8659;</td>
+                </tr>
+                <tr>
+                    <td>&hArr;</td>
+                    <td>&amp;hArr;</td>
+                    <td>&amp;#8660;</td>
+                </tr>
+                <tr>
+                    <td>&forall;</td>
+                    <td>&amp;forall;</td>
+                    <td>&amp;#8704;</td>
+                </tr>
+                <tr>
+                    <td>∂</td>
+                    <td>&amp;part;</td>
+                    <td>&amp;#8706;</td>
+                </tr>
+                <tr>
+                    <td>&exist;</td>
+                    <td>&amp;exist;</td>
+                    <td>&amp;#8707;</td>
+                </tr>
+                <tr>
+                    <td>&empty;</td>
+                    <td>&amp;empty;</td>
+                    <td>&amp;#8709;</td>
+                </tr>
+                <tr>
+                    <td>&nabla;</td>
+                    <td>&amp;nabla;</td>
+                    <td>&amp;#8711;</td>
+                </tr>
+                <tr>
+                    <td>&isin;</td>
+                    <td>&amp;isin;</td>
+                    <td>&amp;#8712;</td>
+                </tr>
+                <tr>
+                    <td>&notin;</td>
+                    <td>&amp;notin;</td>
+                    <td>&amp;#8713;</td>
+                </tr>
+                <tr>
+                    <td>&ni;</td>
+                    <td>&amp;ni;</td>
+                    <td>&amp;#8715;</td>
+                </tr>
+                <tr>
+                    <td>∏</td>
+                    <td>&amp;prod;</td>
+                    <td>&amp;#8719;</td>
+                </tr>
+                <tr>
+                    <td>∑</td>
+                    <td>&amp;sum;</td>
+                    <td>&amp;#8721;</td>
+                </tr>
+                <tr>
+                    <td>−</td>
+                    <td>&amp;minus;</td>
+                    <td>&amp;#8722;</td>
+                </tr>
+                <tr>
+                    <td>&lowast;</td>
+                    <td>&amp;lowast;</td>
+                    <td>&amp;#8727;</td>
+                </tr>
+                <tr>
+                    <td>√</td>
+                    <td>&amp;radic;</td>
+                    <td>&amp;#8730;</td>
+                </tr>
+                <tr>
+                    <td>∝</td>
+                    <td>&amp;prop;</td>
+                    <td>&amp;#8733;</td>
+                </tr>
+                <tr>
+                    <td>∞</td>
+                    <td>&amp;infin;</td>
+                    <td>&amp;#8734;</td>
+                </tr>
+                <tr>
+                    <td>∠</td>
+                    <td>&amp;ang;</td>
+                    <td>&amp;#8736;</td>
+                </tr>
+                <tr>
+                    <td>∧</td>
+                    <td>&amp;and;</td>
+                    <td>&amp;#8743;</td>
+                </tr>
+                <tr>
+                    <td>∨</td>
+                    <td>&amp;or;</td>
+                    <td>&amp;#8744;</td>
+                </tr>
+                <tr>
+                    <td>∩</td>
+                    <td>&amp;cap;</td>
+                    <td>&amp;#8745;</td>
+                </tr>
+                <tr>
+                    <td>∪</td>
+                    <td>&amp;cup;</td>
+                    <td>&amp;#8746;</td>
+                </tr>
+                <tr>
+                    <td>∫</td>
+                    <td>&amp;int;</td>
+                    <td>&amp;#8747;</td>
+                </tr>
+                <tr>
+                    <td>∴</td>
+                    <td>&amp;there4;</td>
+                    <td>&amp;#8756;</td>
+                </tr>
+                <tr>
+                    <td>∼</td>
+                    <td>&amp;sim;</td>
+                    <td>&amp;#8764;</td>
+                </tr>
+                <tr>
+                    <td>∝</td>
+                    <td>&amp;cong;</td>
+                    <td>&amp;#8773;</td>
+                </tr>
+                <tr>
+                    <td>≈</td>
+                    <td>&amp;asymp;</td>
+                    <td>&amp;#8776;</td>
+                </tr>
+                <tr>
+                    <td>≠</td>
+                    <td>&amp;ne;</td>
+                    <td>&amp;#8800;</td>
+                </tr>
+                <tr>
+                    <td>≡</td>
+                    <td>&amp;equiv;</td>
+                    <td>&amp;#8801;</td>
+                </tr>
+                <tr>
+                    <td>≤</td>
+                    <td>&amp;le;</td>
+                    <td>&amp;#8804;</td>
+                </tr>
+                <tr>
+                    <td>≥</td>
+                    <td>&amp;ge;</td>
+                    <td>&amp;#8805;</td>
+                </tr>
+                <tr>
+                    <td>&sub;</td>
+                    <td>&amp;sub;</td>
+                    <td>&amp;#8834;</td>
+                </tr>
+                <tr>
+                    <td>&sup;</td>
+                    <td>&amp;sup;</td>
+                    <td>&amp;#8835;</td>
+                </tr>
+                <tr>
+                    <td>&nsub;</td>
+                    <td>&amp;nsub;</td>
+                    <td>&amp;#8836;</td>
+                </tr>
+                <tr>
+                    <td>&sube;</td>
+                    <td>&amp;sube;</td>
+                    <td>&amp;#8838;</td>
+                </tr>
+                <tr>
+                    <td>&supe;</td>
+                    <td>&amp;supe;</td>
+                    <td>&amp;#8839;</td>
+                </tr>
+                <tr>
+                    <td>⊕</td>
+                    <td>&amp;oplus;</td>
+                    <td>&amp;#8853;</td>
+                </tr>
+                <tr>
+                    <td>&otime;</td>
+                    <td>&amp;otimes;</td>
+                    <td>&amp;#8855;</td>
+                </tr>
+                <tr>
+                    <td>⊥</td>
+                    <td>&amp;perp;</td>
+                    <td>&amp;#8869;</td>
+                </tr>
+                <tr>
+                    <td>&sdot;</td>
+                    <td>&amp;sdot;</td>
+                    <td>&amp;#8901;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;lceil;</td>
+                    <td>&amp;#8968;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;rceil;</td>
+                    <td>&amp;#8969;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;lfloor;</td>
+                    <td>&amp;#8970;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;rfloor;</td>
+                    <td>&amp;#8971;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;lang;</td>
+                    <td>&amp;#9001;</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>&amp;rang;</td>
+                    <td>&amp;#9002;</td>
+                </tr>
+                <tr>
+                    <td>◊</td>
+                    <td>&amp;loz;</td>
+                    <td>&amp;#9674;</td>
+                </tr>
+                <tr>
+                    <td>♠</td>
+                    <td>&amp;spades;</td>
+                    <td>&amp;#9824;</td>
+                </tr>
+                <tr>
+                    <td>♣</td>
+                    <td>&amp;clubs;</td>
+                    <td>&amp;#9827;</td>
+                </tr>
+                <tr>
+                    <td>♥</td>
+                    <td>&amp;hearts;</td>
+                    <td>&amp;#9829;</td>
+                </tr>
+                <tr>
+                    <td>♦</td>
+                    <td>&amp;diams;</td>
+                    <td>&amp;#9830;</td>
+                </tr>
+            </tbody>
+        </table></div>
+
+        <h2 class="mod_h3">重要的国际标记 markup-significant and internationalization characters</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_14">
+            <thead>
+                <tr>
+                    <th>显示</th>
+                    <th>实体名称</th>
+                    <th>实体编号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"</td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;#34;</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;#38;</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;#60;</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;#62;</td>
+                </tr>
+                <tr>
+                    <td>Œ</td>
+                    <td>&amp;OElig;</td>
+                    <td>&amp;#338;</td>
+                </tr>
+                <tr>
+                    <td>œ</td>
+                    <td>&amp;oelig;</td>
+                    <td>&amp;#339;</td>
+                </tr>
+                <tr>
+                    <td>Š</td>
+                    <td>&amp;Scaron;</td>
+                    <td>&amp;#352;</td>
+                </tr>
+                <tr>
+                    <td>š</td>
+                    <td>&amp;scaron;</td>
+                    <td>&amp;#353;</td>
+                </tr>
+                <tr>
+                    <td>Ÿ</td>
+                    <td>&amp;Yuml;</td>
+                    <td>&amp;#376;</td>
+                </tr>
+                <tr>
+                    <td>ˆ</td>
+                    <td>&amp;circ;</td>
+                    <td>&amp;#710;</td>
+                </tr>
+                <tr>
+                    <td>˜</td>
+                    <td>&amp;tilde;</td>
+                    <td>&amp;#732;</td>
+                </tr>
+                <tr>
+                    <td>&ensp;</td>
+                    <td>&amp;ensp;</td>
+                    <td>&amp;#8194;</td>
+                </tr>
+                <tr>
+                    <td>&emsp;</td>
+                    <td>&amp;emsp;</td>
+                    <td>&amp;#8195;</td>
+                </tr>
+                <tr>
+                    <td>&thinsp;</td>
+                    <td>&amp;thinsp;</td>
+                    <td>&amp;#8201;</td>
+                </tr>
+                <tr>
+                    <td>‌&zwnj;</td>
+                    <td>&amp;zwnj;</td>
+                    <td>&amp;#8204;</td>
+                </tr>
+                <tr>
+                    <td>‍&zwj;</td>
+                    <td>&amp;zwj;</td>
+                    <td>&amp;#8205;</td>
+                </tr>
+                <tr>
+                    <td>‎&lrm;</td>
+                    <td>&amp;lrm;</td>
+                    <td>&amp;#8206;</td>
+                </tr>
+                <tr>
+                    <td>&rlm;</td>
+                    <td>&amp;rlm;</td>
+                    <td>&amp;#8207;</td>
+                </tr>
+                <tr>
+                    <td>–</td>
+                    <td>&amp;ndash;</td>
+                    <td>&amp;#8211;</td>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>&amp;mdash;</td>
+                    <td>&amp;#8212;</td>
+                </tr>
+                <tr>
+                    <td>‘</td>
+                    <td>&amp;lsquo;</td>
+                    <td>&amp;#8216;</td>
+                </tr>
+                <tr>
+                    <td>’</td>
+                    <td>&amp;rsquo;</td>
+                    <td>&amp;#8217;</td>
+                </tr>
+                <tr>
+                    <td>‚</td>
+                    <td>&amp;sbquo;</td>
+                    <td>&amp;#8218;</td>
+                </tr>
+                <tr>
+                    <td>“</td>
+                    <td>&amp;ldquo;</td>
+                    <td>&amp;#8220;</td>
+                </tr>
+                <tr>
+                    <td>”</td>
+                    <td>&amp;rdquo;</td>
+                    <td>&amp;#8221;</td>
+                </tr>
+                <tr>
+                    <td>„</td>
+                    <td>&amp;bdquo;</td>
+                    <td>&amp;#8222;</td>
+                </tr>
+                <tr>
+                    <td>†</td>
+                    <td>&amp;dagger;</td>
+                    <td>&amp;#8224;</td>
+                </tr>
+                <tr>
+                    <td>‡</td>
+                    <td>&amp;Dagger;</td>
+                    <td>&amp;#8225;</td>
+                </tr>
+                <tr>
+                    <td>‰</td>
+                    <td>&amp;permil;</td>
+                    <td>&amp;#8240;</td>
+                </tr>
+                <tr>
+                    <td>‹</td>
+                    <td>&amp;lsaquo;</td>
+                    <td>&amp;#8249;</td>
+                </tr>
+                <tr>
+                    <td>›</td>
+                    <td>&amp;rsaquo;</td>
+                    <td>&amp;#8250;</td>
+                </tr>
+                <tr>
+                    <td>€</td>
+                    <td>&amp;euro;</td>
+                    <td>&amp;#8364;</td>
+                </tr>
+            </tbody>
+        </table></div>
+        
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="https://dev.w3.org/html5/html-author/charref">Character Entity Reference Chart</a></li>
+                        <li><a href="http://www.freeformatter.com/html-entities.html">HTML Entity List</a></li>
+                        <li><a href="http://www.htmlhelp.com/reference/html40/entities/">HTML4.0 Entities</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div> 
+
+        <!--
+        =================== base -->
+
+        <!-- 布局 -->
+        <div id="a_layout" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">布局 Instant Layout</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <blockquote class="mod_blockquote">
+            运营页面等临时布局可以尽量用下面的样式拼装页面，节省书写 CSS 代码。
+        </blockquote>
+
+        <h2 class="mod_h3">浮动 float</h2>
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <div class="left dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">left</div>
+                    
+                </td>
+                <td>
+
+                    <div class="right dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">right</div>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        <pre class="highlight">
+            // 左浮动
+            &lt;div class="left"&gt;&lt;/div&gt;
+
+            // 右浮动
+            &lt;div class="right"&gt;&lt;/div&gt;
+
+            // 清除浮动
+            &lt;div class="clearfix"&gt;&lt;/div&gt;
+        </pre>
+
+        <h2 class="mod_h3">显示状态 display, visibility</h2>
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <div class="dis_b" style=" height:60px; line-height:60px; background:#999; font-size:1rem">dis_b</div>
+                    
+                </td>
+                <td>
+
+                    <div class="dis_inb" style=" line-height:60px; background:#999; font-size:1rem">dis_inb</div>
+                    
+                </td>
+                <td>
+
+                    <div class="dis_in" style=" line-height:60px; background:#999; font-size:1rem">dis_in</div>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        <pre class="highlight">
+            // display:block
+            &lt;div class="dis_b"&gt;&lt;/div&gt;
+
+            // display:inline
+            &lt;div class="dis_in"&gt;&lt;/div&gt;
+
+            // display:inline-block
+            &lt;div class="dis_inb"&gt;&lt;/div&gt;
+
+            // visibility: visible
+            &lt;div class="vis_on"&gt;&lt;/div&gt;
+
+            // visibility: hidden
+            &lt;div class="vis_off"&gt;&lt;/div&gt;
+        </pre>
+
+        <h2 class="mod_h3">内边距 padding</h2>
+
+        <pre class="highlight">
+            // padding-top:5px / padding-right:5px / padding-bottom:5px / padding-left:5px /
+            &lt;div class="pt5"&gt;&lt;/div&gt;
+            &lt;div class="pr5"&gt;&lt;/div&gt;
+            &lt;div class="pb5"&gt;&lt;/div&gt;
+            &lt;div class="pl5"&gt;&lt;/div&gt;
+
+            // padding-top:10px / padding-right:10px / padding-bottom:10px / padding-left:10px /
+            &lt;div class="pt10"&gt;&lt;/div&gt;
+            &lt;div class="pr10"&gt;&lt;/div&gt;
+            &lt;div class="pb10"&gt;&lt;/div&gt;
+            &lt;div class="pl10"&gt;&lt;/div&gt;
+
+            // padding-top:15px / padding-right:15px / padding-bottom:15px / padding-left:15px /
+            &lt;div class="pt15"&gt;&lt;/div&gt;
+            &lt;div class="pr15"&gt;&lt;/div&gt;
+            &lt;div class="pb15"&gt;&lt;/div&gt;
+            &lt;div class="pl15"&gt;&lt;/div&gt;
+
+            // padding-top:20px / padding-right:20px / padding-bottom:20px / padding-left:20px /
+            &lt;div class="pt20"&gt;&lt;/div&gt;
+            &lt;div class="pr20"&gt;&lt;/div&gt;
+            &lt;div class="pb20"&gt;&lt;/div&gt;
+            &lt;div class="pl20"&gt;&lt;/div&gt;
+
+            // padding-top:0 / padding-right:0 / padding-bottom:0 / padding-left:0 /
+            &lt;div class="pt0"&gt;&lt;/div&gt;
+            &lt;div class="pr0"&gt;&lt;/div&gt;
+            &lt;div class="pb0"&gt;&lt;/div&gt;
+            &lt;div class="pl0"&gt;&lt;/div&gt;
+        </pre>
+
+        <h2 class="mod_h3">外边距 margin</h2>
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <div class="left dis_b ml5" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">ml5</div>
+                    <div class="left dis_b ml10" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">ml10</div>
+                    <div class="left dis_b ml15" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">ml15</div>
+                    <div class="left dis_b ml20" style="width:60px; height:60px; line-height:60px; background:#999; font-size:1rem">ml20</div>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        <pre class="highlight">
+            // margin-top:5px / margin-right:5px / margin-bottom:5px / margin-left:5px /
+            &lt;div class="mt5"&gt;&lt;/div&gt;
+            &lt;div class="mr5"&gt;&lt;/div&gt;
+            &lt;div class="mb5"&gt;&lt;/div&gt;
+            &lt;div class="ml5"&gt;&lt;/div&gt;
+
+            // margin-top:10px / margin-right:10px / margin-bottom:10px / margin-left:10px /
+            &lt;div class="mt10"&gt;&lt;/div&gt;
+            &lt;div class="mr10"&gt;&lt;/div&gt;
+            &lt;div class="mb10"&gt;&lt;/div&gt;
+            &lt;div class="ml10"&gt;&lt;/div&gt;
+
+            // margin-top:15px / margin-right:15px / margin-bottom:15px / margin-left:15px /
+            &lt;div class="mt15"&gt;&lt;/div&gt;
+            &lt;div class="mr15"&gt;&lt;/div&gt;
+            &lt;div class="mb15"&gt;&lt;/div&gt;
+            &lt;div class="ml15"&gt;&lt;/div&gt;
+
+            // margin-top:20px / margin-right:20px / margin-bottom:20px / margin-left:20px /
+            &lt;div class="mt20"&gt;&lt;/div&gt;
+            &lt;div class="mr20"&gt;&lt;/div&gt;
+            &lt;div class="mb20"&gt;&lt;/div&gt;
+            &lt;div class="ml20"&gt;&lt;/div&gt;
+
+            // margin-top:0 / margin-right:0 / margin-bottom:0 / margin-left:0 /
+            &lt;div class="mt0"&gt;&lt;/div&gt;
+            &lt;div class="mr0"&gt;&lt;/div&gt;
+            &lt;div class="mb0"&gt;&lt;/div&gt;
+            &lt;div class="ml0"&gt;&lt;/div&gt;
+        </pre>
+
+        <h2 class="mod_h3">垂直对齐方式 vertical-align</h2>
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <div class="vt_t dis_inb" style="width:30px; height:30px; line-height:30px; background:#999; font-size:1rem">d</div>
+
+                    <div class="vt_t dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:2rem">o</div>
+
+                    <div class="vt_t dis_inb" style="width:90px; height:90px; line-height:90px; background:#999; font-size:3rem">g</div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <div class="vt_m dis_inb" style="width:30px; height:30px; line-height:30px; background:#999; font-size:1rem">d</div>
+
+                    <div class="vt_m dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:2rem">o</div>
+
+                    <div class="vt_m dis_inb" style="width:90px; height:90px; line-height:90px; background:#999; font-size:3rem">g</div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <div class="vt_b dis_inb" style="width:30px; height:30px; line-height:30px; background:#999; font-size:1rem">d</div>
+
+                    <div class="vt_b dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:2rem">o</div>
+
+                    <div class="vt_b dis_inb" style="width:90px; height:90px; line-height:90px; background:#999; font-size:3rem">g</div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <div class="vt_bl dis_inb" style="width:30px; height:30px; line-height:30px; background:#999; font-size:1rem">d</div>
+
+                    <div class="vt_bl dis_inb" style="width:60px; height:60px; line-height:60px; background:#999; font-size:2rem">o</div>
+
+                    <div class="vt_bl dis_inb" style="width:90px; height:90px; line-height:90px; background:#999; font-size:3rem">g</div>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        <pre class="highlight">
+            // 顶部对齐 vertical-align:top
+            &lt;div class="vt_t"&gt;&lt;/div&gt;
+
+            // 居中对齐 vertical-align:middle
+            &lt;div class="vt_m"&gt;&lt;/div&gt;
+
+            // 底部对齐 vertical-align:bottom
+            &lt;div class="vt_b"&gt;&lt;/div&gt;
+
+            // 基线对齐 vertical-align:baseline
+            &lt;div class="vt_bl"&gt;&lt;/div&gt;
+        </pre>
+
+    </div>
+
+</div> 
+
+        <!-- 文字 -->
+        <div id="a_text" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">文字 Font & Text</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">字体 font-family</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>移动端中文采用默认系统字体，一般不需要专门定义。如iOS下渲染为 PingFang SC 或 Heiti SC，Android下渲染为 Droidsansfallback，小米系统下渲染为 Lantinghei SC 等。</p>
+            <p>如必须使用特殊字体，可视具体情况使用 <a href="http://10.10.34.71/webfont/">WebFont</a> 工具压缩字体文件，或使用图片代替。</p>
+        </blockquote>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+        <div class="gl_table">
+            <table class="gl_tb">
+                <tbody>
+                    <tr>
+                        <td class="f_code"><span class="tx_song">宋体 Simsun</span></td>
+                    </tr>
+                    <tr>
+                        <td class="f_code"><span class="tx_yh">微软雅黑 Microsoft Yahei</span></td>
+                    </tr>
+                    <tr>
+                        <td class="f_code"><span class="tx_pingfangsc">苹方 PingFang SC</span></td>
+                    </tr>
+                    <tr>
+                        <td class="f_code"><span class="tx_ar">Helvetica, Arial, sans-serif</span></td>
+                    </tr>
+                    <tr>
+                        <td class="f_code"><span class="tx_code">Courier New</span></td>
+                    </tr>
+                    <tr>
+                        <td class="f_code"><span class="tx_ss">sans-serif</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">字号 font-size</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>Desktop's Chrome 支持最小字号为 12px（即设计字号24px）</p>
+            <p>10px - 30px 范围内，每个字号都有对应的类名，如 .tx_11, .tx_13 等</p>
+        </blockquote>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+        <div class="gl_table">
+            <table class="gl_tb">
+                <thead>
+                    <tr>
+                        <th><span class="tx_nbr"><span>字样</span></span></th>
+                        <th>字号 / 设计字号</th>
+                        <th>命名规范 / 类名</th>
+                        <th>应用说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_10">字样</span></span></td>
+                        <td>10px / 20px</td>
+                        <td>FontSizeSmall_s / .tx_10</td>
+                        <td>弱提示 / 引导文字，标签 / 角标文字</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_12">字样</span></span></td>
+                        <td>12px / 24px</td>
+                        <td>FontSizeSmall / .tx_12</td>
+                        <td>摘要，次要信息，辅助信息，titlebar取消操作</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_14">字样</span></span></td>
+                        <td>14px / 28px</td>
+                        <td>FontSizeMedium / .tx_14</td>
+                        <td>用于大多数文字：子标题，一级导航，正文摘要／内容，结构化摘要</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_16">字样</span></span></td>
+                        <td>16px / 32px</td>
+                        <td>FontSizeLarge / .tx_16</td>
+                        <td>页面title</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_19">字样</span></span></td>
+                        <td>19px / 38px</td>
+                        <td>FontSizeLarge_x / .tx_19</td>
+                        <td>弹层title，全局titlebar</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_21">字样</span></span></td>
+                        <td>21px / 42px</td>
+                        <td>FontSizeLarge_xx / .tx_21</td>
+                        <td>特殊文字</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_26">字样</span></span></td>
+                        <td>26px / 52px</td>
+                        <td>FontSizeLarge_xxx / .tx_26</td>
+                        <td>特殊文字</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_34">字样</span></span></td>
+                        <td>34px / 68px</td>
+                        <td>FontSizeLarge_xxxx / .tx_34</td>
+                        <td>特殊文字</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tx_nbr f_code"><span class="tx_49">字样</span></span></td>
+                        <td>49px / 98px</td>
+                        <td>FontSizeLarge_xxxxx / .tx_49</td>
+                        <td>特殊文字</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">字重 font-weight</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <ol>
+                        <li class="f_code"><span class="tx_b">加粗</span></li>
+                        <li class="f_code"><span class="tx_n">正常</span></li>
+                    </ol>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">字体样式 text-decoration</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <ol>
+                        <li class="f_code"><span class="tx_udl">下划线</span></li>
+                        <li class="f_code"><span class="tx_del">删除线</span></li>
+                    </ol>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">文字对齐 text-align</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td>
+
+                    <ol>
+                        <li class="f_code"><div class="tx_l">左对齐</div></li>
+                        <li class="f_code"><div class="tx_l">居中对齐</div></li>
+                        <li class="f_code"><div class="tx_l">右对齐</div></li>
+                    </ol>
+                    
+                </td>
+            </tr>
+        </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">换行 break</h2>
+
+        <pre class="highlight">
+            // 强制换行，等于word-wrap:break-word + word-break:break-all
+            &lt;div class="tx_br"&gt;&lt;/div&gt;
+
+            // 强制不换行，溢出文字以省略号处理，等于 white-space:nowrap + overflow:hidden + text-overflow:ellipsis
+            &lt;div class="tx_nbr"&gt;&lt;/div&gt;
+        </pre>
+        
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://10.10.34.71/webfont/">WebFont 工具，可按需压缩中文字体，负责人李健</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div> 
+
+        <!-- 按钮 -->
+        <div id="a_btn" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">按钮 Btn</h2>
+    </div>
+
+    <div class="mod_bd">
+
+	    <h2 class="mod_h3">.btn1 （面性大按钮）</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+			<div class="gl_table"><table class="gl_tb">
+				<tr>
+					<td>
+						<div class="f_code">
+							<!-- a标签 -->
+							<span class="btn btn1"><a href="javascript:;">Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- input标签 -->
+							<span class="btn btn1"><input type="button" value="Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- button标签 -->
+							<span class="btn btn1"><button>Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- span标签 -->
+							<span class="btn btn1"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- inline-block方式 -->
+							<span class="btn btn1 e_btn_inb"><a href="javascript:;">Anchor</a></span>
+							<span class="btn btn1 e_btn_inb"><input type="button" value="Input" /></span>
+							<span class="btn btn1 e_btn_inb"><button>Button</button></span>
+							<span class="btn btn1 e_btn_inb"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, a标签 -->
+							<span class="btn btn1"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, input标签 -->
+							<span class="btn btn1"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, button标签 -->
+							<span class="btn btn1"><button disabled="disabled">Disabled, Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, span标签 -->
+							<span class="btn btn1"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, inline-block方式 -->
+							<span class="btn btn1 e_btn_inb"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+							<span class="btn btn1 e_btn_inb"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+							<span class="btn btn1 e_btn_inb"><button disabled="disabled">Disabled, Button</button></span>
+							<span class="btn btn1 e_btn_inb"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+					</td>
+				</tr>
+			</table></div>
+			
+		</div>
+		</div>
+
+	    <h2 class="mod_h3">.btn2 （线框大按钮）</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+			<div class="gl_table"><table class="gl_tb">
+				<tr>
+					<td>
+						<div class="f_code">
+						    <span class="btn btn2"><a href="javascript:;">Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn2"><input type="button" value="Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn2"><button>Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn2"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn2 e_btn_inb"><a href="javascript:;">Anchor</a></span>
+						    <span class="btn btn2 e_btn_inb"><input type="button" value="Input" /></span>
+						    <span class="btn btn2 e_btn_inb"><button>Button</button></span>
+						    <span class="btn btn2 e_btn_inb"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, a标签 -->
+							<span class="btn btn2"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, input标签 -->
+							<span class="btn btn2"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, button标签 -->
+							<span class="btn btn2"><button disabled="disabled">Disabled, Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, span标签 -->
+							<span class="btn btn2"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, inline-block方式 -->
+							<span class="btn btn2 e_btn_inb"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+							<span class="btn btn2 e_btn_inb"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+							<span class="btn btn2 e_btn_inb"><button disabled="disabled">Disabled, Button</button></span>
+							<span class="btn btn2 e_btn_inb"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+					</td>
+				</tr>
+			</table></div>
+			
+		</div>
+		</div>
+
+	    <h2 class="mod_h3">.btn3 （线框大按钮）</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+			<div class="gl_table"><table class="gl_tb">
+				<tr>
+					<td>
+						<div class="f_code">
+						    <span class="btn btn3"><a href="javascript:;">Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn3"><input type="button" value="Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn3"><button>Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn3"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+						    <span class="btn btn3 e_btn_inb"><a href="javascript:;">Anchor</a></span>
+						    <span class="btn btn3 e_btn_inb"><input type="button" value="Input" /></span>
+						    <span class="btn btn3 e_btn_inb"><button>Button</button></span>
+						    <span class="btn btn3 e_btn_inb"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, a标签 -->
+							<span class="btn btn3"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, input标签 -->
+							<span class="btn btn3"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, button标签 -->
+							<span class="btn btn3"><button disabled="disabled">Disabled, Button</button></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, span标签 -->
+							<span class="btn btn3"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, inline-block方式 -->
+							<span class="btn btn3 e_btn_inb"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+							<span class="btn btn3 e_btn_inb"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+							<span class="btn btn3 e_btn_inb"><button disabled="disabled">Disabled, Button</button></span>
+							<span class="btn btn3 e_btn_inb"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+					</td>
+				</tr>
+			</table></div>
+			
+		</div>
+		</div>
+
+	    <h2 class="mod_h3">.btn1m （面性中按钮）</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+			<div class="gl_table"><table class="gl_tb">
+				<tr>
+					<td>
+						<div class="f_code">
+						    <span class="btn btn1m"><a href="javascript:;">Anchor</a></span>
+						    <span class="btn btn1m"><input type="button" value="Input" /></span>
+						    <span class="btn btn1m"><button>Button</button></span>
+						    <span class="btn btn1m"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, a标签 -->
+							<span class="btn btn1m"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+							<!-- Disabled, input标签 -->
+							<span class="btn btn1m"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+							<!-- Disabled, button标签 -->
+							<span class="btn btn1m"><button disabled="disabled">Disabled, Button</button></span>
+							<!-- Disabled, span标签 -->
+							<span class="btn btn1m"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+					</td>
+				</tr>
+			</table></div>
+			
+		</div>
+		</div>
+
+	    <h2 class="mod_h3">.btn2s （线框小按钮）</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+			<div class="gl_table"><table class="gl_tb">
+				<tr>
+					<td>
+						<div class="f_code">
+						    <span class="btn btn2s"><a href="javascript:;">Anchor</a></span>
+						    <span class="btn btn2s"><input type="button" value="Input" /></span>
+						    <span class="btn btn2s"><button>Button</button></span>
+						    <span class="btn btn2s"><span class="in">Span</span></span>
+						</div>
+						<div class="mt10 f_code">
+							<!-- Disabled, a标签 -->
+							<span class="btn btn2s"><a class="disabled" href="javascript:;">Disabled, Anchor</a></span>
+							<!-- Disabled, input标签 -->
+							<span class="btn btn2s"><input disabled="disabled" type="button" value="Disabled, Input" /></span>
+							<!-- Disabled, button标签 -->
+							<span class="btn btn2s"><button disabled="disabled">Disabled, Button</button></span>
+							<!-- Disabled, span标签 -->
+							<span class="btn btn2s"><span class="in disabled">Disabled, Span</span></span>
+						</div>
+					</td>
+				</tr>
+			</table></div>
+			
+		</div>
+		</div>
+
+    </div>
+
+</div>
+
+        <!-- 单选复选框 -->
+        <div id="a_check" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">单选复选框 inputCheck</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <blockquote class="mod_blockquote">
+            单选框和复选框，label 的 for 属性要和 input 的 id 配对，input 尽量安排在 label 标签内。
+        </blockquote>
+
+        <h2 class="mod_h3">单选框 .inputCheck</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 单选框 .inputCheck -->
+                            <label for="radio1" class="inputCheck">
+                                <input id="radio1" type="radio" name="radiogroup" checked="checked" />
+                                <span class="ml5 vt_m tx_14">Option1</span>
+                            </label>
+                            <label for="radio2" class="inputCheck ml20">
+                                <input id="radio2" type="radio" name="radiogroup" />
+                                <span class="ml5 vt_m tx_14">Option2</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">复选框 .inputCheck</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 复选框 .inputCheck -->
+                            <label for="checkbox1" class="inputCheck">
+                                <input id="checkbox1" type="checkbox" name="checkboxgroup" checked="checked" />
+                                <span class="ml5 vt_m tx_14">Option1</span>
+                            </label>
+                            <label for="checkbox2" class="inputCheck ml20">
+                                <input id="checkbox2" type="checkbox" name="checkboxgroup" />
+                                <span class="ml5 vt_m tx_14">Option2</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- 输入和下拉 -->
+        <div id="a_inputTxt" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">输入和下拉 inputTxt</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">输入框 .inputTxt</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 输入框 .inputTxt -->
+                            <div class="inputTxt">
+                                <input type="text" placeholder="input" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">文本域 .inputTxt</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 文本域 .inputTxt -->
+                            <div class="inputTxt">
+                                <textarea style="height:100px" placeholder="textarea"></textarea>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">DIV模拟文本域 .inputTxt</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 文本域 .inputTxt -->
+                            <div class="inputTxt">
+                                <div class="text" contenteditable="true" style="height:auto; min-height:100px; max-height:400px" placeholder="DIV模拟textarea"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+        <h2 class="mod_h3">下拉框 .inputTxt</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_16">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- 下拉框 .inputTxt -->
+                            <div class="inputTxt">
+                                <select>
+                                    <option>select</option>
+                                </select>
+                                <i class="arr"></i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- 进度 -->
+        <div id="a_progress" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">进度 progress （规范外，供参考）</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">progress_bar</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+		<div class="gl_table"><table class="gl_tb">
+			<tr>
+				<td>
+
+					<div class="f_code">
+					<!-- 进度条 -->
+					<div class="progress_bar">
+						<div class="bd" style="-webkit-transform:translateX(80%); transform:translateX(80%);"></div>
+						<div class="txt tx_12">loading...</div>
+					</div>
+					<!-- /进度条 -->
+					</div>
+					
+				</td>
+			</tr>
+		</table></div>
+
+		</div>
+		</div>
+
+		<h2 class="mod_h3">progress_circle</h2>
+
+		<div class="mod_item">
+		<div class="part_ui">
+
+		<div class="gl_table">
+			<table class="gl_tb">
+				<tr>
+					<td>
+						
+						<div class="f_code" style="width:200px; max-width:100%;">
+					        <div class="progress_circle">
+					            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABGdBTUEAALGPC/xhBQAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAALSURBVAjXY2DABwAAHgABboVHMgAAAABJRU5ErkJggg==" class="placeholder" />
+
+					            <div class="b0"></div>
+
+					            <div class="b1wrap">
+					                <div id="round1" class="b1"></div>
+					            </div>
+
+					            <div class="b2wrap">
+					                <div id="round2" class="b2"></div>
+					            </div>
+
+					            <div class="mid">
+					                <div id="scoreNum" class="c1"></div>
+					            </div>
+
+					        </div>
+
+					        <script>
+							$(window).on('load',function(){
+
+								var progressInit = {
+									'sep' : 50,	// 切分多少份，不超过360
+									'duration' : 0.1 // 每份的运动时间(s)
+								};
+
+								progressInit.score = 20;	// 自定义动画结束的位置
+
+								progressInit.lacka = progressInit.sep - progressInit.score;
+								progressInit.lackb = progressInit.sep / 2 - progressInit.score;
+
+								$('#scoreNum').text(progressInit.sep);
+
+							    setTimeout(function(){
+
+							    	// 圆圈
+							        if(progressInit.score > progressInit.sep / 2){
+							            $('#round1').css({
+							                'transform' : 'rotate(-' + Math.floor(360 / progressInit.sep * progressInit.lacka) + 'deg)',
+							                'transition-duration' : progressInit.lacka * progressInit.duration + 's'
+							            });
+							        }else{
+							            $('#round1').css({
+							                'transform' : 'rotate(-180deg)',
+							                'transition-duration' : progressInit.sep / 2 * progressInit.duration + 's'
+							            });
+							            $('#round2').css({
+							                'transform' : 'rotate(-' + Math.floor(360 / progressInit.sep * progressInit.lackb) + 'deg)',
+							                'transition-duration' : progressInit.lackb * progressInit.duration + 's',
+							                'transition-delay' : progressInit.sep / 2  * progressInit.duration + 's'
+							            });
+							        }
+
+							        // 数字
+							        if(progressInit.score < progressInit.sep){
+							            var beginnum = progressInit.sep - 1;
+							            var countInt = setInterval(function(){
+							                $('#scoreNum').text(beginnum);
+							                beginnum--;
+							                if(beginnum < progressInit.score){
+							                    countInt = window.clearInterval(countInt);
+							                }
+							            },progressInit.duration * 1000);
+							        }
+
+							    },500);
+
+							});
+					        </script>
+				        </div>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		</div>
+		</div>
+
+    </div>
+
+</div>
+
+        <!-- 图标 -->
+        <div id="a_icon" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">图标 Icon</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">SVG矢量图标 .iconsvg</h2>
+
+        <blockquote class="mod_blockquote">
+        	<p>SVGsprite方式引入，可以定义多彩图标</p>
+        	<p>彩色 SVGsprite 可通过 Illustrator 存储为 SVG 格式，然后通过 IcoMoon 工具管理</p>
+        	<p>纯色 Icon 建议采用下面的 Font 方式引入</p>
+        </blockquote>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+		<div class="gl_table e_table_middle tx_12"><table class="gl_tb">
+			<thead>
+				<tr>
+					<th></th>
+					<th>.icon12: 24px</th>
+					<th>.icon14: 28px</th>
+					<th>.icon16: 32px</th>
+					<th>.icon19: 38px</th>
+					<th>.icon20: 40px</th>
+					<th>.icon24: 48px</th>
+					<th>.icon32: 64px</th>
+					<th>.icon40: 80px</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="name">iconsvg_s001didi<span class="f_code"><!-- iconsvg_001didi --></span></div>
+					</td>
+					<td class="f_code"><i class="iconsvg icon12 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon14 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon16 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon19 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon20 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon24 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon32 iconsvg_s001didi"></i></td>
+					<td class="f_code"><i class="iconsvg icon40 iconsvg_s001didi"></i></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="name">iconsvg_s002ridea<span class="f_code"><!-- iconsvg_002ridea --></span></div>
+					</td>
+					<td class="f_code"><i class="iconsvg icon12 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon14 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon16 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon19 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon20 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon24 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon32 iconsvg_s002ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon40 iconsvg_s002ridea"></i></td>
+				</tr>
+				<tr class="c_bg2">
+					<td>
+						<div class="name">iconsvg_s003ridea<span class="f_code"><!-- iconsvg_003ridea --></span></div>
+					</td>
+					<td class="f_code"><i class="iconsvg icon12 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon14 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon16 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon19 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon20 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon24 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon32 iconsvg_s003ridea"></i></td>
+					<td class="f_code"><i class="iconsvg icon40 iconsvg_s003ridea"></i></td>
+				</tr>
+			</tbody>
+		</table></div>
+
+        </div>
+        </div>
+
+		<h2 class="mod_h3">Font矢量图标 .iconfont</h2>
+
+        <blockquote class="mod_blockquote">
+        	<p>纯色图标，通过font-size改变图标尺寸，通过 color 样式改变颜色</p>
+        </blockquote>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+		<div class="gl_table e_table_middle tx_12"><table class="gl_tb">
+			<tr>
+				<td>
+                	<div class="tx_30 f_code"><i class="iconfont iconfont_f001didi"></i></div>
+				</td>
+				<td>
+                	<div class="tx_30 f_code"><i class="iconfont iconfont_f002ridea"></i></div>
+				</td>
+				<td>
+	                <div class="tx_30 f_code"><i class="iconfont iconfont_f003car"></i></div>
+				</td>
+				<td>
+	                <div class="tx_30 f_code"><i class="iconfont iconfont_f004safe"></i></div>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<div class="name">iconfont_f001didi</div>
+					<div class="code">&amp;#xe001;</div>
+				</th>
+				<th>
+                    <div class="name">iconfont_f002ridea</div>
+                    <div class="code">&amp;#xe002;</div>
+				</th>
+				<th>
+                    <div class="name">iconfont_f003car</div>
+                    <div class="code">&amp;#xe003;</div>
+				</th>
+				<th>
+                    <div class="name">iconfont_f004safe</div>
+                    <div class="code">&amp;#xe004;</div>
+				</th>
+			</tr>
+			<tr>
+				<td>
+	                <div class="tx_30 f_code"><i class="iconfont iconfont_f005leaf"></i></div>
+				</td>
+				<td>
+	                <div class="tx_30 f_code"><i class="iconfont iconfont_f006headphone"></i></div>
+				</td>
+				<td>
+	                <div class="tx_30 f_code"><i class="iconfont iconfont_f007right"></i></div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>
+                    <div class="name">iconfont_f005leaf</div>
+                    <div class="code">&amp;#xe005;</div>
+				</th>
+				<th>
+                    <div class="name">iconfont_f006headphone</div>
+                    <div class="code">&amp;#xe006;</div>
+				</th>
+				<th>
+                    <div class="name">iconfont_f007right</div>
+                    <div class="code">&amp;#xe007;</div>
+				</th>
+				<th></th>
+			</tr>
+		</table></div>
+
+        </div>
+        </div>
+
+        <h3 class="mod_h4">使用方法1：使用 CSS 类名，如：</h3>
+
+		<pre class="highlight">
+&lt;i class="iconfont iconfont_f001didi"&gt;&lt;/i&gt;</pre>
+
+        <h3 class="mod_h4">使用方法2：在 HTML 中使用转义字符，如：</h3>
+
+		<pre class="highlight">
+&lt;i class="iconfont"&gt;&amp;#xe001;&lt;/i&gt;</pre>
+
+        <h3 class="mod_h4">注意：使用iconfont前，需要配置fis-conf.js，以允许打包字体格式。</h3>
+
+
+		<pre class="highlight">
+var userAfterRoadMap = [
+	{
+		reg: '/config/**',
+		release: false
+	},
+	{
+		reg: /.+?(eot|ttf|woff|svg|mp3|zip)$/,
+		release: '${releaseDir}$&'
+	},
+	//其他文件不发布
+	{
+		reg: '**',
+		release: false
+	}
+];</pre>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                    	<li><a href="https://icomoon.io/">https://icomoon.io</a></li>
+                        <li><a href="http://www.iconfont.cn/">http://www.iconfont.cn</a></li>
+                        <li><a href="http://font.baidu.com/">http://font.baidu.com</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 杂项 -->
+        <div id="a_other" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">杂项 Others</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">鼠标手型 cursor (Desktop)</h2>
+
+        <div class="gl_table"><table class="gl_tb c_bg1">
+            <tr>
+                <td class="cur_auto">默认</td>
+                <td class="cur_default">箭头</td>
+                <td class="cur_pointer">手指</td>
+            </tr>
+        </table></div>
+
+        <pre class="highlight">
+            // 默认
+            &lt;div class="cur_auto"&gt;&lt;/div&gt;
+
+            // 箭头
+            &lt;div class="cur_default"&gt;&lt;/div&gt;
+
+            // 手指
+            &lt;div class="cur_pointer"&gt;&lt;/div&gt;
+        </pre>
+
+    </div>
+
+</div> 
+
+        <!--
+        =================== main -->
+
+        <!-- 头像 -->
+        <div id="m_avatar" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">头像 Avatar</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">.avatar</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>气泡和红点颜色：#ff3b30</p>
+            <p>红点：大于80px 切线内角</p>
+            <p>红点：小于或等于80px 切线焦点</p>
+            <p>气泡：大于120px 4等分右上角</p>
+            <p>气泡：120px - 80px 3等分右上角</p>
+            <p>气泡：小于80px 切线焦点</p>
+        </blockquote>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+            <div class="gl_table"><table class="gl_tb tx_12">
+                <thead>
+                    <th>基础样式 Module</th>
+                    <th>扩展样式-小红点 Dot</th>
+                    <th>扩展样式-气泡 Pop</th>
+                    <th>类名 Class Name</th>
+                    <th>设计尺寸 Size<br />(Density = 200%)</th>
+                </thead>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar30 基础 -->
+                            <div class="avatar avatar30">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar30 带小圆点 -->
+                            <div class="avatar avatar30">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar30 带数字 -->
+                            <div class="avatar avatar30">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar30</td>
+                    <td>
+                        60px &times; 60px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar32 基础 -->
+                            <div class="avatar avatar32">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar32 带小圆点 -->
+                            <div class="avatar avatar32">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar32 带数字 -->
+                            <div class="avatar avatar32">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar32</td>
+                    <td>
+                        64px &times; 64px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar40 基础 -->
+                            <div class="avatar avatar40">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar40 带小圆点 -->
+                            <div class="avatar avatar40">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar40 带数字 -->
+                            <div class="avatar avatar40">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar40</td>
+                    <td>
+                        80px &times; 80px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar48 基础 -->
+                            <div class="avatar avatar48">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar48 带小圆点 -->
+                            <div class="avatar avatar48">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar48 带数字 -->
+                            <div class="avatar avatar48">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar48</td>
+                    <td>
+                        96px &times; 96px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar50 基础 -->
+                            <div class="avatar avatar50">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar50 带小圆点 -->
+                            <div class="avatar avatar50">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar50 带数字 -->
+                            <div class="avatar avatar50">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar50</td>
+                    <td>
+                        100px &times; 100px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar55 基础 -->
+                            <div class="avatar avatar55">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar55 带小圆点 -->
+                            <div class="avatar avatar55">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar55 带数字 -->
+                            <div class="avatar avatar55">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar55</td>
+                    <td>
+                        110px &times; 110px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar60 基础 -->
+                            <div class="avatar avatar60">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar60 带小圆点 -->
+                            <div class="avatar avatar60">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar60 带数字 -->
+                            <div class="avatar avatar60">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar60</td>
+                    <td>
+                        120px &times; 120px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar70 基础 -->
+                            <div class="avatar avatar70">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar70 带小圆点 -->
+                            <div class="avatar avatar70">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar70 带数字 -->
+                            <div class="avatar avatar70">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar70</td>
+                    <td>
+                        140px &times; 140px
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar80 基础 -->
+                            <div class="avatar avatar80">
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar80 带小圆点 -->
+                            <div class="avatar avatar80">
+                                <i class="dot"></i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="f_code">
+                            <!-- .avatar80 带数字 -->
+                            <div class="avatar avatar80">
+                                <i class="pop">99</i>
+                                <img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>.avatar80</td>
+                    <td>
+                        160px &times; 160px
+                    </td>
+                </tr>
+            </table></div>
+
+        </div>
+        </div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://wiki.intra.xiaojukeji.com/pages/viewpage.action?pageId=40090295">设计规范：气泡与红点位置</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 券 -->
+        <div id="m_ticket" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">券 Ticket</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">.ticket</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+            <div class="gl_table"><table class="gl_tb">
+                <tr>
+                    <td>
+                        <div class="f_code">
+                            <div class="ticket" tabindex="0">
+                                <div class="inner">
+                                    <div class="val"><span class="yuan">&yen;<!--使用&amp;yen;转义--></span><span class="number">3</span></div>
+                                    <div class="tit">顺风车券</div>
+                                    <div class="subtit">有效期至2016-06-15</div>
+                                    <div class="note">新用户专享</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table></div>
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- 消息体 -->
+        <div id="m_msgBox" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">消息体 msgBox</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">基本 .msgBox</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+	        <div class="gl_table"><table class="gl_tb">
+	            <tr>
+	                <td>
+	                	<div class="f_code">
+	                		<!-- 基本 .msgBox -->
+							<div class="msgBox">
+								<div class="picCnt">
+									<div class="avatar avatar40">
+										<img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" />
+									</div>
+								</div>
+								<div class="msgCnt">
+									<div class="username">
+										<span class="c_t1 tx_14">Didi Chuxing</span>
+									</div>
+									<div class="useropt">
+										<span class="c_t4 tx_12">8小时以前</span>
+									</div>
+									<div class="message mt10">
+							    		<span class="tx_12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+									</div>
+								</div>
+							</div>
+	                	</div>
+	                </td>
+	            </tr>
+	        </table></div>
+
+	    </div>
+	    </div>
+
+        <h2 class="mod_h3">无消息部分 .msgBox</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+	        <div class="gl_table"><table class="gl_tb">
+	            <tr>
+	                <td>
+	                	<div class="f_code">
+	                		<!-- 无消息部分 .msgBox -->
+							<div class="msgBox">
+								<div class="picCnt">
+									<div class="avatar avatar40">
+										<img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+									</div>
+								</div>
+								<div class="msgCnt">
+									<div class="username">
+										<span class="c_t1 tx_14">Didi Chuxing</span>
+									</div>
+									<div class="useropt">
+										<span class="c_t4 tx_12">顺风出行241次</span>
+									</div>
+								</div>
+							</div>
+	                	</div>
+	                </td>
+	            </tr>
+	        </table></div>
+
+	    </div>
+	    </div>
+
+        <h2 class="mod_h3">无用户名部分 .msgBox</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+	        <div class="gl_table"><table class="gl_tb">
+	            <tr>
+	                <td>
+	                	<div class="f_code">
+	                		<!-- 无用户名部分 .msgBox -->
+							<div class="msgBox">
+								<div class="picCnt">
+									<div class="avatar avatar40">
+										<img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+									</div>
+								</div>
+								<div class="msgCnt">
+									<div class="message">
+							    		<span class="tx_12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+									</div>
+								</div>
+							</div>
+	                	</div>
+	                </td>
+	            </tr>
+	        </table></div>
+
+	    </div>
+	    </div>
+
+        <h2 class="mod_h3">富消息体框架 .msgBox</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+	        <div class="gl_table"><table class="gl_tb">
+	            <tr>
+	                <td>
+	                	<div class="f_code">
+	                		<!-- 富消息体框架 .msgBox -->
+							<div class="msgBox">
+								<div class="picCnt">
+									<div class="avatar avatar40">
+										<img class="head" src="//futurefriendly.cn/ds/static/release/img/avatar.jpg" alt="" />
+									</div>
+								</div>
+								<div class="msgCnt">
+									<div class="username">
+										<span class="c_t1 tx_14">Didi Chuxing</span>
+									</div>
+									<div class="useropt">
+										<span class="c_t4 tx_12">8小时以前</span>
+									</div>
+									<div class="richmsg mt10">
+										<!-- rich消息结构位置 -->
+										<img style="width:100%" class="head" src="//futurefriendly.cn/ds/static/release/img/richdemo.png" alt="" />
+										<!-- /rich消息结构位置 -->
+									</div>
+								</div>
+							</div>
+	                	</div>
+	                </td>
+	            </tr>
+	        </table></div>
+
+	    </div>
+	    </div>
+
+    </div>
+
+</div>
+
+
+        <!-- 空页面提示 -->
+        <div id="m_blankTip" class="gl_mod">
+
+    <div class="mod_hd">
+        <h2 class="mod_h2">空页面提示 blankTip</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">.blankTip</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+	        <div class="gl_table"><table class="gl_tb">
+	            <tr>
+	                <td>
+	                	<div class="f_code mod_page">
+
+							<!-- 空页面中直接写在 #main 内，图片尺寸168x168 -->
+							<div class="blankTip">
+								<div class="pic">
+									<img src="//futurefriendly.cn/ds/static/release/img/ico_blankTip.jpg" />
+								</div>
+								<h3 class="mt10 tx_14 c_t0 tx_c">您还没有任何消息</h3>
+								<p class="mt5 tx_12 c_t3 tx_c">您还没有任何消息</p>
+								<div class="btnwrap">
+									<span class="btn btn1"><a href="javascript:;">按钮</a></span>
+								</div>
+							</div>
+
+	                	</div>
+	                </td>
+	            </tr>
+	        </table></div>
+
+	    </div>
+	    </div>
+
+    </div>
+
+</div>
+
+
+        <!--
+        =================== skin -->
+
+        <!-- 文字 -->
+        <div id="skin_txt" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">文字 Color</h2>
+    </div>
+
+    <div class="mod_bd">
+
+	    <h2 class="mod_h3">普通文字 Text</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+		<div class="gl_table"><table class="gl_tb tx_14 tx_code">
+			<thead>
+				<th>色值</th>
+				<th>命名规范 / 类名</th>
+				<th>应用说明</th>
+			</thead>
+			<tr class="c_t0">
+				<td>
+					<p>#666666</p>
+				</td>
+				<td>
+					<p>ColorGray / .c_t0</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t0">40%灰色：次要信息</span></p>
+				</td>
+			</tr>
+			<tr class="c_t1">
+				<td>
+					<p>#333333</p>
+				</td>
+				<td>
+					<p>ColorDarkGray / .c_t1</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t1">20%灰色:title bar标题文字，正文标题 / 结构化摘要，常规按钮文字</span></p>
+				</td>
+			</tr>
+			<tr class="c_t2">
+				<td>
+					<p>#fa8919</p>
+				</td>
+				<td>
+					<p>ColorOrange / .c_t2</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t2">标准橘色：主导航 / 二级导航当前态，价格，强提醒</span></p>
+				</td>
+			</tr>
+			<tr class="c_t3">
+				<td>
+					<p>#adadad</p>
+				</td>
+				<td>
+					<p>ColorLightGray / .c_t3</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t3">68%灰色：文本框内的引导文案，功能列表中的弱引导文字</span></p>
+				</td>
+			</tr>
+			<tr class="c_t4">
+				<td>
+					<p>#cccccc</p>
+				</td>
+				<td>
+					<p>ColorLightGray_s / .c_t4</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t4">80%灰色：按钮不可点击态文字</span></p>
+				</td>
+			</tr>
+			<tr class="c_t5">
+				<td>
+					<p>#ffa033</p>
+				</td>
+				<td>
+					<p>ColorLightOrange / .c_t5</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t5">亮橘色：文字链接，消息系统图标,列表中的营销标签</span></p>
+				</td>
+			</tr>
+			<tr class="c_t6">
+				<td>
+					<p>#52b786</p>
+				</td>
+				<td>
+					<p>ColorGreen / .c_t6</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t6">拼车订单价格描述</span></p>
+				</td>
+			</tr>
+			<tr class="c_t7">
+				<td>
+					<p>#878787</p>
+				</td>
+				<td>
+					<p>ColorLinkGray / .c_t7</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_t7">53%灰色：再区分等级的次要信息，次要信息（慎用）</span></p>
+				</td>
+			</tr>
+			<tr class="c_tw" style="background:#999">
+				<td>
+					<p>#ffffff</p>
+				</td>
+				<td>
+					<p>- / .c_tw</p>
+				</td>
+				<td>
+					<p class="f_code"><span class="c_tw">白色</span></p>
+				</td>
+			</tr>
+		</table></div>
+
+		</div>
+		</div>
+
+	    <h2 class="mod_h3">链接 Link (未出现在设计规范中，供参考)</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+		<div class="gl_table"><table class="gl_tb tx_14 tx_code">
+			<thead>
+				<th>色值</th>
+				<th>命名规范 / 类名</th>
+				<th>应用说明</th>
+			</thead>
+			<tr class="c_a0">
+				<td>
+					<p>#fa8919</p>
+				</td>
+				<td>
+					<p>- / .c_a0</p>
+				</td>
+				<td>
+					<p class="f_code"><a class="c_a0" href="javascript:;">默认链接色</a></p>
+				</td>
+			</tr>
+			<tr class="c_a1">
+				<td>
+					<p>#336666</p>
+				</td>
+				<td>
+					<p>- / .c_a1</p>
+				</td>
+				<td>
+					<p class="f_code"><a class="c_a1" href="javascript:;">弱链接色</a></p>
+				</td>
+			</tr>
+		</table></div>
+
+		</div>
+		</div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li>顺风车设计规范 V1.0 苏天宇</li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 其他 -->
+        <div id="skin_bg" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">其他 Other</h2>
+    </div>
+
+    <div class="mod_bd">
+
+	    <h2 class="mod_h3">背景颜色 Background</h2>
+
+        <div class="mod_item">
+        <div class="part_ui">
+
+		<div class="gl_table"><table class="gl_tb tx_14 tx_code">
+			<thead>
+				<tr>
+					<th>色值</th>
+					<th>命名规范 / 类名</th>
+					<th>应用说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c_bg0">
+					<td><p>#ffffff</p></td>
+					<td><p>ColorWhite / .c_bg0</p></td>
+					<td class="f_code">白色：风格主基调，按钮（带背景色）上的文字</td>
+				</tr>
+				<tr class="c_bg1">
+					<td><p>#fafafa</p></td>
+					<td><p>ColorLightGray_ssss / .c_bg1</p></td>
+					<td class="f_code">98%灰色:titlebar底色</td>
+				</tr>
+				<tr class="c_bg2">
+					<td><p>#f0f0f0</p></td>
+					<td><p>ColorLightGray_sss / .c_bg2</p></td>
+					<td class="f_code">94%灰色:部分页面级背景</td>
+				</tr>
+			</tbody>
+		</table></div>
+
+		</div>
+		</div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li>顺风车设计规范 V1.0 苏天宇</li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!--
+        =================== dialog -->
+
+        <!-- 浮层 -->
+        <div id="dialog_dd" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">浮层 DidiDialog</h2>
+    </div>
+
+    <div class="mod_bd">
+
+		<h2 class="mod_h3">dd.dialog</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>方法不变，可参考 <a href="http://docs.xiaojukeji.com/display/CHUZUCHE/how+to+use+dd.dialog">原文档</a></p>
+        </blockquote>
+
+		<ul id="dd-demo" class="mt15">
+		<!-- alert -->
+		    <li>
+		        <pre class="mb15">
+dd.dialog.alert("当前不是WIFI网络, 下载离线地图包需要18.2m流量，继续下载吗？");
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">alert1</a></span>
+		    </li>
+
+
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.alert("小标题--嘀嘀打车送你回家", "大标题", "按钮名称");
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">alert2</a></span>
+		    </li>
+
+
+		    <li class="mt15">
+		        <pre class="mb15">
+var opts = {
+    icon: {
+        url: "http://static.xiaojukeji.com/webapp/images/i-plaint.png",
+        width: "8px",
+        height: "36px"
+    },
+    title: "大标题--滴滴滴",
+    tip: "小标题--嘀嘀打车送你回家嘀嘀打车送你回家",
+    btn: {
+        val: "按钮名称",
+        handler: function() {
+            //确认回调
+        }
+    }
+};
+dd.dialog.alert(opts); 
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">alert3</a></span>
+		    </li>
+
+		<!-- confirm -->
+
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.confirm("标题", function() {
+     alert("确认操作");
+     //确认操作
+ });
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">confirm1</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var opts = {
+    text: "标题",
+    icon: {
+        url: "http://static.xiaojukeji.com/webapp/images/i-plaint.png",
+        width: "8px",
+        height: "36px"
+    },
+    cancel: {
+        id: "",
+        val: "取消1",
+        kls: "",
+        handler: function() {
+            // alert(0)
+        }
+    },
+    confirm: {
+        id: "",
+        val: "确定2",
+        kls: "",
+        handler: function() {
+            // alert(1)
+        }
+    }
+}
+dd.dialog.confirm(opts);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">confirm2</a></span>
+		    </li>
+
+		<!-- loading -->
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.loading("加载文案..",5000);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">loading1</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var opts = {
+    text: "加载文案加载文案加载文案加载..",
+    icon: {
+        width: "43px",
+        height: "34px",
+        url: "http://static.xiaojukeji.com/webapp/images/i-loading.gif"
+    }
+};
+dd.dialog.loading(opts);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">loading2</a></span>
+		    </li>
+		<!-- flatLoading -->
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.flatLoading();
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">flatLoading1</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var opts = {
+    text: "加载文案..",
+    icon: {
+        width: "43px",
+        height: "34px",
+        url: "http://static.xiaojukeji.com/webapp/images/i-loading.gif"
+    }
+};
+dd.dialog.flatLoading(opts);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">flatLoading2</a></span>
+		    </li>
+		<!-- logoLoading -->
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.logoLoading(5000);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">logoLoading</a></span>
+		    </li>
+		<!-- tip -->
+		    <li class="mt15">
+		        <pre class="mb15">
+dd.dialog.tip("提示..",5000);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">tip1</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var opts = {
+    text: "提示文案..",
+    icon: {
+        url: "http://static.xiaojukeji.com/webapp/images/i-tip.png",
+        width: "45px",
+        height: "45px"
+    }
+};
+dd.dialog.tip(opts);
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">tip2</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var str='&lt;div style="background:#fff;width:280px;height:50px;padding:10px;"&gt;div地方地方&lt;/div&gt;';
+var _dialog=dd.dialog.Fn(str);
+_dialog.show()
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">Fn1-字符串插入</a></span>
+		    </li>
+		    <li class="mt15">
+		        <pre class="mb15">
+var _el = document.createElement('div');
+_el.innerHTML="ddd";
+_el.style.cssText="background:#fff;padding:10px;"
+var _dialog=dd.dialog.Fn(_el);
+_dialog.show()
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">Fn2-dom插入</a></span>
+		    </li>
+		     <li class="mt15">
+		        <pre class="mb15">
+var opts={
+    type:"alert",
+    wallCss:"background: #ff0000;",
+    wrapCss:"background: #fff;width: 87.5%;text-align: center;",
+    title:{
+        cssText:" color:#900; font-size:1rem;",
+        txt:"title标题"
+    },
+    tip:{
+        color:"#999",
+        size:".75rem",
+        txt:"tip标题"
+    },
+    icon: {
+            url: "http://static.xiaojukeji.com/webapp/images/i-plaint.png",
+            width: "8px",
+            height: "36px",
+            cssText:"border:1px solid #333;"
+        },
+    btns: [{
+            id:  "btn-cancel",
+            val: "按钮1实力",
+            kls: "btn btn2",
+            event: "click",
+            handler: function(e) {
+                _dialog.hide()
+            }
+        }, {
+            id: "btn-ok",
+            val:  "按钮2实力",
+            kls:  "btn btn1",
+            event:  "click",
+            handler: function(e) {
+                
+            }
+        },{
+            id:  "btn-cancel",
+            val: "按钮1实力",
+            kls: "btn btn3",
+            event: "click",
+            handler: function(e) {
+                
+            }
+        }],
+    ext:'按钮说明',
+    close:{
+        cssText:"background:#eee;border-radius:50%;"
+    }
+};
+var _dialog=dd.dialog.Fn(opts);
+_dialog.show()
+		        </pre>
+                <span class="btn btn1"><a class="f_dd" href="javascript:;">Fn3-obj插入</a></span>
+		    </li>
+		</ul>
+
+    </div>
+
+</div>
+
+        <!--
+        =================== animation -->
+
+        <!-- 原则 -->
+        <div id="animation_rule" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">动画原则 Animate Rule</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">基本动画原则</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>减少打扰：避免干扰用户正常的阅读体验，减少作为交互的动画（减小页面性能的 repaints 和 reflows 消耗，让用户尽快看到内容），如使用交互动画，需要保持有序的交互引导。</p>
+            <p>提升体验：利用动画增强用户体验，适当运用作为内容的动画（Flash / Video / Canvas / CSS / Gif）。</p>
+            <p>聚焦内容：网页的本质是静态文档（页面）。最早页面没有动画。动画属于依赖技术的高级web需要。引导性：动画 &gt; 图片 &gt; 图形 &gt; 文字</p>
+            <p>避免犯错：如果没有考虑好，不要使用动画。</p>
+        </blockquote>
+
+        <h2 class="mod_h3">基本CSS动画规则</h2>
+
+        <h3 class="mod_h4">速度和节奏 animation-duration</h3>
+
+        <blockquote class="mod_blockquote">
+            <ul class="mod_ul">
+                <li>
+                    <p>如页面无音乐，标准CSS动画速度 (animation-duration) 等于 <span class="c_t2">0.2s</span>，同一个页面中，所有的动画速度应该是标准动画速度的倍数。</p>
+                </li>
+                <li>
+                    <p>如页面有音乐，需要考虑音乐和动画的节奏和谐。标准CSS动画速度等于一小节或一拍的时长。以 6/8 拍（以八分音符为一拍，每小节6拍），每分钟96个八分音符为例，一小节时长 = 60秒/96拍*6拍 = 3.75秒；一拍时长 = 60秒/96拍 = 0.625秒</p>
+                </li>
+                <li>
+                    <p>下面举两个控制了标准CSS动画速度的H5页面为例：</p>
+                </li>
+            </ul>
+        </blockquote>
+
+        <div class="gl_table"><table class="gl_tb">
+            <thead>
+                <tr>
+                    <th>H5项目，可点击查看</th>
+                    <th>音乐</th>
+                    <th>标准CSS动画速度</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    <a href="http://static.didialift.com/pinche/staticpage/team_slides.html?channel=500161" target="_blank">遇见美好，邂逅浪漫</a>
+                </td>
+                <td>拍号：3/4；<br>速度：100bpm（每分钟 100 个四分音符）</td>
+                <td>1.8s（即一小节时长：60秒/100*3拍）</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://static.didialift.com/pinche/staticpage/pop.html#h303615" target="_blank">顺风侠</a>
+                </td>
+                <td>拍号：2/4；<br>速度：105bpm（每分钟 105 个四分音符）</td>
+                <td>0.57s（即一拍时长：60秒/105拍）</td>
+            </tr>
+        </table></div>
+
+        <h3 class="mod_h4">缓动 animation-timing-function</h3>
+
+        <blockquote class="mod_blockquote">
+            <ul class="mod_ul">
+                <li>标准CSS动画缓动 (animation-timing-function) ：<span class="c_t2">ease-in-out</span></li>
+            </ul>
+        </blockquote>
+
+        <h3 class="mod_h4">CSS动画的兼容 Compatible</h3>
+
+        <blockquote class="mod_blockquote">
+            <ul class="mod_ul">
+                <li>PC端浏览器对 CSS transform / transition 动画的支持范围：IE10.0+, Firefox25.0+, Chrome31.0+, Safari7.0+, Opera17.0+</li>
+            </ul>
+        </blockquote>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://fe.in.didialift.com:8088/fe/cssanimate/demo/">CSS Animate</a></li>
+                        <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!-- 示例 -->
+        <div id="animation_demo" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">动画示例 Animate Demo</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">缓动 animation-timing-function</h2>
+        
+        <h3 class="mod_h4">CSS默认缓动</h3>
+
+        <div class="gl_table"><table class="gl_tb">
+            <tr>
+                <td>
+                    <img src="//futurefriendly.cn/ds/static/release/page/guideline/images/timing_linear.png" />
+                </td>
+                <td>
+                    <img src="//futurefriendly.cn/ds/static/release/page/guideline/images/timing_ease.png" />
+                </td>
+                <td>
+                    <img src="//futurefriendly.cn/ds/static/release/page/guideline/images/timing_easein.png" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class="pr20">
+                        <div class="mod_aniblock">
+                            <div class="in"></div>
+                        </div>
+                    </div>
+                    <p class="mt10 tx_c">
+                        <span class="btn btn2s"><a class="lk ani_timing_opt" data-css="linear" href="javascript:;">线性 linear</a></span>
+                    </p>
+                </th>
+                <th>
+                    <div class="pr20">
+                        <div class="mod_aniblock">
+                            <div class="in"></div>
+                        </div>
+                    </div>
+                    <p class="mt10 tx_c">
+                        <span class="btn btn2s"><a class="lk ani_timing_opt" data-css="ease" href="javascript:;">缓解 ease</a></span>
+                    </p>
+                </th>
+                <th>
+                    <div class="pr20">
+                        <div class="mod_aniblock">
+                            <div class="in"></div>
+                        </div>
+                    </div>
+                    <p class="mt10 tx_c">
+                        <span class="btn btn2s"><a class="lk ani_timing_opt" data-css="ease-in" href="javascript:;">渐入 ease-in</a></span>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="//futurefriendly.cn/ds/static/release/page/guideline/images/timing_easeout.png" />
+                </td>
+                <td>
+                    <img src="//futurefriendly.cn/ds/static/release/page/guideline/images/timing_easeinout.png" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>
+                    <div class="pr20">
+                        <div class="mod_aniblock">
+                            <div class="in"></div>
+                        </div>
+                    </div>
+                    <p class="mt10 tx_c">
+                        <span class="btn btn2s"><a class="lk ani_timing_opt" data-css="ease-out" href="javascript:;">渐出 ease-out</a></span>
+                    </p>
+                </th>
+                <th>
+                    <div class="pr20">
+                        <div class="mod_aniblock">
+                            <div class="in"></div>
+                        </div>
+                    </div>
+                    <p class="mt10 tx_c">
+                        <span class="btn btn2s"><a class="lk ani_timing_opt" data-css="ease-in-out" href="javascript:;">渐入渐出 ease-in-out</a></span>
+                    </p>
+                </th>
+                <th></th>
+            </tr>
+        </table></div>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb tx_16">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="http://fe.in.didialift.com:8088/fe/cssanimate/demo/">DIDI CSS Animate</a></li>
+                        <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+                        <li><a href="http://cubic-bezier.com/">CSS缓动贝塞尔曲线可视化</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+        <!--
+        =================== extend -->
+
+        <!-- 将didiui引入项目 -->
+        <div id="didiui" class="gl_mod">
+
+    <div class="mod_hd">
+	    <h2 class="mod_h2">将didiui引入项目</h2>
+    </div>
+
+    <div class="mod_bd">
+
+        <h2 class="mod_h3">Didiui（样式库）</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>Didiui 是基础 UI 样式库，包含本 Guideline 中所罗列的基本 CSS 样式和模块。用来替代原 common-ui。</p>
+        </blockquote>
+
+        <h3 class="mod_h4">安装</h3>
+
+        <p class="mt15">进入fis-didi项目根目录(如果没有则通过didi init project初始化一个)</p>
+        <pre class="highlight">
+didi install didi-component/didiui
+        </pre>
+
+        <h3 class="mod_h4">使用</h3>
+
+        <p class="mt15">在项目任意可编写JS代码处使用</p>
+        <pre class="highlight">
+var didiui = require('didiui');
+        </pre>
+
+        <h2 class="mod_h3">dd（对话框浮层）</h2>
+
+        <blockquote class="mod_blockquote">
+            <p>dd 可以和 didiui 一起使用，也可单独使用</p>
+            <p>若和 didiui 一起使用，项目中需要 require 'didiui'（已包含 didireset） 和 'dd' 两个组件</p>
+            <p>若单独使用 dd ，项目中需要require 'didireset' 和 'dd' 两个组件</p>
+        </blockquote>
+
+        <h3 class="mod_h4">安装</h3>
+
+        <p class="mt15">进入fis-didi项目根目录(如果没有则通过didi init project初始化一个)</p>
+        <pre class="highlight">
+didi install didi-component/dd
+        </pre>
+
+        <h3 class="mod_h4">使用</h3>
+
+        <p class="mt15">在项目任意可编写JS代码处使用</p>
+        <pre class="highlight">
+var dd = require('dd');
+        </pre>
+
+    </div>
+
+    <div class="mod_ft">
+
+        <h2 class="mod_h3">Reference</h2>
+
+        <div class="gl_table"><table class="gl_tb">
+            <tr>
+                <td>
+                    <ol class="mod_ol">
+                        <li><a href="https://git.xiaojukeji.com/didi-component/didiui">didi-component/didiui</a></li>
+                        <li><a href="https://git.xiaojukeji.com/didi-component/dididialog">didi-component/dididialog</a></li>
+                    </ol>
+                </td>
+            </tr>
+        </table></div>
+        
+    </div>
+
+</div>
+
+    </div>
+        
+</div>
+
+<!--
+    @require "lib/lib.js"
+    @require "css/lib.css"
+-->
+
+<script src="http://www.xiaojukeji.com/js/jquery.js"></script>
+<script>
+$.noConflict();
+</script>
+<script src="http://static.didialift.com/pinche/js/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.js"></script>
+
+<script>
+var DidiBridge = require('didibridge');
+var DidiMonitor = require('didimonitor');
+var dd = require('dd');
+</script>
+<!--
+    @require "didireset"
+    @require "ui_base/ui_base.css"
+    @require "ui_main/ui_main.css"
+    @require "ui_skin/ui_skin.css"
+-->
+<script>
+require('page/guideline/main.js');
+jQuery.SyntaxHighlighter.init();
+</script>
+
+</body>
+
+</html>

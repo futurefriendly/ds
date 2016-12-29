@@ -1,0 +1,63 @@
+body {
+  background-color: transparent;
+}
+#main {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 25%;
+}
+.invite_tit .lk {
+  color: #878787;
+}
+article {
+  margin-top: 9%;
+}
+article h2 {
+  padding: 6% 0;
+}
+.ticklist {
+  width: 78%;
+  margin: 0 auto;
+}
+.ticknew {
+  width: 66%;
+  margin: 0 auto;
+}
+.opt_foot {
+  position: relative;
+  z-index: 99;
+}
+.opt_foot .inner {
+  padding: 6% 2.5%;
+}
+.opt_foot .inner .c1 {
+  width: 50%;
+  float: left;
+}
+.opt_foot .inner .c1:first-child {
+  box-shadow: #cccccc 1px 0 0 0;
+}
+.e_foot_fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.e_foot_fix .inner {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 1px;
+}
+.ruledetail .lk {
+  color: #adadad;
+}
+.imgcorner {
+  width: 32%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

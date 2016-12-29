@@ -1,0 +1,74 @@
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ico_gingili_smile,
+.ico_gingili_king,
+.ico_gingili_percent {
+  width: 25px;
+  height: 25px;
+  background-image: url(//futurefriendly.cn/ds/static/release/page/gingili_cert/images/ico_gingili.png);
+  background-repeat: no-repeat;
+  background-size: 77px 25px;
+}
+.ico_gingili_smile {
+  background-position: 0 0;
+}
+.ico_gingili_king {
+  background-position: -26px 0;
+}
+.ico_gingili_percent {
+  background-position: -52px 0;
+}
+.apphold {
+  padding-top: 12%;
+}
+.apphold .c1 {
+  width: 16%;
+  margin: 0 auto;
+}
+.apphold .c1 img {
+  width: 100%;
+  display: block;
+}
+.apphold .c2 {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1.125em;
+  color: #585858;
+}
+.opt_foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.opt_foot .inner {
+  padding: 4% 5%;
+}
+.appdesc {
+  margin-top: 7%;
+}
+.appdesc .tit {
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+.appdesc .desclist {
+  margin: 7% 12% 0;
+}
+.appdesc .desclist .item {
+  position: relative;
+  padding-left: 30px;
+  font-size: .875rem;
+  color: #666;
+  margin-top: 1rem;
+}
+.appdesc .desclist .item:first-child {
+  margin-top: 0;
+}
+.appdesc .desclist .ico {
+  position: absolute;
+  left: 0;
+  top: -2px;
+}

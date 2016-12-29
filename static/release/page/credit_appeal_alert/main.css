@@ -1,0 +1,7 @@
+body {
+  background-color: #f0f0f0;
+}
+#main {
+  max-width: 768px;
+  margin: auto;
+}

@@ -1,0 +1,22 @@
+.toptext {
+  padding-top: 14%;
+  line-height: 1.5em;
+}
+.e_spacehead_6 {
+  width: 44%;
+  left: 28%;
+  margin-top: 3%;
+  -webkit-transform: scale(0.5);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.active .e_spacehead_6 {
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+.e_spacehead_6 .name {
+  bottom: 2%;
+}
+.bonus_txt {
+  padding: 2% 0;
+}

@@ -1,0 +1,26 @@
+.e_spacehead_1 {
+  width: 54%;
+  left: 23%;
+  top: 14%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transform: scale(0.5);
+  transition: all 0.4s ease-in-out;
+}
+.active .e_spacehead_1 {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.e_spacehead_1 .name {
+  bottom: 3%;
+}
+.e_time_1 {
+  left: 7%;
+  top: 9%;
+}
+.e_time_2 {
+  right: 4.7%;
+  top: 55.4%;
+}

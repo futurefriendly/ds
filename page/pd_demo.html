@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>静态页面demo</title>
+  
+<!-- 基础同步依赖代码 --> 
+<script src="//futurefriendly.cn/ds/static/release/lib/lib.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didimonitor/didi-monitor.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didibridge/didibridge.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/pd_demo/main.js"type="text/javascript"></script>
+<script src="//futurefriendly.cn/ds/static/release/page/pd_demo/inc/list_xrz.js"type="text/javascript"></script>
+
+<!-- resourcemap --> 
+
+
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/css/lib.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/component_modules/didi-component-didireset/didireset.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_base/ui_base.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_main/ui_main.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/components/ui_skin/ui_skin.css">
+<link rel="stylesheet" type="text/css" href="//futurefriendly.cn/ds/static/release/page/pd_demo/main.css">
+
+</head>
+
+<body ontouchstart="">
+
+	<div id="main">
+
+	<!-- menu -->
+	<div id="menu" class="pd_page">
+	    <div class="pd_menu">
+	<ul class="clearfix">
+		<li class="item">
+		<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/demo.png" alt="">
+		</li>
+		<li class="item">
+			<button class="lk pd_select" data-href="list_xrz">161107_信任值在列表页中</button>
+		</li>
+		<li class="item">
+			<button class="lk pd_select" data-href="dxl">161226_单向历翻页</button>
+		</li>
+		<li class="item">
+			<button disabled="disabled" class="lk"></button>
+		</li>
+		<li class="item">
+			<button disabled="disabled" class="lk"></button>
+		</li>
+		<li class="item">
+			<button disabled="disabled" class="lk"></button>
+		</li>
+	</ul>
+</div>
+	</div>
+	<!-- /menu -->
+
+    <!-- 信任值在列表页中161107 -->
+    <div id="list_xrz" class="pd_page">
+        <div class="place">
+	<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/top.png" alt="">
+</div>
+
+<div class="c2">
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在车型行体现，仅突出较差（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label29">信誉极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label29">信誉较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label29">信誉一般</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label31">信誉较差</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label29">信誉极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label29">信誉较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card9.png" alt="" class="card">
+		</li>
+	</ul>
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在昵称行体现，仅突出较差（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label26">信誉极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label26">信誉较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label26">信誉一般</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label28">信誉较差</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label26">信誉极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label26">信誉较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card8.png" alt="" class="card">
+		</li>
+	</ul>
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在资料行体现，灰色字，仅突出较差（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label23">信誉极好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label23">信誉较好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label23">信誉一般 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label25">信誉较差</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label23">信誉极好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label23">信誉较好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+	</ul>
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在昵称行体现（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label17">信用极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label17">信用较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label17">信用一般</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label19">信用较差</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label17">信用极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label17">信用较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card7.png" alt="" class="card">
+		</li>
+	</ul>
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在昵称行体现（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label20">信用极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label20">信用较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label20">信用一般</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label22">信用较差</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label20">信用极好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label20">信用较好</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+	</ul>
+
+	<ul class="clearfix">
+		<li class="item">
+			<p>信息在资料行体现（四字）</p>
+		</li>
+		<li class="item">
+			<div class="label14">信誉极好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label14">信誉较好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label14">信誉一般 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label16">信誉较差 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label14">信誉极好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+		<li class="item">
+			<div class="label14">信誉较好 ·</div>
+			<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/card3.png" alt="" class="card">
+		</li>
+	</ul>
+	
+</div>
+
+<div class="place">
+	<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/foot.png" alt="">
+</div>
+
+<div class="top">
+<div class="inner">
+	<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/top.png" alt="">
+</div>
+</div>
+
+<div class="foot">
+	<img src="//futurefriendly.cn/ds/static/release/page/pd_demo/images/foot.png" alt="">
+</div>
+
+    </div>
+    <!-- /信任值在列表页中161107 -->
+
+    <!-- 单向历翻页161226 -->
+    <div id="dxl" class="pd_page">
+        <div class="dxl_top">
+	
+</div>
+<div class="dxl_bottom btm0" name="0">
+	<div class="c1"><i></i></div>
+	<div class="c2"><i></i></div>
+	<div class="c3"><i></i></div>
+</div>
+<style>
+	body{ overflow:hidden; }
+	.dxl_top{ position:absolute; left:0; right:0; top:0; width:100%; height:70%;background:#fff url(//futurefriendly.cn/ds/static/release/page/pd_demo/images/cal1.png) center bottom no-repeat; background-size:contain; }
+	.dxl_bottom{ position: absolute;left: 0; right: 0; top: 70%;width: 100%; height:30%; text-align:center; font-size:5rem; color:#000; background-color:#fff;
+	}
+	.dxl_bottom .c1,
+	.dxl_bottom .c2,
+	.dxl_bottom .c3{ position:absolute;left:-2px; width:100%; height:100%; overflow:hidden; background:#fff url(//futurefriendly.cn/ds/static/release/page/pd_demo/images/cal2.png) center top no-repeat; background-size:contain;
+		transition:opacity 1s ease-in-out;
+		border:#0d143d 2px solid;
+		border-top:none;
+	}
+	.dxl_bottom .c1{ z-index:3;}
+	.dxl_bottom .c2{ z-index:2; opacity:0;}
+	.dxl_bottom .c3{ z-index:1; opacity:0;}
+	.dxl_bottom .c1 i,
+	.dxl_bottom .c2 i,
+	.dxl_bottom .c3 i{ content:''; position:absolute; width:100%; height:100%; top:0; left:0; right:0; background-color:#fff;
+		transform:translateY(-100%);
+		backface-visibility:hidden;
+	}
+	.dxl_bottom.btm1 .c1,
+	.dxl_bottom.btm2 .c2,
+	.dxl_bottom.btm3 .c3{
+		animation:pageturn 1s ease-in-out;
+		animation-fill-mode: both;
+	}
+	.dxl_bottom.btm1 .c1,
+	.dxl_bottom.btm2 .c2,
+	.dxl_bottom.btm3 .c3{ z-index:3}
+	.dxl_bottom.btm1 .c2,
+	.dxl_bottom.btm2 .c3,
+	.dxl_bottom.btm3 .c1{ z-index:2}
+	.dxl_bottom.btm1 .c3,
+	.dxl_bottom.btm2 .c1,
+	.dxl_bottom.btm3 .c2{ z-index:1}
+	.dxl_bottom.btm1 .c1 i,
+	.dxl_bottom.btm2 .c2 i,
+	.dxl_bottom.btm3 .c3 i{
+		animation:pageinside 1s steps(1);
+		animation-fill-mode: both;
+	}
+	.dxl_bottom.btm0 .c2,
+	.dxl_bottom.btm3 .c2,
+	.dxl_bottom.btm2 .c1,
+	.dxl_bottom.btm1 .c3{ opacity:0;
+	}
+	.dxl_bottom.btm1 .c2,
+	.dxl_bottom.btm2 .c3,
+	.dxl_bottom.btm3 .c1{ opacity:1;
+	}
+	@keyframes pageturn{
+		0%{ opacity:1; transform:perspective(500px) rotateX(0); transform-origin:center top;}
+		20%{ opacity:1; transform:perspective(500px) rotateX(0) translateY(-15px); transform-origin:center top;}
+		50%{ opacity:.9; transform:perspective(500px) rotateX(90deg) skew(-30deg); transform-origin:center top;}
+		100%{ opacity:0; transform:perspective(500px) rotateX(180deg) skew(0deg); transform-origin:center top; border:none;}
+	}
+	@keyframes pageinside{
+		0%{ transform:translateY(-100%); opacity:0}
+		50%{ transform:translateY(0); opacity:1}
+		100%{ transform:translateY(0); opacity:1}
+	}
+</style>
+<script>
+	$(function(){
+		$('.dxl_top,.dxl_bottom').on('touchend',function(){
+			document.body.ontouchmove=function(e){
+			    e.preventDefault();
+			}
+			var num = parseInt($('.dxl_bottom').attr('name'));
+			if(num>2){
+				num = 0;
+			}
+			num = num + 1;
+			$('.dxl_bottom').attr('class','dxl_bottom btm'+num);
+			$('.dxl_bottom').attr('name',num)
+		});
+	});
+</script>
+    </div>
+    <!-- /单向历翻页161226 -->
+
+    <!--
+        @require "lib/lib.js"
+        @require "css/lib.css"
+    -->
+    <!--
+    @require "didireset"
+    @require "ui_base/ui_base.css"
+    @require "ui_main/ui_main.css"
+    @require "ui_skin/ui_skin.css"
+    -->
+    <script>
+
+    require('page/pd_demo/main.js');
+    require('page/pd_demo/inc/list_xrz.js');
+
+    </script>
+
+</body>
+
+</html>
