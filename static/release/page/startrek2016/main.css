@@ -81,7 +81,7 @@ body {
   margin: 0 auto;
   min-width: 320px;
   max-width: 768px;
-  background-image: url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(http://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png);
+  background-image: url(https://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(https://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png), url(https://static.didialift.com/pinche/xiaojushow/tmp/3f5be7bd0e2656759e1c675846920dd3-noise2.png);
   background-position: 0 0,0 0,0 0;
   -webkit-animation: bodybg 10s linear infinite;
   animation: bodybg 10s linear infinite;
