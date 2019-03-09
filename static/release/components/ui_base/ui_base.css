@@ -414,8 +414,8 @@ body .pl0 {
 .inputCheck input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  background: url(//futurefriendly.cn/ds/static/release/components/ui_base/images/input_2x_151027.png) 0 0 no-repeat;
-  background-image: -webkit-image-set(url(//futurefriendly.cn/ds/static/release/components/ui_base/images/input_151027.png) 1x, url(//futurefriendly.cn/ds/static/release/components/ui_base/images/input_2x_151027.png) 2x);
+  background: url(//www.futurefriendly.cn/ds/static/release/components/ui_base/images/input_2x_151027.png) 0 0 no-repeat;
+  background-image: -webkit-image-set(url(//www.futurefriendly.cn/ds/static/release/components/ui_base/images/input_151027.png) 1x, url(//www.futurefriendly.cn/ds/static/release/components/ui_base/images/input_2x_151027.png) 2x);
   background-size: 83px 20px;
 }
 .inputCheck input[type="radio"]:checked {
@@ -838,7 +838,7 @@ body .pl0 {
 .iconsvg {
   display: inline-block;
   background-repeat: no-repeat;
-  background-image: url(//futurefriendly.cn/ds/static/release/components/ui_base/images/sprite.svg);
+  background-image: url(//www.futurefriendly.cn/ds/static/release/components/ui_base/images/sprite.svg);
 }
 .iconsvg_s001didi {
   width: 2rem;
@@ -971,8 +971,8 @@ body .pl0 {
 ----------------------------------------------------------------*/
 @font-face {
   font-family: "iconfont";
-  src: url('//futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.eot?t=1466497059');
-  src: url('//futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.eot?t=1466497059#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.woff?t=1466497059') format('woff'), /* chrome, firefox */ url('//futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.ttf?t=1466497059') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.svg?t=1466497059#iconfont') format('svg');
+  src: url('//www.futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.eot?t=1466497059');
+  src: url('//www.futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.eot?t=1466497059#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//www.futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.woff?t=1466497059') format('woff'), /* chrome, firefox */ url('//www.futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.ttf?t=1466497059') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//www.futurefriendly.cn/ds/static/release/components/ui_base/font/iconfont.svg?t=1466497059#iconfont') format('svg');
   
   /* IE9*/
   /* iOS 4.1- */
