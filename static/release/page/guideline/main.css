@@ -443,9 +443,11 @@ pre {
   .topnav .logo .c2 {
     font-size: 1.5rem;
   }
-  .topnav .bd,
-  .gl_container {
+  .topnav .bd{
     padding: 0 1rem 1rem 2rem;
+  }
+  .gl_container {
+    padding: 2.625em 1rem 1rem 2rem;
   }
   .gl_side {
     display: block;
