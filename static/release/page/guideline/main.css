@@ -151,9 +151,9 @@ pre {
   margin: 0 auto;
 }
 /* 导航fix占位 */
-.topnav_ph {
+/*.topnav_ph {
   height: 2.625em;
-}
+}*/
 /* logo */
 .topnav .logo {
   float: left;
@@ -355,6 +355,7 @@ pre {
   overflow-y: scroll;
   background: rgba(0, 0, 0, 0.9);
   padding-bottom: 5em;
+  padding-top:2.625em;
   -webkit-overflow-scrolling: touch;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -365,7 +366,7 @@ pre {
 }
 /* 右栏 */
 .gl_container {
-  padding: 0 4% 4%;
+  padding: 2.625em 4% 4%;
   margin: 0 auto;
   background: #fff;
 }
@@ -444,7 +445,7 @@ pre {
   }
   .topnav .bd,
   .gl_container {
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 1rem 2rem;
   }
   .gl_side {
     display: block;
@@ -492,7 +493,7 @@ pre {
 }
 .mod_h3 {
   font-size: 1.25rem;
-  padding: 0 0 5px 20px;
+  padding: 5px 0 5px 20px;
   margin-top: 30px;
   border-left: #ff8903 1rem solid;
   font-family: Helvetica, Arial, Pingfang SC, sans-serif;
