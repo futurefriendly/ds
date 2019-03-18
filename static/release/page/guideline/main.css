@@ -36,8 +36,8 @@ pre {
 ----------------------------------------------------------------*/
 @font-face {
   font-family: 'icomoon';
-  src: url('//futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.eot?7iccne');
-  src: url('//futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.eot?7iccne#iefix') format('embedded-opentype'), url('//futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.ttf?7iccne') format('truetype'), url('//futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.woff?7iccne') format('woff'), url('//futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.svg?7iccne#icomoon') format('svg');
+  src: url('//www.futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.eot?7iccne');
+  src: url('//www.futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.eot?7iccne#iefix') format('embedded-opentype'), url('//www.futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.ttf?7iccne') format('truetype'), url('//www.futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.woff?7iccne') format('woff'), url('//www.futurefriendly.cn/ds/static/release/page/guideline/fonts/icomoon.svg?7iccne#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
